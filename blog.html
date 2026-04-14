@@ -3,35 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IT Blog & Insights - SLS IT Solutions | Technology Tips & Trends</title>
-  <meta name="description" content="Stay updated with the latest IT security, infrastructure, and technology insights from SLS IT Solutions. Expert tips, best practices, and industry trends for businesses.">
-  <meta name="keywords" content="IT blog, cybersecurity tips, IT infrastructure insights, technology trends, managed IT services, business IT solutions">
+  <title>Resources & Insights - SLS IT Solutions | Guides, Whitepapers & Industry Reports</title>
+  <meta name="description" content="Expert guides, whitepapers, and industry insights to help your business stay secure and ahead. Download free IT security and compliance resources from SLS IT Solutions.">
+  <meta name="keywords" content="IT resources, cybersecurity guides, whitepapers, compliance checklist, managed IT services, DPDP Act, zero trust security">
   <meta name="author" content="SLS IT Solutions">
   <link rel="canonical" href="https://www.slsitsolutions.com/blog.html">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="IT Blog & Insights - SLS IT Solutions | Technology Tips & Trends">
-  <meta property="og:description" content="Stay updated with the latest IT security, infrastructure, and technology insights. Expert tips, best practices, and industry trends.">
+  <meta property="og:title" content="Resources & Insights - SLS IT Solutions | Guides, Whitepapers & Industry Reports">
+  <meta property="og:description" content="Expert guides, whitepapers, and industry insights to help your business stay secure and ahead.">
   <meta property="og:url" content="https://www.slsitsolutions.com/blog.html">
   <meta property="og:site_name" content="SLS IT Solutions">
   <meta property="og:locale" content="en_IN">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="IT Blog & Insights - SLS IT Solutions | Technology Tips & Trends">
-  <meta name="twitter:description" content="Stay updated with the latest IT security, infrastructure, and technology insights. Expert tips, best practices, and industry trends.">
+  <meta name="twitter:title" content="Resources & Insights - SLS IT Solutions | Guides, Whitepapers & Industry Reports">
+  <meta name="twitter:description" content="Expert guides, whitepapers, and industry insights to help your business stay secure and ahead.">
 
-  <!-- Tailwind CSS -->
+  <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="assets/images/logo-hd.jpeg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link rel="stylesheet" href="assets/css/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    /* Insight card styles */
+    .insight-card {
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(15,23,42,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .insight-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(15,76,129,0.15);
+    }
+    .insight-card-image {
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      flex-shrink: 0;
+    }
+    .insight-card-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(15,23,42,0.15) 0%, rgba(15,23,42,0.45) 100%);
+    }
+    .floating-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      z-index: 2;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+    .insight-card-body {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .insight-card-body p {
+      flex: 1;
+    }
+
+    /* CTA image background */
+    .cta-image-bg {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+    }
+    .cta-image-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(15,23,42,0.88) 0%, rgba(10,52,96,0.82) 50%, rgba(15,76,129,0.78) 100%);
+    }
+    .cta-image-bg > * {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
 </head>
 <body>
 
@@ -46,7 +115,7 @@
           <a href="index.html" class="nav-link">Home</a>
           <a href="about.html" class="nav-link">About</a>
           <div class="relative dropdown">
-            <a href="services.html" class="nav-link  flex items-center gap-1">Services
+            <a href="services.html" class="nav-link flex items-center gap-1">Services
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </a>
             <div class="dropdown-menu">
@@ -56,7 +125,7 @@
               <a href="support.html" class="dropdown-item">IT Support & Consultancy</a>
             </div>
           </div>
-          <a href="blog.html" class="nav-link active">Blog</a>
+          <a href="resources.html" class="nav-link active">Resources</a>
           <a href="contact.html" class="nav-link">Contact</a>
           <a href="contact.html" class="btn-primary !py-2.5 !px-5">Get a Quote</a>
         </div>
@@ -82,7 +151,7 @@
     <a href="backup.html" class="pl-4 text-base opacity-75">Backup & DR</a>
     <a href="infrastructure.html" class="pl-4 text-base opacity-75">Infrastructure</a>
     <a href="support.html" class="pl-4 text-base opacity-75">IT Support</a>
-    <a href="blog.html">Blog</a>
+    <a href="resources.html">Resources</a>
     <a href="contact.html">Contact</a>
   </div>
 
@@ -90,286 +159,115 @@
   <!-- ============================================ -->
   <!-- PAGE HEADER -->
   <!-- ============================================ -->
-  <section class="page-header" style="background-image: linear-gradient(135deg, rgba(15,23,42,0.88), rgba(10,52,96,0.82), rgba(15,76,129,0.78)), url('assets/images/heroes/security-hero.jpg'); background-size: cover; background-position: center;">
+  <section class="page-header" style="background-image: linear-gradient(135deg, rgba(15,23,42,0.88) 0%, rgba(10,52,96,0.82) 50%, rgba(15,76,129,0.78) 100%), url('assets/images/sections/code-screen.jpg'); background-size: cover; background-position: center;">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <!-- Breadcrumb -->
       <div class="breadcrumb mb-6">
         <a href="index.html">Home</a>
         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-        <span class="text-white">Blog</span>
+        <span class="text-white">Resources</span>
       </div>
-      <h1 class="text-4xl sm:text-5xl font-bold text-white mb-4" style="font-family:'Poppins',sans-serif;">Insights & Resources</h1>
-      <p class="text-gray-300 text-lg max-w-2xl leading-relaxed">Stay updated with the latest cybersecurity threats, IT infrastructure trends, and compliance updates relevant to Indian businesses.</p>
+      <h1 class="text-4xl sm:text-5xl font-bold text-white mb-4" style="font-family:'Poppins',sans-serif;">Resources & Insights</h1>
+      <p class="text-gray-300 text-lg max-w-2xl leading-relaxed">Expert guides, whitepapers, and industry insights to help your business stay secure and ahead.</p>
     </div>
   </section>
 
 
   <!-- ============================================ -->
-  <!-- FEATURED POST -->
-  <!-- ============================================ -->
-  <section class="section-padding">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <a href="#" class="block blog-card fade-up group">
-        <div class="grid grid-cols-1 lg:grid-cols-2">
-          <!-- Image placeholder with gradient -->
-          <div class="h-64 lg:h-full min-h-[320px] relative overflow-hidden rounded-t-2xl lg:rounded-l-2xl lg:rounded-tr-none" style="background: linear-gradient(135deg, rgba(15,23,42,0.6), rgba(15,76,129,0.4)), url('assets/images/blog/cybersecurity-featured.jpg'); background-size:cover; background-position:center;">
-            <div class="absolute inset-0 flex items-center justify-center">
-              <svg class="w-24 h-24 text-white/10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="0.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
-              </svg>
-            </div>
-            <!-- Category badge -->
-            <div class="absolute top-6 left-6">
-              <span class="bg-red-500 text-white text-xs font-semibold px-3 py-1.5 rounded-full">Cybersecurity</span>
-            </div>
-            <!-- Featured label -->
-            <div class="absolute top-6 right-6">
-              <span class="bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full">Featured</span>
-            </div>
-          </div>
-          <!-- Content -->
-          <div class="p-8 lg:p-10 flex flex-col justify-center">
-            <span class="text-[#0f4c81] text-sm font-semibold uppercase tracking-wide mb-3">Cybersecurity</span>
-            <h2 class="text-2xl sm:text-3xl font-bold text-[#0f172a] mb-4 group-hover:text-[#0f4c81] transition-colors" style="font-family:'Poppins',sans-serif;">Top Cybersecurity Threats Facing Indian Businesses in 2026</h2>
-            <p class="text-gray-600 leading-relaxed mb-6">From UPI fraud to ransomware targeting Indian enterprises, learn about the most critical cybersecurity challenges and how to protect your organization.</p>
-            <div class="flex items-center justify-between flex-wrap gap-4">
-              <div class="flex items-center gap-4 text-sm text-gray-400">
-                <span class="flex items-center gap-1.5">
-                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
-                  April 5, 2026
-                </span>
-                <span class="flex items-center gap-1.5">
-                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                  8 min read
-                </span>
-              </div>
-              <span class="text-[#0f4c81] font-semibold text-sm group-hover:gap-3 inline-flex items-center gap-1.5 transition-all">
-                Read More
-                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-              </span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-  </section>
-
-
-  <!-- ============================================ -->
-  <!-- BLOG GRID -->
+  <!-- RESOURCES GRID -->
   <!-- ============================================ -->
   <section class="section-padding bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-14 fade-up">
-        <h2 class="section-title">Latest Articles</h2>
-        <p class="section-subtitle mx-auto">Expert insights on IT security, infrastructure, and technology</p>
+        <h2 class="section-title">Browse Our Resources</h2>
+        <p class="section-subtitle mx-auto">Download free guides, whitepapers, and reports crafted by our IT security experts</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <!-- Blog Card 1: Backup & Recovery -->
-        <a href="#" class="blog-card fade-up group">
-          <div class="blog-card-image" style="background: linear-gradient(135deg, rgba(5,150,105,0.5), rgba(16,185,129,0.3)), url('assets/images/blog/compliance.jpg'); background-size:cover; background-position:center;">
-            <div class="absolute inset-0 flex items-center justify-center">
-              <svg class="w-16 h-16 text-white/15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="0.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/>
-              </svg>
-            </div>
-            <div class="absolute top-4 left-4">
-              <span class="bg-emerald-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Compliance</span>
-            </div>
+        <!-- Card 1: Cybersecurity Best Practices -->
+        <div class="insight-card fade-up">
+          <div class="insight-card-image" style="background-image: url('assets/images/blog/cybersecurity-featured.jpg');">
+            <span class="floating-badge bg-[#0f4c81] text-white">Guide</span>
           </div>
-          <div class="p-6">
-            <h3 class="text-lg font-bold text-[#0f172a] mb-2 group-hover:text-[#0f4c81] transition-colors" style="font-family:'Poppins',sans-serif;">DPDP Act 2023: What Indian Businesses Need to Know About Data Protection</h3>
-            <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">India's Digital Personal Data Protection Act is reshaping how businesses handle data. Here's your complete compliance guide.</p>
-            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-              <div class="flex items-center gap-3 text-xs text-gray-400">
-                <span class="flex items-center gap-1">
-                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
-                  March 28, 2026
-                </span>
-                <span class="flex items-center gap-1">
-                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                  6 min read
-                </span>
-              </div>
-              <span class="text-[#0f4c81] font-semibold text-xs inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-                Read More
-                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-              </span>
-            </div>
+          <div class="insight-card-body">
+            <h3 class="text-lg font-bold text-gray-900 mb-2" style="font-family:'Poppins',sans-serif;">Cybersecurity Best Practices for Indian SMBs</h3>
+            <p class="text-sm text-gray-600 mb-4 leading-relaxed">A practical, step-by-step guide covering essential security controls, threat awareness, and policy frameworks tailored for small and medium businesses in India.</p>
+            <a href="#" class="text-[#0f4c81] font-semibold text-sm hover:text-[#1a6bb5] transition-colors inline-flex items-center gap-1">
+              Download <i class="fas fa-download text-xs"></i>
+            </a>
           </div>
-        </a>
+        </div>
 
-        <!-- Blog Card 2: Infrastructure -->
-        <a href="#" class="blog-card fade-up group">
-          <div class="blog-card-image" style="background: linear-gradient(135deg, #4338ca 0%, #6366f1 50%, #818cf8 100%);">
-            <div class="absolute inset-0 flex items-center justify-center">
-              <svg class="w-16 h-16 text-white/15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="0.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z"/>
-              </svg>
-            </div>
-            <div class="absolute top-4 left-4">
-              <span class="bg-indigo-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Infrastructure</span>
-            </div>
+        <!-- Card 2: DPDP Act Compliance -->
+        <div class="insight-card fade-up">
+          <div class="insight-card-image" style="background-image: url('assets/images/blog/compliance.jpg');">
+            <span class="floating-badge bg-[#0f4c81] text-white">Whitepaper</span>
           </div>
-          <div class="p-6">
-            <h3 class="text-lg font-bold text-[#0f172a] mb-2 group-hover:text-[#0f4c81] transition-colors" style="font-family:'Poppins',sans-serif;">Cloud vs On-Premise: Choosing the Right IT Infrastructure for Indian SMBs</h3>
-            <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">With India's cloud market growing rapidly, should your business migrate? We compare costs, benefits, and challenges for the Indian context.</p>
-            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-              <div class="flex items-center gap-3 text-xs text-gray-400">
-                <span class="flex items-center gap-1">
-                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
-                  March 15, 2026
-                </span>
-                <span class="flex items-center gap-1">
-                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                  7 min read
-                </span>
-              </div>
-              <span class="text-[#0f4c81] font-semibold text-xs inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-                Read More
-                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-              </span>
-            </div>
+          <div class="insight-card-body">
+            <h3 class="text-lg font-bold text-gray-900 mb-2" style="font-family:'Poppins',sans-serif;">DPDP Act 2023 Compliance Checklist</h3>
+            <p class="text-sm text-gray-600 mb-4 leading-relaxed">Everything your organization needs to know about India's Digital Personal Data Protection Act — with a ready-to-use compliance checklist and action plan.</p>
+            <a href="#" class="text-[#0f4c81] font-semibold text-sm hover:text-[#1a6bb5] transition-colors inline-flex items-center gap-1">
+              Download <i class="fas fa-download text-xs"></i>
+            </a>
           </div>
-        </a>
+        </div>
 
-        <!-- Blog Card 3: Security -->
-        <a href="#" class="blog-card fade-up group">
-          <div class="blog-card-image" style="background: linear-gradient(135deg, #0f4c81 0%, #1a6bb5 50%, #3b82f6 100%);">
-            <div class="absolute inset-0 flex items-center justify-center">
-              <svg class="w-16 h-16 text-white/15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="0.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/>
-              </svg>
-            </div>
-            <div class="absolute top-4 left-4">
-              <span class="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Security</span>
-            </div>
+        <!-- Card 3: ROI of Managed IT -->
+        <div class="insight-card fade-up">
+          <div class="insight-card-image" style="background-image: url('assets/images/blog/managed-it.jpg');">
+            <span class="floating-badge bg-[#0f4c81] text-white">Case Study</span>
           </div>
-          <div class="p-6">
-            <h3 class="text-lg font-bold text-[#0f172a] mb-2 group-hover:text-[#0f4c81] transition-colors" style="font-family:'Poppins',sans-serif;">Why Indian Manufacturers Need Zero Trust Security Architecture</h3>
-            <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">As India's manufacturing sector digitizes, zero trust security has become essential. Learn how to implement it effectively.</p>
-            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-              <div class="flex items-center gap-3 text-xs text-gray-400">
-                <span class="flex items-center gap-1">
-                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
-                  March 8, 2026
-                </span>
-                <span class="flex items-center gap-1">
-                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                  5 min read
-                </span>
-              </div>
-              <span class="text-[#0f4c81] font-semibold text-xs inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-                Read More
-                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-              </span>
-            </div>
+          <div class="insight-card-body">
+            <h3 class="text-lg font-bold text-gray-900 mb-2" style="font-family:'Poppins',sans-serif;">The ROI of Managed IT Services</h3>
+            <p class="text-sm text-gray-600 mb-4 leading-relaxed">Real-world data and case studies showing how Indian businesses reduced downtime, cut IT costs, and improved productivity by switching to managed IT services.</p>
+            <a href="#" class="text-[#0f4c81] font-semibold text-sm hover:text-[#1a6bb5] transition-colors inline-flex items-center gap-1">
+              Download <i class="fas fa-download text-xs"></i>
+            </a>
           </div>
-        </a>
+        </div>
 
-        <!-- Blog Card 4: IT Support -->
-        <a href="#" class="blog-card fade-up group">
-          <div class="blog-card-image" style="background: linear-gradient(135deg, rgba(217,119,6,0.5), rgba(251,191,36,0.3)), url('assets/images/blog/managed-it.jpg'); background-size:cover; background-position:center;">
-            <div class="absolute inset-0 flex items-center justify-center">
-              <svg class="w-16 h-16 text-white/15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="0.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/>
-              </svg>
-            </div>
-            <div class="absolute top-4 left-4">
-              <span class="bg-amber-500 text-white text-xs font-semibold px-3 py-1 rounded-full">IT Support</span>
-            </div>
+        <!-- Card 4: Digital Resilience -->
+        <div class="insight-card fade-up">
+          <div class="insight-card-image" style="background-image: url('assets/images/blog/digital-resilience.jpg');">
+            <span class="floating-badge bg-[#0f4c81] text-white">Industry Report</span>
           </div>
-          <div class="p-6">
-            <h3 class="text-lg font-bold text-[#0f172a] mb-2 group-hover:text-[#0f4c81] transition-colors" style="font-family:'Poppins',sans-serif;">5 Signs Your Indian Business Needs Managed IT Services</h3>
-            <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">Still managing IT in-house? Here are clear indicators that it's time to partner with a managed services provider.</p>
-            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-              <div class="flex items-center gap-3 text-xs text-gray-400">
-                <span class="flex items-center gap-1">
-                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
-                  February 22, 2026
-                </span>
-                <span class="flex items-center gap-1">
-                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                  4 min read
-                </span>
-              </div>
-              <span class="text-[#0f4c81] font-semibold text-xs inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-                Read More
-                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-              </span>
-            </div>
+          <div class="insight-card-body">
+            <h3 class="text-lg font-bold text-gray-900 mb-2" style="font-family:'Poppins',sans-serif;">Building Digital Resilience in 2026</h3>
+            <p class="text-sm text-gray-600 mb-4 leading-relaxed">Our annual industry report covering emerging IT threats, infrastructure trends, and strategic recommendations to keep Indian businesses resilient and competitive.</p>
+            <a href="#" class="text-[#0f4c81] font-semibold text-sm hover:text-[#1a6bb5] transition-colors inline-flex items-center gap-1">
+              Download <i class="fas fa-download text-xs"></i>
+            </a>
           </div>
-        </a>
+        </div>
 
-        <!-- Blog Card 5: Networking -->
-        <a href="#" class="blog-card fade-up group">
-          <div class="blog-card-image" style="background: linear-gradient(135deg, rgba(13,148,136,0.5), rgba(45,212,191,0.3)), url('assets/images/blog/digital-resilience.jpg'); background-size:cover; background-position:center;">
-            <div class="absolute inset-0 flex items-center justify-center">
-              <svg class="w-16 h-16 text-white/15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="0.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 19.5v-.75a7.5 7.5 0 00-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"/>
-              </svg>
-            </div>
-            <div class="absolute top-4 left-4">
-              <span class="bg-teal-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Digital India</span>
-            </div>
+        <!-- Card 5: Cloud Migration -->
+        <div class="insight-card fade-up">
+          <div class="insight-card-image" style="background-image: url('assets/images/blog/cloud-infra.jpg');">
+            <span class="floating-badge bg-[#0f4c81] text-white">Guide</span>
           </div>
-          <div class="p-6">
-            <h3 class="text-lg font-bold text-[#0f172a] mb-2 group-hover:text-[#0f4c81] transition-colors" style="font-family:'Poppins',sans-serif;">Building Digital Resilience: IT Strategy for India's Growing SMBs</h3>
-            <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">How small and medium businesses in India can build a robust digital foundation for sustainable growth.</p>
-            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-              <div class="flex items-center gap-3 text-xs text-gray-400">
-                <span class="flex items-center gap-1">
-                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
-                  February 10, 2026
-                </span>
-                <span class="flex items-center gap-1">
-                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                  6 min read
-                </span>
-              </div>
-              <span class="text-[#0f4c81] font-semibold text-xs inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-                Read More
-                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-              </span>
-            </div>
+          <div class="insight-card-body">
+            <h3 class="text-lg font-bold text-gray-900 mb-2" style="font-family:'Poppins',sans-serif;">Cloud Infrastructure Migration Guide</h3>
+            <p class="text-sm text-gray-600 mb-4 leading-relaxed">A comprehensive migration playbook covering planning, workload assessment, vendor selection, and post-migration optimization for businesses moving to the cloud.</p>
+            <a href="#" class="text-[#0f4c81] font-semibold text-sm hover:text-[#1a6bb5] transition-colors inline-flex items-center gap-1">
+              Download <i class="fas fa-download text-xs"></i>
+            </a>
           </div>
-        </a>
+        </div>
 
-        <!-- Blog Card 6: Web Development -->
-        <a href="#" class="blog-card fade-up group">
-          <div class="blog-card-image" style="background: linear-gradient(135deg, rgba(124,58,237,0.5), rgba(167,139,250,0.3)), url('assets/images/blog/threats-2026.jpg'); background-size:cover; background-position:center;">
-            <div class="absolute inset-0 flex items-center justify-center">
-              <svg class="w-16 h-16 text-white/15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="0.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/>
-              </svg>
-            </div>
-            <div class="absolute top-4 left-4">
-              <span class="bg-purple-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Cybersecurity</span>
-            </div>
+        <!-- Card 6: Zero Trust -->
+        <div class="insight-card fade-up">
+          <div class="insight-card-image" style="background-image: url('assets/images/blog/zero-trust.jpg');">
+            <span class="floating-badge bg-[#0f4c81] text-white">Whitepaper</span>
           </div>
-          <div class="p-6">
-            <h3 class="text-lg font-bold text-[#0f172a] mb-2 group-hover:text-[#0f4c81] transition-colors" style="font-family:'Poppins',sans-serif;">Top Cybersecurity Threats Facing Indian Businesses in 2026</h3>
-            <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">From UPI fraud to ransomware targeting Indian enterprises, learn about the most critical cybersecurity challenges and how to protect your organization.</p>
-            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-              <div class="flex items-center gap-3 text-xs text-gray-400">
-                <span class="flex items-center gap-1">
-                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
-                  January 30, 2026
-                </span>
-                <span class="flex items-center gap-1">
-                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                  5 min read
-                </span>
-              </div>
-              <span class="text-[#0f4c81] font-semibold text-xs inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-                Read More
-                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-              </span>
-            </div>
+          <div class="insight-card-body">
+            <h3 class="text-lg font-bold text-gray-900 mb-2" style="font-family:'Poppins',sans-serif;">Zero Trust Security Framework</h3>
+            <p class="text-sm text-gray-600 mb-4 leading-relaxed">Understand the principles of Zero Trust architecture and learn how to implement a "never trust, always verify" security model across your network and endpoints.</p>
+            <a href="#" class="text-[#0f4c81] font-semibold text-sm hover:text-[#1a6bb5] transition-colors inline-flex items-center gap-1">
+              Download <i class="fas fa-download text-xs"></i>
+            </a>
           </div>
-        </a>
+        </div>
 
       </div>
     </div>
@@ -377,25 +275,28 @@
 
 
   <!-- ============================================ -->
-  <!-- NEWSLETTER SECTION -->
+  <!-- NEWSLETTER CTA SECTION -->
   <!-- ============================================ -->
-  <section class="section-padding bg-white">
+  <section class="cta-image-bg py-16" style="background-image: url('assets/images/sections/abstract-tech.jpg');">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-2xl mx-auto text-center fade-up">
-        <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-6">
-          <svg class="w-8 h-8 text-[#0f4c81]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
-          </svg>
+        <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+          <i class="fas fa-envelope-open-text text-white text-2xl"></i>
         </div>
-        <h2 class="section-title">Subscribe to Our Newsletter</h2>
-        <p class="section-subtitle mx-auto">Get the latest IT security and compliance insights for Indian businesses delivered to your inbox.</p>
-        <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-          <input type="email" placeholder="Enter your email address" class="form-input flex-1" required>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4" style="font-family:'Poppins',sans-serif;">Stay Updated with IT Security Insights</h2>
+        <p class="text-gray-300 text-lg mb-8 leading-relaxed">Get the latest whitepapers, compliance updates, and cybersecurity news for Indian businesses delivered straight to your inbox.</p>
+        <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto" onsubmit="return false;">
+          <input
+            type="email"
+            placeholder="Enter your email address"
+            class="form-input flex-1"
+          >
           <button type="submit" class="btn-primary whitespace-nowrap justify-center">
             Subscribe
-            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
+            <i class="fas fa-paper-plane text-sm"></i>
           </button>
         </form>
+        <p class="text-gray-400 text-xs mt-4">No spam. Unsubscribe anytime. We respect your privacy.</p>
       </div>
     </div>
   </section>
@@ -454,7 +355,7 @@
             <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
             <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
             <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
-            <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+            <li><a href="blog.html" class="hover:text-white transition-colors">Resources</a></li>
             <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
           </ul>
         </div>
@@ -494,7 +395,6 @@
       </div>
     </div>
   </footer>
-
 
 
   <!-- JavaScript -->

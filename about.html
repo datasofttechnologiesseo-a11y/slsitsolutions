@@ -21,6 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link rel="stylesheet" href="assets/css/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -48,7 +49,7 @@
               <a href="support.html" class="dropdown-item">IT Support & Consultancy</a>
             </div>
           </div>
-          <a href="blog.html" class="nav-link ">Blog</a>
+          <a href="resources.html" class="nav-link ">Resources</a>
           <a href="contact.html" class="nav-link ">Contact</a>
           <a href="contact.html" class="btn-primary !py-2.5 !px-5">Get a Quote</a>
         </div>
@@ -74,7 +75,7 @@
     <a href="backup.html" class="pl-4 text-base opacity-75">Backup & DR</a>
     <a href="infrastructure.html" class="pl-4 text-base opacity-75">Infrastructure</a>
     <a href="support.html" class="pl-4 text-base opacity-75">IT Support</a>
-    <a href="blog.html">Blog</a>
+    <a href="resources.html">Resources</a>
     <a href="contact.html">Contact</a>
   </div>
 
@@ -94,12 +95,48 @@
     </div>
   </section>
 
-  <!-- ========== ABOUT SECTION ========== -->
-  <section class="section-padding">
+  <!-- ========== ABOUT SECTION (Split Layout) ========== -->
+  <section class="split-section">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-4xl mx-auto text-center fade-up">
-        <h2 class="section-title">Who We Are</h2>
-        <p class="text-lg text-gray-600 leading-relaxed">SLS IT Solutions is a leading IT infrastructure and managed services provider based in Faridabad, serving businesses across Delhi-NCR and pan-India. We specialize in delivering enterprise-grade cybersecurity, backup, infrastructure, and IT support solutions tailored for the unique challenges of the Indian market.</p>
+      <div class="split-content fade-up">
+        <div class="split-text">
+          <span class="split-label">Know Who We Are</span>
+          <h2 class="split-heading">About SLS IT Solutions Pvt. Ltd.</h2>
+          <p class="split-desc">SLS IT Solutions is a leading IT infrastructure and managed services provider based in Faridabad, serving businesses across Delhi-NCR and pan-India. We specialize in delivering enterprise-grade cybersecurity, backup, infrastructure, and IT support solutions tailored for the unique challenges of the Indian market.</p>
+          <p class="split-desc">Our story began as a forward-looking company providing infrastructure solutions in the 21st century, forming a strong presence and reputation in the marketplace for offering the best of Virtualization, Backup &amp; Recovery, Cloud Computing, and IT System Integration services cost-effectively.</p>
+          <div class="split-features">
+            <div class="split-feature-item"><i class="fas fa-check-circle"></i> 10+ Years in Business</div>
+            <div class="split-feature-item"><i class="fas fa-check-circle"></i> 200+ Clients Served</div>
+            <div class="split-feature-item"><i class="fas fa-check-circle"></i> Pan-India Operations</div>
+            <div class="split-feature-item"><i class="fas fa-check-circle"></i> Certified Professionals</div>
+          </div>
+        </div>
+        <div class="split-image-wrap">
+          <img src="assets/images/sections/office-team.jpg" alt="SLS IT Solutions Team">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== OUR EXPERTISE (Split Reverse) ========== -->
+  <section class="split-section split-reverse" style="background: #f8fafc;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="split-content fade-up">
+        <div class="split-text">
+          <span class="split-label">What We Do</span>
+          <h2 class="split-heading">Comprehensive IT Solutions Under One Roof</h2>
+          <p class="split-desc">From protecting your data against rising cyber threats to building future-ready IT infrastructure, we deliver enterprise-grade technology services that keep your business running 24/7. Our expertise spans across all critical IT domains.</p>
+          <div class="split-features">
+            <div class="split-feature-item"><i class="fas fa-shield-halved" style="color:#3b82f6;"></i> Cybersecurity Solutions</div>
+            <div class="split-feature-item"><i class="fas fa-cloud-arrow-up" style="color:#10b981;"></i> Backup &amp; Recovery</div>
+            <div class="split-feature-item"><i class="fas fa-server" style="color:#8b5cf6;"></i> Infrastructure Management</div>
+            <div class="split-feature-item"><i class="fas fa-headset" style="color:#f59e0b;"></i> 24/7 IT Support</div>
+          </div>
+          <a href="services.html" class="btn-primary">Explore Our Services <i class="fas fa-arrow-right text-sm"></i></a>
+        </div>
+        <div class="split-image-wrap">
+          <img src="assets/images/sections/server-room.jpg" alt="IT Infrastructure">
+        </div>
       </div>
     </div>
   </section>
@@ -111,9 +148,7 @@
         <!-- Mission -->
         <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm fade-up">
           <div class="icon-box bg-[#0f4c81]/10">
-            <svg class="w-8 h-8 text-[#0f4c81]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
+            <i class="fas fa-bullseye text-[#0f4c81] text-3xl"></i>
           </div>
           <h3 class="text-2xl font-bold mb-4" style="font-family:'Poppins',sans-serif;">Our Mission</h3>
           <p class="text-gray-600 leading-relaxed">To empower Indian businesses with dependable, secure, and cost-effective IT solutions that drive growth, ensure compliance, and build digital resilience.</p>
@@ -121,10 +156,7 @@
         <!-- Vision -->
         <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm fade-up">
           <div class="icon-box bg-[#00a86b]/10">
-            <svg class="w-8 h-8 text-[#00a86b]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-            </svg>
+            <i class="fas fa-lightbulb text-[#00a86b] text-3xl"></i>
           </div>
           <h3 class="text-2xl font-bold mb-4" style="font-family:'Poppins',sans-serif;">Our Vision</h3>
           <p class="text-gray-600 leading-relaxed">To become India's most trusted technology partner, known for delivering excellence in IT infrastructure, cybersecurity, and digital transformation services.</p>
@@ -134,7 +166,7 @@
   </section>
 
   <!-- ========== WHAT WE DO ========== -->
-  <section class="section-padding">
+  <section class="section-padding section-bg-image section-bg-light" style="background-image: url('assets/images/sections/abstract-tech.jpg');">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12 fade-up">
         <h2 class="section-title">What We Do</h2>
@@ -144,9 +176,7 @@
         <!-- Security -->
         <div class="service-card text-center fade-up">
           <div class="icon-box bg-red-50 mx-auto">
-            <svg class="w-8 h-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
+            <i class="fas fa-shield-halved text-red-500 text-3xl"></i>
           </div>
           <h4 class="text-lg font-bold mb-2">Security</h4>
           <p class="text-sm text-gray-500">Protect your business from cyber threats with advanced security solutions.</p>
@@ -154,9 +184,7 @@
         <!-- Backup -->
         <div class="service-card text-center fade-up">
           <div class="icon-box bg-blue-50 mx-auto">
-            <svg class="w-8 h-8 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
-            </svg>
+            <i class="fas fa-database text-blue-500 text-3xl"></i>
           </div>
           <h4 class="text-lg font-bold mb-2">Backup</h4>
           <p class="text-sm text-gray-500">Ensure business continuity with reliable backup and disaster recovery.</p>
@@ -164,9 +192,7 @@
         <!-- Infrastructure -->
         <div class="service-card text-center fade-up">
           <div class="icon-box bg-purple-50 mx-auto">
-            <svg class="w-8 h-8 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
-            </svg>
+            <i class="fas fa-server text-purple-500 text-3xl"></i>
           </div>
           <h4 class="text-lg font-bold mb-2">Infrastructure</h4>
           <p class="text-sm text-gray-500">Build and manage robust IT infrastructure for optimal performance.</p>
@@ -174,9 +200,7 @@
         <!-- Support -->
         <div class="service-card text-center fade-up">
           <div class="icon-box bg-green-50 mx-auto">
-            <svg class="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-            </svg>
+            <i class="fas fa-headset text-green-500 text-3xl"></i>
           </div>
           <h4 class="text-lg font-bold mb-2">Support</h4>
           <p class="text-sm text-gray-500">Get responsive and knowledgeable IT support when you need it most.</p>
@@ -239,9 +263,7 @@
             <div class="relative z-10 space-y-6">
               <div class="flex items-center gap-4">
                 <div class="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center">
-                  <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
+                  <i class="fas fa-handshake text-white text-2xl"></i>
                 </div>
                 <div>
                   <h4 class="text-lg font-bold">Trusted Partner</h4>
@@ -250,9 +272,7 @@
               </div>
               <div class="flex items-center gap-4">
                 <div class="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center">
-                  <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
+                  <i class="fas fa-clock text-white text-2xl"></i>
                 </div>
                 <div>
                   <h4 class="text-lg font-bold">Fast Response</h4>
@@ -261,9 +281,7 @@
               </div>
               <div class="flex items-center gap-4">
                 <div class="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center">
-                  <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
+                  <i class="fas fa-users text-white text-2xl"></i>
                 </div>
                 <div>
                   <h4 class="text-lg font-bold">Expert Team</h4>
@@ -287,49 +305,37 @@
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center fade-up">
           <div class="icon-box bg-blue-50 mx-auto">
-            <svg class="w-8 h-8 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-            </svg>
+            <i class="fas fa-gears text-blue-500 text-3xl"></i>
           </div>
           <h4 class="text-lg font-bold mb-2">Manufacturing</h4>
         </div>
         <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center fade-up">
           <div class="icon-box bg-red-50 mx-auto">
-            <svg class="w-8 h-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-            </svg>
+            <i class="fas fa-heart text-red-500 text-3xl"></i>
           </div>
           <h4 class="text-lg font-bold mb-2">Healthcare</h4>
         </div>
         <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center fade-up">
           <div class="icon-box bg-green-50 mx-auto">
-            <svg class="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-            </svg>
+            <i class="fas fa-award text-green-500 text-3xl"></i>
           </div>
           <h4 class="text-lg font-bold mb-2">Education</h4>
         </div>
         <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center fade-up">
           <div class="icon-box bg-purple-50 mx-auto">
-            <svg class="w-8 h-8 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
+            <i class="fas fa-lock text-purple-500 text-3xl"></i>
           </div>
           <h4 class="text-lg font-bold mb-2">BFSI</h4>
         </div>
         <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center fade-up">
           <div class="icon-box bg-amber-50 mx-auto">
-            <svg class="w-8 h-8 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" />
-            </svg>
+            <i class="fas fa-chart-line text-amber-500 text-3xl"></i>
           </div>
           <h4 class="text-lg font-bold mb-2">Retail</h4>
         </div>
         <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center fade-up">
           <div class="icon-box bg-indigo-50 mx-auto">
-            <svg class="w-8 h-8 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-            </svg>
+            <i class="fas fa-globe-asia text-indigo-500 text-3xl"></i>
           </div>
           <h4 class="text-lg font-bold mb-2">Government</h4>
         </div>
@@ -379,27 +385,27 @@
       </div>
       <div class="flex flex-wrap justify-center gap-4 md:gap-6 fade-up">
         <span class="inline-flex items-center px-6 py-3 rounded-full bg-white border border-gray-200 text-[#0f172a] font-semibold text-sm shadow-sm hover:shadow-md hover:border-[#0f4c81]/30 transition-all duration-300">
-          <svg class="w-5 h-5 mr-2 text-[#0f4c81]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" /></svg>
+          <i class="fas fa-microchip mr-2 text-[#0f4c81]"></i>
           IBM
         </span>
         <span class="inline-flex items-center px-6 py-3 rounded-full bg-white border border-gray-200 text-[#0f172a] font-semibold text-sm shadow-sm hover:shadow-md hover:border-[#0f4c81]/30 transition-all duration-300">
-          <svg class="w-5 h-5 mr-2 text-[#0f4c81]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+          <i class="fas fa-network-wired mr-2 text-[#0f4c81]"></i>
           Microsoft
         </span>
         <span class="inline-flex items-center px-6 py-3 rounded-full bg-white border border-gray-200 text-[#0f172a] font-semibold text-sm shadow-sm hover:shadow-md hover:border-[#0f4c81]/30 transition-all duration-300">
-          <svg class="w-5 h-5 mr-2 text-[#0f4c81]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" /></svg>
+          <i class="fas fa-server mr-2 text-[#0f4c81]"></i>
           Dell
         </span>
         <span class="inline-flex items-center px-6 py-3 rounded-full bg-white border border-gray-200 text-[#0f172a] font-semibold text-sm shadow-sm hover:shadow-md hover:border-[#0f4c81]/30 transition-all duration-300">
-          <svg class="w-5 h-5 mr-2 text-[#0f4c81]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+          <i class="fas fa-shield-halved mr-2 text-[#0f4c81]"></i>
           Sophos
         </span>
         <span class="inline-flex items-center px-6 py-3 rounded-full bg-white border border-gray-200 text-[#0f172a] font-semibold text-sm shadow-sm hover:shadow-md hover:border-[#0f4c81]/30 transition-all duration-300">
-          <svg class="w-5 h-5 mr-2 text-[#0f4c81]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" /></svg>
+          <i class="fas fa-database mr-2 text-[#0f4c81]"></i>
           Commvault
         </span>
         <span class="inline-flex items-center px-6 py-3 rounded-full bg-white border border-gray-200 text-[#0f172a] font-semibold text-sm shadow-sm hover:shadow-md hover:border-[#0f4c81]/30 transition-all duration-300">
-          <svg class="w-5 h-5 mr-2 text-[#0f4c81]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /></svg>
+          <i class="fas fa-cloud mr-2 text-[#0f4c81]"></i>
           AWS
         </span>
       </div>
@@ -457,7 +463,7 @@
             <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
             <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
             <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
-            <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+            <li><a href="resources.html" class="hover:text-white transition-colors">Resources</a></li>
             <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
           </ul>
         </div>
