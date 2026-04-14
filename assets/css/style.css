@@ -19,7 +19,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 120px;
 }
 
 body {
@@ -39,10 +39,104 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== LOGO ===== */
 .navbar .logo-img { height: 52.9px; } /* 50.4px + 5% more for header */
 
+/* ===== TOPBAR ===== */
+.topbar {
+  background: #0f172a;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.8125rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.topbar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.topbar-item:hover {
+  color: #ffffff;
+}
+
+.topbar-item i {
+  color: #00a86b;
+  font-size: 0.75rem;
+  width: 14px;
+  text-align: center;
+}
+
+.topbar-divider {
+  width: 1px;
+  height: 16px;
+  background: rgba(255,255,255,0.15);
+}
+
+.topbar-social {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.topbar-social a {
+  color: rgba(255,255,255,0.5);
+  font-size: 0.8125rem;
+  transition: color 0.2s ease;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.topbar-social a:hover {
+  color: #ffffff;
+  background: rgba(255,255,255,0.08);
+}
+
+/* Hide topbar on scroll */
+.topbar.hidden {
+  transform: translateY(-100%);
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    display: none;
+  }
+}
+
 /* ===== NAVBAR ===== */
 .navbar {
   position: fixed;
-  top: 0;
+  top: 40px;
   left: 0;
   right: 0;
   z-index: 1000;
@@ -54,6 +148,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar.scrolled {
+  top: 0;
   box-shadow: 0 4px 24px rgba(0,0,0,0.06);
   border-bottom-color: transparent;
 }
@@ -491,7 +586,7 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(135deg, rgba(15,23,42,0.88) 0%, rgba(10,52,96,0.82) 50%, rgba(15,76,129,0.78) 100%);
   background-size: cover;
   background-position: center;
-  padding: 8rem 0 4rem;
+  padding: 10rem 0 4rem;
   position: relative;
   overflow: hidden;
 }

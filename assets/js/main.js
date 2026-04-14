@@ -2,13 +2,16 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
-  // Navbar scroll effect
+  // Topbar + Navbar scroll effect
   const navbar = document.querySelector('.navbar');
+  const topbar = document.querySelector('.topbar');
   window.addEventListener('scroll', function() {
     if (window.scrollY > 50) {
       navbar.classList.add('scrolled');
+      if (topbar) topbar.classList.add('hidden');
     } else {
       navbar.classList.remove('scrolled');
+      if (topbar) topbar.classList.remove('hidden');
     }
   });
 
