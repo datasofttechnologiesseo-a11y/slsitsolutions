@@ -1,0 +1,50 @@
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center">
+          <img src="assets/images/logo-hd.jpeg" alt="SLS IT Solutions" class="h-12 logo-img">
+        </a>
+        <div class="nav-links hidden lg:flex items-center gap-8">
+          <a href="index.html" class="nav-link {{ACTIVE_HOME}}">Home</a>
+          <a href="about.html" class="nav-link {{ACTIVE_ABOUT}}">About</a>
+          <div class="relative dropdown">
+            <a href="services.html" class="nav-link {{ACTIVE_SERVICES}} flex items-center gap-1">Services
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="security.html" class="dropdown-item">Security Solutions</a>
+              <a href="backup.html" class="dropdown-item">Backup & Disaster Recovery</a>
+              <a href="infrastructure.html" class="dropdown-item">Infrastructure Solutions</a>
+              <a href="support.html" class="dropdown-item">IT Support & Consultancy</a>
+            </div>
+          </div>
+          <a href="blog.html" class="nav-link {{ACTIVE_BLOG}}">Blog</a>
+          <a href="contact.html" class="nav-link {{ACTIVE_CONTACT}}">Contact</a>
+          <a href="contact.html" class="btn-primary !py-2.5 !px-5">Get a Quote</a>
+        </div>
+        <div class="flex items-center gap-4 lg:hidden">
+          <a href="contact.html" class="btn-primary !py-2 !px-4 text-sm">Get a Quote</a>
+          <div class="hamburger" onclick="document.querySelector('.mobile-menu').classList.add('active');document.body.style.overflow='hidden';">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="absolute top-6 right-6 cursor-pointer" onclick="document.querySelector('.mobile-menu').classList.remove('active');document.body.style.overflow='';">
+      <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="security.html" class="pl-4 text-base opacity-75">Security Solutions</a>
+    <a href="backup.html" class="pl-4 text-base opacity-75">Backup & DR</a>
+    <a href="infrastructure.html" class="pl-4 text-base opacity-75">Infrastructure</a>
+    <a href="support.html" class="pl-4 text-base opacity-75">IT Support</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>

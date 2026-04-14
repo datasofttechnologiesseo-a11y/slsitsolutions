@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" fill="none">
+  <!-- Circle -->
+  <circle cx="40" cy="40" r="36" stroke="#009AE0" stroke-width="3" fill="none"/>
+  <!-- Shield -->
+  <path d="M40 10 C40 10 58 16 58 16 C58 16 60 40 58 50 C56 58 40 70 40 70 C40 70 24 58 22 50 C20 40 22 16 22 16 C22 16 40 10 40 10Z" fill="none" stroke="#009AE0" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- SLS text inside shield -->
+  <text x="40" y="46" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="20" fill="#009AE0" letter-spacing="1">SLS</text>
+  <!-- SLS IT Solutions text -->
+  <text x="90" y="38" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="28" fill="#009AE0" letter-spacing="1">SLS IT Solutions</text>
+  <!-- Service First tagline -->
+  <text x="92" y="58" font-family="Arial, sans-serif" font-weight="500" font-size="14" fill="#009AE0" letter-spacing="6">S e r v i c e   F i r s t</text>
+</svg>
