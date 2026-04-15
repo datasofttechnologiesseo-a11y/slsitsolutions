@@ -1,46 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SLS IT Solutions - IT Support, Cybersecurity & Infrastructure Services in India</title>
-  <meta name="description" content="SLS IT Solutions provides enterprise-grade cybersecurity, backup & disaster recovery, IT infrastructure, and 24/7 support services for Indian businesses. DPDP Act compliant. Trusted by 200+ companies across India.">
-  <meta name="keywords" content="IT solutions India, cybersecurity India, IT support Delhi NCR, DPDP Act compliance, backup disaster recovery, IT infrastructure India, managed IT services">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="SLS IT Solutions - Secure & Scalable IT for Indian Businesses">
-  <meta property="og:description" content="Enterprise-grade cybersecurity, backup, infrastructure & IT support services trusted by 200+ Indian businesses. Get a free consultation today.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.slsitsolutions.com/">
-  <meta property="og:image" content="https://www.slsitsolutions.com/assets/images/logo.png">
-  <meta property="og:site_name" content="SLS IT Solutions">
-  <meta property="og:locale" content="en_IN">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="SLS IT Solutions - IT Support, Cybersecurity & Infrastructure Services in India">
-  <meta name="twitter:description" content="Enterprise-grade cybersecurity, backup, infrastructure & IT support services trusted by 200+ Indian businesses.">
-
-  <!-- Canonical -->
-  <link rel="canonical" href="https://www.slsitsolutions.com/">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="assets/images/logo-hd.jpeg">
-
-  <!-- Preconnect for Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Tailwind CSS CDN -->
-  <link rel="stylesheet" href="assets/css/tailwind.min.css">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
-
-  <!-- JSON-LD Organization Schema -->
+<?php
+$page_title = 'SLS IT Solutions - IT Support, Cybersecurity & Infrastructure Services in India';
+$page_description = 'SLS IT Solutions provides enterprise-grade cybersecurity, backup & disaster recovery, IT infrastructure, and 24/7 support services for Indian businesses. DPDP Act compliant. Trusted by 200+ companies across India.';
+$page_keywords = 'IT solutions India, cybersecurity India, IT support Delhi NCR, DPDP Act compliance, backup disaster recovery, IT infrastructure India, managed IT services';
+$canonical = 'https://www.slsitsolutions.com/';
+$og_title = 'SLS IT Solutions - Secure & Scalable IT for Indian Businesses';
+$og_description = 'Enterprise-grade cybersecurity, backup, infrastructure & IT support services trusted by 200+ Indian businesses. Get a free consultation today.';
+$og_url = 'https://www.slsitsolutions.com/';
+$og_image = 'https://www.slsitsolutions.com/assets/images/logo.png';
+$twitter_title = 'SLS IT Solutions - IT Support, Cybersecurity & Infrastructure Services in India';
+$twitter_description = 'Enterprise-grade cybersecurity, backup, infrastructure & IT support services trusted by 200+ Indian businesses.';
+$extra_head = <<<'HTML'
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -70,92 +39,9 @@
     ]
   }
   </script>
-</head>
-<body>
-
-  <!-- Topbar -->
-  <div class="topbar">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="topbar-inner">
-        <div class="topbar-left">
-          <a href="tel:+918383800914" class="topbar-item">
-            <i class="fas fa-phone"></i> +91 8383800914
-          </a>
-          <div class="topbar-divider"></div>
-          <a href="mailto:sales@slsitsolutions.com" class="topbar-item">
-            <i class="fas fa-envelope"></i> sales@slsitsolutions.com
-          </a>
-          <div class="topbar-divider"></div>
-          <span class="topbar-item">
-            <i class="fas fa-location-dot"></i> Sector-2, Ballabgarh, Faridabad
-          </span>
-          <div class="topbar-divider"></div>
-          <span class="topbar-item">
-            <i class="fas fa-clock"></i> Mon-Sat, 9 AM - 6 PM
-          </span>
-        </div>
-        <div class="topbar-right">
-          <div class="topbar-social">
-            <a href="https://www.linkedin.com/company/slsitsolutions" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://x.com/slsitsolutions" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://www.facebook.com/slsitsolutions" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        <a href="index.html" class="flex items-center">
-          <img src="assets/images/logo-hd.jpeg" alt="SLS IT Solutions" class="h-12 logo-img">
-        </a>
-        <div class="nav-links hidden lg:flex items-center gap-8">
-          <a href="index.html" class="nav-link active">Home</a>
-          <a href="about.html" class="nav-link">About</a>
-          <div class="relative dropdown">
-            <a href="services.html" class="nav-link flex items-center gap-1">Services
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-            </a>
-            <div class="dropdown-menu">
-              <a href="security.html" class="dropdown-item">Security Solutions</a>
-              <a href="backup.html" class="dropdown-item">Backup & Disaster Recovery</a>
-              <a href="infrastructure.html" class="dropdown-item">Infrastructure Solutions</a>
-              <a href="support.html" class="dropdown-item">IT Support & Consultancy</a>
-            </div>
-          </div>
-          <a href="resources.html" class="nav-link">Resources</a>
-          <a href="contact.html" class="nav-link">Contact</a>
-          <a href="contact.html" class="btn-primary !py-2.5 !px-5">Get a Quote</a>
-        </div>
-        <div class="flex items-center gap-4 lg:hidden">
-          <a href="contact.html" class="btn-primary !py-2 !px-4 text-sm">Get a Quote</a>
-          <div class="hamburger">
-            <span></span><span></span><span></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Mobile Menu -->
-  <div class="mobile-menu">
-    <div class="mobile-close absolute top-6 right-6 cursor-pointer">
-      <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-    </div>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="security.html" class="pl-4 text-base opacity-75">Security Solutions</a>
-    <a href="backup.html" class="pl-4 text-base opacity-75">Backup & DR</a>
-    <a href="infrastructure.html" class="pl-4 text-base opacity-75">Infrastructure</a>
-    <a href="support.html" class="pl-4 text-base opacity-75">IT Support</a>
-    <a href="resources.html">Resources</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
+HTML;
+include 'includes/header.php';
+?>
 
   <!-- ===== HERO SECTION ===== -->
   <section class="hero-gradient hero-section" style="background-image: linear-gradient(135deg, rgba(15,23,42,0.88) 0%, rgba(15,76,129,0.82) 50%, rgba(10,52,96,0.80) 100%), url('assets/images/heroes/home-hero.jpg'); background-size: cover; background-position: center;">
@@ -181,8 +67,8 @@
             </p>
 
             <div class="flex flex-wrap gap-4" style="animation: fadeInUp 0.8s ease 0.8s both;">
-              <a href="contact.html" class="btn-primary">Get a Free Consultation &rarr;</a>
-              <a href="services.html" class="btn-secondary">Explore Our Services</a>
+              <a href="contact.php" class="btn-primary">Get a Free Consultation &rarr;</a>
+              <a href="services.php" class="btn-secondary">Explore Our Services</a>
             </div>
 
             <!-- Trust Indicators -->
@@ -377,7 +263,7 @@
             <div class="split-feature-item"><i class="fas fa-check-circle"></i> ISO Certified Processes</div>
             <div class="split-feature-item"><i class="fas fa-check-circle"></i> Pan-India Coverage</div>
           </div>
-          <a href="about.html" class="btn-primary">Learn More About Us <i class="fas fa-arrow-right text-sm"></i></a>
+          <a href="about.php" class="btn-primary">Learn More About Us <i class="fas fa-arrow-right text-sm"></i></a>
         </div>
         <div class="split-image-wrap">
           <img src="assets/images/sections/office-team.jpg" alt="SLS IT Solutions Team">
@@ -508,7 +394,7 @@
             </div>
             <h3 class="text-lg font-bold text-gray-900 mb-2" style="font-family:'Poppins',sans-serif;">Cybersecurity &amp; Threat Protection</h3>
             <p class="text-sm text-gray-600 mb-4 leading-relaxed">Safeguard your business from ransomware, phishing, and zero-day attacks with multi-layered security solutions.</p>
-            <a href="security.html" class="text-[#0f4c81] font-semibold text-sm hover:text-[#1a6bb5] transition-colors inline-flex items-center gap-1">
+            <a href="security.php" class="text-[#0f4c81] font-semibold text-sm hover:text-[#1a6bb5] transition-colors inline-flex items-center gap-1">
               Learn More <i class="fas fa-arrow-right text-xs"></i>
             </a>
           </div>
@@ -523,7 +409,7 @@
             </div>
             <h3 class="text-lg font-bold text-gray-900 mb-2" style="font-family:'Poppins',sans-serif;">Backup &amp; Disaster Recovery</h3>
             <p class="text-sm text-gray-600 mb-4 leading-relaxed">Never lose critical business data again. Automated backup and disaster recovery with 99.9% data availability.</p>
-            <a href="backup.html" class="text-emerald-600 font-semibold text-sm hover:text-emerald-700 transition-colors inline-flex items-center gap-1">
+            <a href="backup.php" class="text-emerald-600 font-semibold text-sm hover:text-emerald-700 transition-colors inline-flex items-center gap-1">
               Learn More <i class="fas fa-arrow-right text-xs"></i>
             </a>
           </div>
@@ -538,7 +424,7 @@
             </div>
             <h3 class="text-lg font-bold text-gray-900 mb-2" style="font-family:'Poppins',sans-serif;">IT Infrastructure &amp; Networking</h3>
             <p class="text-sm text-gray-600 mb-4 leading-relaxed">Build a robust IT backbone with server management, virtualization, and networking solutions.</p>
-            <a href="infrastructure.html" class="text-purple-600 font-semibold text-sm hover:text-purple-700 transition-colors inline-flex items-center gap-1">
+            <a href="infrastructure.php" class="text-purple-600 font-semibold text-sm hover:text-purple-700 transition-colors inline-flex items-center gap-1">
               Learn More <i class="fas fa-arrow-right text-xs"></i>
             </a>
           </div>
@@ -553,7 +439,7 @@
             </div>
             <h3 class="text-lg font-bold text-gray-900 mb-2" style="font-family:'Poppins',sans-serif;">IT Support &amp; Consultancy</h3>
             <p class="text-sm text-gray-600 mb-4 leading-relaxed">Get expert IT guidance and round-the-clock support from our experienced team in your timezone.</p>
-            <a href="support.html" class="text-amber-600 font-semibold text-sm hover:text-amber-700 transition-colors inline-flex items-center gap-1">
+            <a href="support.php" class="text-amber-600 font-semibold text-sm hover:text-amber-700 transition-colors inline-flex items-center gap-1">
               Learn More <i class="fas fa-arrow-right text-xs"></i>
             </a>
           </div>
@@ -703,7 +589,7 @@
         <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4" style="font-family:'Poppins',sans-serif;">Ready to Secure &amp; Scale Your IT Infrastructure?</h2>
         <p class="text-lg text-white max-w-2xl mx-auto mb-8">Join 200+ Indian businesses that trust SLS IT Solutions for their critical IT needs. Get a free consultation today.</p>
         <div class="flex flex-wrap justify-center gap-4">
-          <a href="contact.html" class="btn-primary" style="background:white;color:#0f4c81;">Get a Free Consultation &rarr;</a>
+          <a href="contact.php" class="btn-primary" style="background:white;color:#0f4c81;">Get a Free Consultation &rarr;</a>
           <a href="tel:+918383800914" class="btn-secondary">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
             Call Us Now
@@ -714,81 +600,6 @@
   </section>
 
 
-  <!-- Footer -->
-  <footer class="text-gray-400 pt-16 pb-8" style="background-color:#0f172a;">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
-        <!-- Column 1: Brand -->
-        <div>
-          <img src="assets/images/logo-hd.jpeg" alt="SLS IT Solutions - IT Support & Cybersecurity" class="h-12 mb-4 logo-img">
-          <p class="text-sm leading-relaxed mb-6">Reliable IT support, security, backup, and infrastructure solutions for modern businesses.</p>
-          <div class="flex gap-3">
-            <a href="https://www.linkedin.com/company/slsitsolutions" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors" aria-label="LinkedIn">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </a>
-            <a href="https://x.com/slsitsolutions" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors" aria-label="X / Twitter">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            </a>
-            <a href="https://www.facebook.com/slsitsolutions" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors" aria-label="Facebook">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            </a>
-          </div>
-        </div>
-        <!-- Column 2: Quick Links -->
-        <div>
-          <h4 class="text-white font-semibold text-lg mb-5" style="font-family:'Poppins',sans-serif;">Quick Links</h4>
-          <ul class="space-y-3">
-            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
-            <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
-            <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
-            <li><a href="resources.html" class="hover:text-white transition-colors">Resources</a></li>
-            <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
-          </ul>
-        </div>
-        <!-- Column 3: Our Services -->
-        <div>
-          <h4 class="text-white font-semibold text-lg mb-5" style="font-family:'Poppins',sans-serif;">Our Services</h4>
-          <ul class="space-y-3">
-            <li><a href="security.html" class="hover:text-white transition-colors">Security Solutions</a></li>
-            <li><a href="backup.html" class="hover:text-white transition-colors">Backup & DR</a></li>
-            <li><a href="infrastructure.html" class="hover:text-white transition-colors">Infrastructure</a></li>
-            <li><a href="support.html" class="hover:text-white transition-colors">IT Support</a></li>
-          </ul>
-        </div>
-        <!-- Column 4: Contact -->
-        <div>
-          <h4 class="text-white font-semibold text-lg mb-5" style="font-family:'Poppins',sans-serif;">Contact</h4>
-          <ul class="space-y-4">
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-[#00a86b] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-              <span class="text-gray-300">+91 8383800914</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-[#00a86b] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              <span class="text-gray-300">sales@slsitsolutions.com</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-[#00a86b] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-              <span class="text-gray-300">Arya Nagar, Sector-2, Ballabgarh, Faridabad, Haryana</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!-- Bottom Bar -->
-      <div class="footer-bottom-bar">
-        <p class="footer-copyright">&copy; 2026 <span>SLS IT Solutions</span>. All Rights Reserved.</p>
-        <p class="footer-credit">Designed &amp; Developed by <a href="http://datasofttechnologies.com/" target="_blank" rel="noopener">Datasoft Technologies <i class="fas fa-arrow-up-right-from-square"></i></a></p>
-      </div>
-    </div>
-  </footer>
+  
 
-  <!-- Scroll to Top -->
-  <button id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-24 right-6 w-11 h-11 bg-[#0f4c81] text-white rounded-full flex items-center justify-center shadow-lg hover:bg-[#1a6bb5] transition-all duration-300 z-50 opacity-0 invisible" aria-label="Scroll to top">
-    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
-  </button>
-
-
-  <!-- Main JS -->
-  <script src="assets/js/main.js"></script>
-</body>
-</html>
+<?php include 'includes/footer.php'; ?>
