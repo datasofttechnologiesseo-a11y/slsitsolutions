@@ -1366,32 +1366,144 @@ section { overflow-x: clip; }
 .split-section .split-image-wrap {
   flex: 1;
   position: relative;
+  min-width: 0;
+  padding: 14px 18px 18px 14px;
 }
 
 .split-section .split-image-wrap img {
   width: 100%;
-  height: 400px;
+  height: 420px;
   object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.12);
-  transition: transform 0.5s ease;
+  border-radius: 22px;
+  box-shadow: 0 25px 60px rgba(15, 76, 129, 0.20);
+  transition: transform 0.6s ease;
+  display: block;
+  position: relative;
+  z-index: 1;
 }
 
 .split-section .split-image-wrap:hover img {
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 
-/* Accent bar on image */
+/* Decorative dot pattern (top-right corner) */
 .split-section .split-image-wrap::before {
   content: '';
   position: absolute;
-  top: -12px;
-  right: -12px;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  border: 3px solid #0f4c81;
+  top: 0;
+  right: 0;
+  width: 90px;
+  height: 90px;
+  background-image: radial-gradient(circle, #0f4c81 1.6px, transparent 1.8px);
+  background-size: 14px 14px;
+  opacity: 0.3;
+  z-index: 0;
+  border-radius: 6px;
+}
+
+/* Gradient accent block (bottom-left) */
+.split-section .split-image-wrap::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60%;
+  height: 55%;
+  background: linear-gradient(135deg, rgba(15, 76, 129, 0.12) 0%, rgba(0, 168, 107, 0.12) 100%);
+  border-radius: 22px;
+  z-index: 0;
+}
+
+/* ===== Enhanced About image (about page - with badge) ===== */
+.about-image-wrap {
+  padding: 14px 28px 28px 0;
+}
+
+.about-image-wrap::before,
+.about-image-wrap::after {
+  display: none;
+}
+
+.about-image-inner {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 30px 70px rgba(15, 76, 129, 0.22);
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.about-image-inner img {
+  border-radius: 22px;
+  height: 460px;
+  transition: transform 0.8s ease;
+}
+
+.about-image-wrap:hover .about-image-inner img {
+  transform: scale(1.05);
+}
+
+.about-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(15, 76, 129, 0.22) 0%, rgba(15, 76, 129, 0) 45%, rgba(0, 168, 107, 0.18) 100%);
+  pointer-events: none;
+}
+
+/* Experience badge floating on image */
+.about-experience-badge {
+  position: absolute;
+  right: -10px;
+  bottom: 28px;
+  background: #ffffff;
+  padding: 1.25rem 1.5rem;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.18);
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  z-index: 2;
+  border-left: 4px solid #0f4c81;
+}
+
+.about-experience-badge .badge-number {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(135deg, #0f4c81 0%, #00a86b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-experience-badge .badge-number span {
+  font-size: 1.5rem;
+  color: #00a86b;
+  -webkit-text-fill-color: #00a86b;
+  margin-left: 2px;
+}
+
+.about-experience-badge .badge-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #0f172a;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Decorative dot pattern */
+.about-image-dots {
+  position: absolute;
+  top: -14px;
+  right: -10px;
+  width: 90px;
+  height: 90px;
+  background-image: radial-gradient(circle, #0f4c81 1.6px, transparent 1.8px);
+  background-size: 14px 14px;
+  opacity: 0.35;
   z-index: -1;
+  border-radius: 6px;
 }
 
 .split-section .split-label {
@@ -1462,7 +1574,12 @@ section { overflow-x: clip; }
 
 .split-section.split-reverse .split-image-wrap::before {
   right: auto;
-  left: -12px;
+  left: 0;
+}
+
+.split-section.split-reverse .split-image-wrap::after {
+  left: auto;
+  right: 0;
 }
 
 /* Dark variant */
@@ -1513,5 +1630,308 @@ section { overflow-x: clip; }
   }
   .split-section .split-image-wrap img {
     height: 280px;
+  }
+  .about-image-wrap {
+    padding: 14px 20px 20px 0;
+  }
+  .about-image-inner img {
+    height: 300px;
+  }
+  .about-experience-badge {
+    right: 6px;
+    bottom: 12px;
+    padding: 0.9rem 1.1rem;
+    gap: 0.6rem;
+  }
+  .about-experience-badge .badge-number {
+    font-size: 2rem;
+  }
+  .about-experience-badge .badge-text {
+    font-size: 0.72rem;
+  }
+  .about-image-dots {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Prevent horizontal overflow from decorative elements */
+.split-section {
+  overflow-x: clip;
+}
+
+/* ===== Contact Visual Card (replaces image on contact page) ===== */
+.contact-visual-wrap {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  padding: 14px 18px 18px 14px;
+}
+
+.contact-visual-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90px;
+  height: 90px;
+  background-image: radial-gradient(circle, #0f4c81 1.6px, transparent 1.8px);
+  background-size: 14px 14px;
+  opacity: 0.3;
+  z-index: 0;
+  border-radius: 6px;
+}
+
+.contact-visual-wrap::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60%;
+  height: 55%;
+  background: linear-gradient(135deg, rgba(15, 76, 129, 0.12) 0%, rgba(0, 168, 107, 0.12) 100%);
+  border-radius: 22px;
+  z-index: 0;
+}
+
+.contact-visual-card {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 22px;
+  padding: 2rem;
+  box-shadow: 0 25px 60px rgba(15, 76, 129, 0.18);
+  border: 1px solid rgba(15, 76, 129, 0.08);
+}
+
+.contact-visual-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.contact-visual-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #0f4c81 0%, #1a6bb5 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  box-shadow: 0 10px 25px rgba(15, 76, 129, 0.35);
+}
+
+.contact-visual-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #0f172a;
+}
+
+.contact-visual-sub {
+  font-size: 0.85rem;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.15rem;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  display: inline-block;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulseDot 1.8s infinite;
+}
+
+@keyframes pulseDot {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.contact-visual-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-visual-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #eef2f7;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-visual-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.cvi-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.cvi-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.cvi-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0f172a;
+  word-break: break-word;
+}
+
+.contact-visual-stats {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.contact-visual-stats > div {
+  text-align: center;
+  flex: 1;
+}
+
+.contact-visual-stats strong {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #0f4c81 0%, #00a86b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.contact-visual-stats span {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .contact-visual-card {
+    padding: 1.5rem;
+  }
+  .contact-visual-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  .contact-visual-stats strong {
+    font-size: 1.25rem;
+  }
+}
+
+/* ===== FOOTER BOTTOM BAR ===== */
+.footer-bottom-bar {
+  margin-top: 2.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-copyright {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 0.2px;
+}
+
+.footer-copyright span {
+  font-weight: 700;
+  background: linear-gradient(135deg, #60a5fa 0%, #00a86b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-credit {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 0.2px;
+}
+
+.footer-credit a {
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.3s ease;
+  background: linear-gradient(135deg, #60a5fa 0%, #00a86b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-credit a i {
+  font-size: 0.7rem;
+  -webkit-text-fill-color: #60a5fa;
+  color: #60a5fa;
+  transition: transform 0.3s ease;
+}
+
+.footer-credit a:hover i {
+  transform: translate(2px, -2px);
+}
+
+.footer-credit a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1.5px;
+  background: linear-gradient(90deg, #60a5fa, #00a86b);
+  transition: width 0.35s ease;
+}
+
+.footer-credit a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .footer-bottom-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
   }
 }
