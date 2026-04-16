@@ -4,8 +4,8 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
         <!-- Column 1: Brand -->
         <div>
-          <img src="assets/images/logo-hd.jpeg" alt="SLS IT Solutions - IT Support & Cybersecurity" class="h-12 mb-4 logo-img">
-          <p class="text-sm leading-relaxed mb-6">Reliable IT support, security, backup, and infrastructure solutions for modern businesses.</p>
+          <img src="Logo (1).png" alt="SLS IT Solutions - IT Support & Cybersecurity" class="h-12 mb-4">
+          <p class="text-sm leading-relaxed mb-6" style="color: #ffffff;">Reliable IT support, security, backup, and infrastructure solutions for modern businesses.</p>
           <div class="flex gap-3">
             <a href="https://www.linkedin.com/company/slsitsolutions" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors" aria-label="LinkedIn">
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>

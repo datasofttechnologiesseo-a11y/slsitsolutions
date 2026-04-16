@@ -314,37 +314,99 @@ include 'includes/header.php';
   </section>
 
   <!-- ========== TECHNOLOGY PARTNERS ========== -->
-  <section class="section-padding bg-[#f8fafc]">
+  <section class="section-padding" style="background:#f8fafc;">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12 fade-up">
         <h2 class="section-title">Technology Partners</h2>
         <p class="section-subtitle">We collaborate with industry-leading technology providers to deliver best-in-class solutions.</p>
       </div>
-      <div class="flex flex-wrap justify-center gap-4 md:gap-6 fade-up">
-        <span class="inline-flex items-center px-6 py-3 rounded-full bg-white border border-gray-200 text-[#0f172a] font-semibold text-sm shadow-sm hover:shadow-md hover:border-[#0f4c81]/30 transition-all duration-300">
-          <i class="fas fa-microchip mr-2 text-[#0f4c81]"></i>
-          IBM
-        </span>
-        <span class="inline-flex items-center px-6 py-3 rounded-full bg-white border border-gray-200 text-[#0f172a] font-semibold text-sm shadow-sm hover:shadow-md hover:border-[#0f4c81]/30 transition-all duration-300">
-          <i class="fas fa-network-wired mr-2 text-[#0f4c81]"></i>
-          Microsoft
-        </span>
-        <span class="inline-flex items-center px-6 py-3 rounded-full bg-white border border-gray-200 text-[#0f172a] font-semibold text-sm shadow-sm hover:shadow-md hover:border-[#0f4c81]/30 transition-all duration-300">
-          <i class="fas fa-server mr-2 text-[#0f4c81]"></i>
-          Dell
-        </span>
-        <span class="inline-flex items-center px-6 py-3 rounded-full bg-white border border-gray-200 text-[#0f172a] font-semibold text-sm shadow-sm hover:shadow-md hover:border-[#0f4c81]/30 transition-all duration-300">
-          <i class="fas fa-shield-halved mr-2 text-[#0f4c81]"></i>
-          Sophos
-        </span>
-        <span class="inline-flex items-center px-6 py-3 rounded-full bg-white border border-gray-200 text-[#0f172a] font-semibold text-sm shadow-sm hover:shadow-md hover:border-[#0f4c81]/30 transition-all duration-300">
-          <i class="fas fa-database mr-2 text-[#0f4c81]"></i>
-          Commvault
-        </span>
-        <span class="inline-flex items-center px-6 py-3 rounded-full bg-white border border-gray-200 text-[#0f172a] font-semibold text-sm shadow-sm hover:shadow-md hover:border-[#0f4c81]/30 transition-all duration-300">
-          <i class="fas fa-cloud mr-2 text-[#0f4c81]"></i>
-          AWS
-        </span>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 fade-up">
+
+        <!-- Category 1: Hardware -->
+        <div class="partner-category">
+          <div class="partner-cat-header">
+            <span class="partner-cat-icon" style="background:linear-gradient(135deg,#0f4c81,#1a6bb5);">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+            </span>
+            <span class="partner-cat-title">Hardware</span>
+          </div>
+          <div class="partner-logos-grid">
+            <div class="partner-logo-item">
+              <img src="assets/images/partners/hp.svg" alt="HP" loading="lazy">
+            </div>
+            <div class="partner-logo-item">
+              <img src="assets/images/partners/ibm.svg" alt="IBM" loading="lazy">
+            </div>
+            <div class="partner-logo-item">
+              <img src="assets/images/partners/lenovo.svg" alt="Lenovo" loading="lazy">
+            </div>
+            <div class="partner-logo-item">
+              <img src="assets/images/partners/dell.svg" alt="Dell" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Network Security -->
+        <div class="partner-category">
+          <div class="partner-cat-header">
+            <span class="partner-cat-icon" style="background:linear-gradient(135deg,#dc2626,#ef4444);">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </span>
+            <span class="partner-cat-title">Network Security</span>
+          </div>
+          <div class="partner-logos-grid partner-logos-3">
+            <div class="partner-logo-item">
+              <img src="assets/images/partners/fortinet.svg" alt="Fortinet" loading="lazy">
+            </div>
+            <div class="partner-logo-item">
+              <img src="assets/images/partners/sophos.svg" alt="Sophos" loading="lazy">
+            </div>
+            <div class="partner-logo-item partner-logo-full">
+              <img src="assets/images/partners/sonicwall.svg" alt="SonicWALL" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Endpoint Security -->
+        <div class="partner-category">
+          <div class="partner-cat-header">
+            <span class="partner-cat-icon" style="background:linear-gradient(135deg,#7c3aed,#a855f7);">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </span>
+            <span class="partner-cat-title">Endpoint Security</span>
+          </div>
+          <div class="partner-logos-grid partner-logos-3">
+            <div class="partner-logo-item">
+              <img src="assets/images/partners/crowdstrike.svg" alt="CrowdStrike" loading="lazy">
+            </div>
+            <div class="partner-logo-item">
+              <img src="assets/images/partners/seqrite.png" alt="Seqrite" loading="lazy">
+            </div>
+            <div class="partner-logo-item partner-logo-full">
+              <img src="assets/images/partners/escan.png" alt="eScan" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Cloud -->
+        <div class="partner-category">
+          <div class="partner-cat-header">
+            <span class="partner-cat-icon" style="background:linear-gradient(135deg,#00a86b,#00c97f);">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+            </span>
+            <span class="partner-cat-title">Cloud Platforms</span>
+          </div>
+          <div class="partner-logos-grid">
+            <div class="partner-logo-item">
+              <img src="assets/images/partners/aws.svg" alt="AWS" loading="lazy">
+            </div>
+            <div class="partner-logo-item">
+              <img src="assets/images/partners/google.svg" alt="Google Cloud" loading="lazy">
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>

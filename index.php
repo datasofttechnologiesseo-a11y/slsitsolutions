@@ -51,7 +51,7 @@ include 'includes/header.php';
       <div class="float-shape"></div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full" style="padding: 7rem 1rem 5rem;">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch">
           <!-- Left Content -->
           <div class="max-w-3xl z-10">
             <div class="hero-badge">
@@ -71,102 +71,84 @@ include 'includes/header.php';
               <a href="services.php" class="btn-secondary">Explore Our Services</a>
             </div>
 
-            <!-- Trust Indicators -->
-            <div class="flex flex-wrap gap-4" style="margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.12); animation: fadeInUp 0.8s ease 1s both;">
+            <!-- All 6 Status Cards - Compact 3x2 Grid -->
+            <div class="hero-trust-grid grid gap-2.5" style="grid-template-columns: repeat(3, 1fr); margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.12); animation: fadeInUp 0.8s ease 1s both;">
 
               <!-- DPDP Compliant -->
-              <div style="background:#ffffff; border-radius: 14px; padding: 0.875rem 1.5rem; display: flex; align-items: center; gap: 0.875rem; box-shadow: 0 4px 16px rgba(0,0,0,0.12); min-width: 180px;">
-                <div style="width:40px; height:40px; border-radius:10px; background: linear-gradient(135deg, #10b981, #059669); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-                  <svg style="width:22px; height:22px; color:#fff;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              <div style="background:#ffffff; border-radius: 12px; padding: 0.625rem 0.75rem; display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <div style="width:32px; height:32px; border-radius:8px; background: linear-gradient(135deg, #10b981, #059669); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                  <svg style="width:17px; height:17px; color:#fff;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
                 </div>
                 <div>
-                  <div style="font-size:0.7rem; font-weight:700; color:#64748b; text-transform:uppercase; letter-spacing:0.5px; line-height:1;">Certified</div>
-                  <div style="font-size:0.9375rem; font-weight:700; color:#0f172a; line-height:1.3; margin-top:2px;">DPDP Act Compliant</div>
+                  <div style="font-size:0.575rem; font-weight:700; color:#64748b; text-transform:uppercase; letter-spacing:0.4px; line-height:1;">Certified</div>
+                  <div style="font-size:0.775rem; font-weight:700; color:#0f172a; line-height:1.2; margin-top:1px;">DPDP Compliant</div>
                 </div>
               </div>
 
               <!-- ISO Certified -->
-              <div style="background:#ffffff; border-radius: 14px; padding: 0.875rem 1.5rem; display: flex; align-items: center; gap: 0.875rem; box-shadow: 0 4px 16px rgba(0,0,0,0.12); min-width: 180px;">
-                <div style="width:40px; height:40px; border-radius:10px; background: linear-gradient(135deg, #3b82f6, #2563eb); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-                  <svg style="width:22px; height:22px; color:#fff;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+              <div style="background:#ffffff; border-radius: 12px; padding: 0.625rem 0.75rem; display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <div style="width:32px; height:32px; border-radius:8px; background: linear-gradient(135deg, #3b82f6, #2563eb); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                  <svg style="width:17px; height:17px; color:#fff;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
                 </div>
                 <div>
-                  <div style="font-size:0.7rem; font-weight:700; color:#64748b; text-transform:uppercase; letter-spacing:0.5px; line-height:1;">Quality</div>
-                  <div style="font-size:0.9375rem; font-weight:700; color:#0f172a; line-height:1.3; margin-top:2px;">ISO Certified Processes</div>
+                  <div style="font-size:0.575rem; font-weight:700; color:#64748b; text-transform:uppercase; letter-spacing:0.4px; line-height:1;">Quality</div>
+                  <div style="font-size:0.775rem; font-weight:700; color:#0f172a; line-height:1.2; margin-top:1px;">ISO Certified</div>
                 </div>
               </div>
 
               <!-- 24/7 Support -->
-              <div style="background:#ffffff; border-radius: 14px; padding: 0.875rem 1.5rem; display: flex; align-items: center; gap: 0.875rem; box-shadow: 0 4px 16px rgba(0,0,0,0.12); min-width: 180px;">
-                <div style="width:40px; height:40px; border-radius:10px; background: linear-gradient(135deg, #f59e0b, #d97706); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-                  <svg style="width:22px; height:22px; color:#fff;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <div style="background:#ffffff; border-radius: 12px; padding: 0.625rem 0.75rem; display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <div style="width:32px; height:32px; border-radius:8px; background: linear-gradient(135deg, #f59e0b, #d97706); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                  <svg style="width:17px; height:17px; color:#fff;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                 </div>
                 <div>
-                  <div style="font-size:0.7rem; font-weight:700; color:#64748b; text-transform:uppercase; letter-spacing:0.5px; line-height:1;">Always On</div>
-                  <div style="font-size:0.9375rem; font-weight:700; color:#0f172a; line-height:1.3; margin-top:2px;">24/7 Support in IST</div>
+                  <div style="font-size:0.575rem; font-weight:700; color:#64748b; text-transform:uppercase; letter-spacing:0.4px; line-height:1;">Always On</div>
+                  <div style="font-size:0.775rem; font-weight:700; color:#0f172a; line-height:1.2; margin-top:1px;">24/7 Support</div>
+                </div>
+              </div>
+
+              <!-- Security Monitoring -->
+              <div style="background:#ffffff; border-radius: 12px; padding: 0.625rem 0.75rem; display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <div style="width:32px; height:32px; border-radius:8px; background: linear-gradient(135deg, #10b981, #047857); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                  <svg style="width:17px; height:17px; color:#fff;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                </div>
+                <div>
+                  <div style="font-size:0.575rem; font-weight:700; color:#64748b; text-transform:uppercase; letter-spacing:0.4px; line-height:1;">Security</div>
+                  <div style="font-size:0.775rem; font-weight:700; color:#0f172a; line-height:1.2; margin-top:1px;">Monitoring Active</div>
+                </div>
+              </div>
+
+              <!-- Backup Protected -->
+              <div style="background:#ffffff; border-radius: 12px; padding: 0.625rem 0.75rem; display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <div style="width:32px; height:32px; border-radius:8px; background: linear-gradient(135deg, #6366f1, #4f46e5); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                  <svg style="width:17px; height:17px; color:#fff;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
+                </div>
+                <div>
+                  <div style="font-size:0.575rem; font-weight:700; color:#64748b; text-transform:uppercase; letter-spacing:0.4px; line-height:1;">Backup</div>
+                  <div style="font-size:0.775rem; font-weight:700; color:#0f172a; line-height:1.2; margin-top:1px;">Protected</div>
+                </div>
+              </div>
+
+              <!-- Infrastructure Uptime -->
+              <div style="background:#ffffff; border-radius: 12px; padding: 0.625rem 0.75rem; display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <div style="width:32px; height:32px; border-radius:8px; background: linear-gradient(135deg, #ec4899, #db2777); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                  <svg style="width:17px; height:17px; color:#fff;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/></svg>
+                </div>
+                <div>
+                  <div style="font-size:0.575rem; font-weight:700; color:#64748b; text-transform:uppercase; letter-spacing:0.4px; line-height:1;">Infra</div>
+                  <div style="font-size:0.775rem; font-weight:700; color:#0f172a; line-height:1.2; margin-top:1px;">99.9% Uptime</div>
                 </div>
               </div>
 
             </div>
           </div>
 
-          <!-- Right Side: Animated Dashboard Cards (hidden on mobile) -->
-          <div class="hidden lg:flex flex-col gap-5 z-10" style="animation: fadeInUp 1s ease 0.6s both;">
-
-            <!-- Card 1: Security -->
-            <div class="bg-white rounded-2xl p-5 flex items-center gap-5 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-x-2 cursor-default" style="animation: slideInRight 0.8s ease 1s both, cardHover 4s ease-in-out 2s infinite;">
-              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center flex-shrink-0 shadow-lg shadow-emerald-200">
-                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-              </div>
-              <div class="flex-1">
-                <div class="text-[#0f4c81] text-xs uppercase tracking-widest mb-1 font-bold">Security Monitoring</div>
-                <div class="flex items-center justify-between">
-                  <div class="flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shadow-sm shadow-emerald-300"></span>
-                    <span class="text-[#0f172a] font-bold text-lg">Active</span>
-                  </div>
-                  <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full">Live</span>
-                </div>
-                <div class="mt-2 h-1.5 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full" style="width:95%; animation: progressBar 3s ease-in-out infinite alternate;"></div></div>
-              </div>
+          <!-- Right Side: Hero Image (hidden on mobile) -->
+          <div class="hidden lg:flex items-center z-10" style="animation: fadeInUp 1s ease 0.6s both; margin-top: 0.5rem; margin-left: 3.5rem;">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl w-full">
+              <img src="Home hero image.png" alt="SLS IT Solutions NOC & Service Desk Team" class="w-full h-full object-contain" loading="eager" style="object-position: center;">
+              <div style="position:absolute; inset:0; border-radius: 1.5rem; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);"></div>
             </div>
-
-            <!-- Card 2: Backup -->
-            <div class="bg-white rounded-2xl p-5 flex items-center gap-5 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-x-2 cursor-default" style="animation: slideInRight 0.8s ease 1.3s both, cardHover 4s ease-in-out 3s infinite;">
-              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-200">
-                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
-              </div>
-              <div class="flex-1">
-                <div class="text-[#0f4c81] text-xs uppercase tracking-widest mb-1 font-bold">Backup Status</div>
-                <div class="flex items-center justify-between">
-                  <div class="flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shadow-sm shadow-emerald-300"></span>
-                    <span class="text-[#0f172a] font-bold text-lg">Protected</span>
-                  </div>
-                  <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full">100%</span>
-                </div>
-                <div class="mt-2 h-1.5 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-blue-400 to-blue-500 rounded-full" style="width:100%; animation: progressBar 4s ease-in-out 1s infinite alternate;"></div></div>
-              </div>
-            </div>
-
-            <!-- Card 3: Infrastructure -->
-            <div class="bg-white rounded-2xl p-5 flex items-center gap-5 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-x-2 cursor-default" style="animation: slideInRight 0.8s ease 1.6s both, cardHover 4s ease-in-out 4s infinite;">
-              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-200">
-                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/></svg>
-              </div>
-              <div class="flex-1">
-                <div class="text-[#0f4c81] text-xs uppercase tracking-widest mb-1 font-bold">Infrastructure</div>
-                <div class="flex items-center justify-between">
-                  <div class="flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shadow-sm shadow-emerald-300"></span>
-                    <span class="text-[#0f172a] font-bold text-lg">99.9% Uptime</span>
-                  </div>
-                  <span class="text-xs font-semibold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full">Optimal</span>
-                </div>
-                <div class="mt-2 h-1.5 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-amber-400 to-orange-500 rounded-full" style="width:99.9%; animation: progressBar 5s ease-in-out 2s infinite alternate;"></div></div>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
@@ -174,73 +156,59 @@ include 'includes/header.php';
   </section>
 
 
-  <!-- ===== TRUST BAR ===== -->
-  <section class="bg-white py-10 border-b">
+  <!-- ===== OUR CUSTOMERS ===== -->
+  <section class="bg-white py-12 border-b">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p class="text-center text-sm font-semibold text-gray-400 uppercase tracking-widest mb-8">Trusted Technology Partners</p>
-      <div class="flex flex-wrap items-center justify-center gap-10 sm:gap-14 lg:gap-20">
-        <!-- IBM -->
-        <div class="flex items-center opacity-40 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0">
-          <svg class="h-10" viewBox="0 0 65 26" xmlns="http://www.w3.org/2000/svg">
-            <g fill="#1F70C1">
-              <!-- I -->
-              <rect x="0" y="0" width="14" height="3"/><rect x="3" y="5" width="8" height="3"/><rect x="3" y="10" width="8" height="3"/>
-              <rect x="3" y="15" width="8" height="3"/><rect x="0" y="20" width="14" height="3"/>
-              <!-- B -->
-              <rect x="18" y="0" width="20" height="3"/><rect x="21" y="5" width="8" height="3"/><rect x="34" y="5" width="4" height="3"/>
-              <rect x="18" y="10" width="20" height="3"/><rect x="21" y="15" width="8" height="3"/><rect x="35" y="15" width="4" height="3"/>
-              <rect x="18" y="20" width="21" height="3"/>
-              <!-- M -->
-              <rect x="43" y="0" width="5" height="3"/><rect x="57" y="0" width="5" height="3"/>
-              <rect x="43" y="5" width="7" height="3"/><rect x="55" y="5" width="7" height="3"/>
-              <rect x="46" y="10" width="5" height="3"/><rect x="54" y="10" width="5" height="3"/>
-              <rect x="43" y="15" width="4" height="3"/><rect x="58" y="15" width="4" height="3"/>
-              <rect x="43" y="20" width="4" height="3"/><rect x="58" y="20" width="4" height="3"/>
-            </g>
-          </svg>
-        </div>
-        <!-- Microsoft -->
-        <div class="flex items-center gap-3 opacity-40 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0">
-          <svg class="h-6" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="0" width="10" height="10" fill="#F25022"/>
-            <rect x="11" y="0" width="10" height="10" fill="#7FBA00"/>
-            <rect x="0" y="11" width="10" height="10" fill="#00A4EF"/>
-            <rect x="11" y="11" width="10" height="10" fill="#FFB900"/>
-          </svg>
-          <span class="text-lg font-semibold text-gray-500" style="font-family:'Segoe UI',sans-serif;">Microsoft</span>
-        </div>
-        <!-- Dell -->
-        <div class="flex items-center opacity-40 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0">
-          <svg class="h-10" viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="45" cy="45" r="43" fill="none" stroke="#007DB8" stroke-width="4"/>
-            <text x="45" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="32" fill="#007DB8">DELL</text>
-          </svg>
-        </div>
-        <!-- Sophos -->
-        <div class="flex items-center gap-2 opacity-40 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0">
-          <svg class="h-7" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="14" cy="14" r="13" fill="none" stroke="#203056" stroke-width="2.5"/>
-            <path d="M14 4 A10 10 0 0 1 24 14" fill="none" stroke="#0BC" stroke-width="2.5" stroke-linecap="round"/>
-          </svg>
-          <span class="text-lg font-bold text-gray-500" style="font-family:'Arial',sans-serif;letter-spacing:1px;color:#203056;">Sophos</span>
-        </div>
-        <!-- Commvault -->
-        <div class="flex items-center gap-2 opacity-40 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0">
-          <svg class="h-7" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="14,2 26,8 26,20 14,26 2,20 2,8" fill="none" stroke="#E7582A" stroke-width="2.5"/>
-            <polygon points="14,7 21,11 21,19 14,23 7,19 7,11" fill="#E7582A" opacity="0.2"/>
-          </svg>
-          <span class="text-lg font-bold text-gray-500" style="font-family:'Arial',sans-serif;color:#E7582A;">Commvault</span>
-        </div>
-        <!-- AWS -->
-        <div class="flex items-center opacity-40 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0">
-          <svg class="h-10" viewBox="0 0 120 48" xmlns="http://www.w3.org/2000/svg">
-            <text x="0" y="32" font-family="'Amazon Ember','Arial Black',sans-serif" font-weight="900" font-size="36" fill="#232F3E" letter-spacing="2">aws</text>
-            <path d="M6 38 Q60 50 114 38" fill="none" stroke="#FF9900" stroke-width="3.5" stroke-linecap="round"/>
-            <path d="M100 34 L114 38 L104 44" fill="none" stroke="#FF9900" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+      <div class="text-center mb-10 fade-up">
+        <h2 class="section-title">Our Customers</h2>
+        <p class="section-subtitle mx-auto" style="font-family:'Georgia',serif; font-size:1.25rem; font-style:italic; background: linear-gradient(135deg, #0f4c81, #00a86b); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-weight:600; letter-spacing:0.5px;">Turning IT challenges into solutions</p>
+      </div>
+
+      <!-- Marquee Slider -->
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <!-- Set 1 — ordered biggest to smallest by logo resolution -->
+          <div class="marquee-item"><img src="assets/images/clients/Rahul-Technic.png" alt="Rahul Technic"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Arcis-Design.png" alt="Arcis Design"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Keshoram.png" alt="Keshoram"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Space-Telelink.png" alt="Space Telelink"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Indogulf.jpg" alt="Indogulf Cropsciences"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Universal-Quartzz.jpg" alt="Universal Quartzz"></div>
+          <div class="marquee-item"><img src="assets/images/clients/CICO.png" alt="CICO Group"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Tilak-Stone.jpg" alt="Tilak Stone"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Enterslice.jpg" alt="Enterslice"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Akash-Group.jpg" alt="Akash Group"></div>
+          <div class="marquee-item"><img src="assets/images/clients/JQR.png" alt="JQR Sports"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Bhagwati.png" alt="Bhagwati Techno Fab"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Premier.jpg" alt="Premier Plastics"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Cornitos.png" alt="Cornitos"></div>
+          <div class="marquee-item"><img src="assets/images/clients/AVON.jpg" alt="Avon Industries"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Universal-Granimarmo.jpg" alt="Universal Granimarmo"></div>
+          <div class="marquee-item"><img src="assets/images/clients/ANH.png" alt="ANH"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Moeving.png" alt="Moeving"></div>
+
+          <!-- Set 2 (duplicate for seamless loop) -->
+          <div class="marquee-item"><img src="assets/images/clients/Rahul-Technic.png" alt="Rahul Technic"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Arcis-Design.png" alt="Arcis Design"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Keshoram.png" alt="Keshoram"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Space-Telelink.png" alt="Space Telelink"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Indogulf.jpg" alt="Indogulf Cropsciences"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Universal-Quartzz.jpg" alt="Universal Quartzz"></div>
+          <div class="marquee-item"><img src="assets/images/clients/CICO.png" alt="CICO Group"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Tilak-Stone.jpg" alt="Tilak Stone"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Enterslice.jpg" alt="Enterslice"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Akash-Group.jpg" alt="Akash Group"></div>
+          <div class="marquee-item"><img src="assets/images/clients/JQR.png" alt="JQR Sports"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Bhagwati.png" alt="Bhagwati Techno Fab"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Premier.jpg" alt="Premier Plastics"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Cornitos.png" alt="Cornitos"></div>
+          <div class="marquee-item"><img src="assets/images/clients/AVON.jpg" alt="Avon Industries"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Universal-Granimarmo.jpg" alt="Universal Granimarmo"></div>
+          <div class="marquee-item"><img src="assets/images/clients/ANH.png" alt="ANH"></div>
+          <div class="marquee-item"><img src="assets/images/clients/Moeving.png" alt="Moeving"></div>
         </div>
       </div>
+
       <!-- Green divider -->
       <div class="mt-10 mx-auto" style="width:80px;height:3px;background:linear-gradient(90deg,#00a86b,#0f4c81);border-radius:4px;"></div>
     </div>
@@ -552,6 +520,107 @@ include 'includes/header.php';
         </div>
       </div>
     </div>
+  </section>
+
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testi-section">
+    <!-- Decorative blobs -->
+    <div class="testi-blob testi-blob-1"></div>
+    <div class="testi-blob testi-blob-2"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-14 fade-up">
+        <span class="testi-badge">CLIENT VOICES</span>
+        <h2 class="testi-heading">What Our Clients Say</h2>
+        <p class="testi-sub">Trusted by businesses across India — real results, real relationships.</p>
+      </div>
+
+      <!-- Slider Wrapper -->
+      <div class="testi-slider-outer fade-up">
+        <div class="testi-slider" id="testiSlider">
+
+          <!-- Card 1 -->
+          <div class="testi-slide">
+            <div class="testi-card-inner">
+              <svg class="testi-icon" viewBox="0 0 40 32" fill="none"><path d="M0 32V19.2C0 8.533 6.4 2.133 19.2 0l2.4 4C15.467 5.6 12.267 8.8 11.2 14.4H16V32H0zm24 0V19.2C24 8.533 30.4 2.133 43.2 0l2.4 4C39.467 5.6 36.267 8.8 35.2 14.4H40V32H24z" fill="#00a86b" fill-opacity="0.25"/></svg>
+              <p class="testi-quote-text">SLS IT Solutions completely transformed our IT infrastructure. Their team handled our server migration seamlessly with zero downtime. We finally have the security and reliability our operations demand.</p>
+              <div class="testi-stars">★★★★★</div>
+              <div class="testi-author">
+                <div class="testi-av" style="background:linear-gradient(135deg,#0f4c81,#1a6bb5);">RK</div>
+                <div>
+                  <div class="testi-name">Rajesh Kumar</div>
+                  <div class="testi-co">Rahul Technic, Faridabad</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="testi-slide">
+            <div class="testi-card-inner">
+              <svg class="testi-icon" viewBox="0 0 40 32" fill="none"><path d="M0 32V19.2C0 8.533 6.4 2.133 19.2 0l2.4 4C15.467 5.6 12.267 8.8 11.2 14.4H16V32H0zm24 0V19.2C24 8.533 30.4 2.133 43.2 0l2.4 4C39.467 5.6 36.267 8.8 35.2 14.4H40V32H24z" fill="#00a86b" fill-opacity="0.25"/></svg>
+              <p class="testi-quote-text">We approached SLS IT Solutions for our data backup and disaster recovery setup. Their response time is exceptional and the solution they implemented gives us complete peace of mind. Highly recommend for any manufacturing business.</p>
+              <div class="testi-stars">★★★★★</div>
+              <div class="testi-author">
+                <div class="testi-av" style="background:linear-gradient(135deg,#00a86b,#00c97f);">AM</div>
+                <div>
+                  <div class="testi-name">Amit Mehta</div>
+                  <div class="testi-co">AVON Industrial Packaging, Delhi</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="testi-slide">
+            <div class="testi-card-inner">
+              <svg class="testi-icon" viewBox="0 0 40 32" fill="none"><path d="M0 32V19.2C0 8.533 6.4 2.133 19.2 0l2.4 4C15.467 5.6 12.267 8.8 11.2 14.4H16V32H0zm24 0V19.2C24 8.533 30.4 2.133 43.2 0l2.4 4C39.467 5.6 36.267 8.8 35.2 14.4H40V32H24z" fill="#00a86b" fill-opacity="0.25"/></svg>
+              <p class="testi-quote-text">As a fast-growing agri-business, our data security was a real concern. SLS IT Solutions provided enterprise-grade cybersecurity that actually fits our budget. Their team is always just a call away — that's rare in India.</p>
+              <div class="testi-stars">★★★★★</div>
+              <div class="testi-author">
+                <div class="testi-av" style="background:linear-gradient(135deg,#7c3aed,#a855f7);">PS</div>
+                <div>
+                  <div class="testi-name">Priya Sharma</div>
+                  <div class="testi-co">Indogulf Cropsciences, NCR</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.testi-slider -->
+
+        <!-- Dots -->
+        <div class="testi-dots" id="testiDots">
+          <button class="testi-dot active" onclick="goToSlide(0)"></button>
+          <button class="testi-dot" onclick="goToSlide(1)"></button>
+          <button class="testi-dot" onclick="goToSlide(2)"></button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    (function(){
+      var slider = document.getElementById('testiSlider');
+      var dots   = document.querySelectorAll('.testi-dot');
+      var current = 0;
+      var total   = 3;
+      var timer;
+
+      function goToSlide(n){
+        current = (n + total) % total;
+        slider.style.transform = 'translateX(-' + (current * 100 / total) + '%)';
+        dots.forEach(function(d,i){ d.classList.toggle('active', i === current); });
+      }
+      window.goToSlide = goToSlide;
+
+      function autoPlay(){
+        timer = setInterval(function(){ goToSlide(current + 1); }, 4000);
+      }
+      slider.addEventListener('mouseenter', function(){ clearInterval(timer); });
+      slider.addEventListener('mouseleave', autoPlay);
+      autoPlay();
+    })();
+    </script>
   </section>
 
 
