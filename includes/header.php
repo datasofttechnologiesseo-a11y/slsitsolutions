@@ -46,10 +46,53 @@ function nav_active($page) {
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
+  <!-- Preload LCP image -->
+  <link rel="preload" as="image" href="assets/images/logo-hd.jpeg">
+
+  <!-- Critical CSS inlined for fast first paint -->
+  <style>
+    :root{--primary:#0f4c81;--secondary:#00a86b;--accent:#f59e0b;--dark:#0f172a;--text:#1e293b;--text-light:#64748b;--bg:#ffffff;--bg-alt:#f8fafc;--radius:12px;--shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1)}
+    *,::after,::before{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--text);line-height:1.6;overflow-x:hidden}
+    .topbar{background:var(--dark);color:#94a3b8;font-size:.8rem;padding:8px 0;position:fixed;top:0;left:0;right:0;z-index:1000;transition:transform .3s ease}
+    .topbar.hidden{transform:translateY(-100%)}
+    .topbar-inner{display:flex;justify-content:space-between;align-items:center}
+    .topbar-left{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .topbar-item{color:#94a3b8;text-decoration:none;display:flex;align-items:center;gap:6px;transition:color .2s}
+    .topbar-item:hover{color:#fff}
+    .topbar-item i{color:var(--secondary);font-size:.75rem}
+    .topbar-divider{width:1px;height:16px;background:#334155}
+    .topbar-right{display:flex;align-items:center}
+    .topbar-social{display:flex;gap:12px}
+    .topbar-social a{color:#94a3b8;font-size:.85rem;transition:color .2s}
+    .topbar-social a:hover{color:#fff}
+    .navbar{position:fixed;top:40px;left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(20px);z-index:999;transition:all .3s ease;border-bottom:1px solid rgba(15,76,129,.06)}
+    .navbar.scrolled{top:0;box-shadow:0 4px 20px rgba(15,76,129,.08)}
+    .nav-links{font-family:'Poppins',sans-serif}
+    .nav-link{color:var(--text);font-weight:500;font-size:.95rem;padding:8px 4px;transition:color .2s;text-decoration:none;position:relative}
+    .nav-link:hover,.nav-link.active{color:var(--primary)}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:linear-gradient(135deg,var(--primary),#1a6bb5);color:#fff;font-weight:600;font-size:.95rem;border-radius:var(--radius);text-decoration:none;transition:all .3s ease;border:none;cursor:pointer;font-family:'Poppins',sans-serif}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(15,76,129,.3)}
+    .logo-img{height:3rem}
+    .max-w-7xl{max-width:80rem;margin-left:auto;margin-right:auto}
+    .hero-gradient{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+    .hero-gradient::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,#0a2540 0%,#0f4c81 40%,#1a6bb5 70%,#0f4c81 100%);z-index:0}
+    .hamburger{width:28px;height:20px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer}
+    .hamburger span{display:block;height:2px;background:var(--text);border-radius:2px;transition:all .3s}
+    @media(max-width:1023px){.topbar-left{gap:8px}.topbar-divider,.topbar-right{display:none}.topbar{font-size:.7rem}}
+  </style>
+
+  <!-- Non-critical CSS loaded async -->
   <link rel="stylesheet" href="assets/css/tailwind.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Google Fonts loaded async -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap"></noscript>
 
   <?= $extra_head ?>
 </head>
@@ -92,7 +135,7 @@ function nav_active($page) {
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <a href="index.php" class="flex items-center">
-          <img src="assets/images/logo-hd.jpeg" alt="SLS IT Solutions" class="h-12 logo-img">
+          <img src="assets/images/logo-hd.jpeg" alt="SLS IT Solutions" class="h-12 logo-img" width="216" height="53" fetchpriority="high">
         </a>
         <div class="nav-links hidden lg:flex items-center gap-8">
           <a href="index.php" class="nav-link <?= nav_active('index') ?>">Home</a>
@@ -243,3 +286,5 @@ function nav_active($page) {
     </div>
     <a href="contact.php">Contact</a>
   </div>
+
+  <main>

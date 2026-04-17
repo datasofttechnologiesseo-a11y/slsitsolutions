@@ -146,7 +146,7 @@ include 'includes/header.php';
           <!-- Right Side: Hero Image (hidden on mobile) -->
           <div class="hidden lg:flex items-center z-10" style="animation: fadeInUp 1s ease 0.6s both; margin-top: 0.5rem; margin-left: 3.5rem;">
             <div class="relative rounded-3xl overflow-hidden shadow-2xl w-full">
-              <img src="Home hero image.png" alt="SLS IT Solutions NOC & Service Desk Team" class="w-full h-full object-contain" loading="eager" style="object-position: center;">
+              <img src="Home hero image.png" alt="SLS IT Solutions NOC & Service Desk Team" class="w-full h-full object-contain" loading="eager" width="548" height="505" style="object-position: center;">
               <div style="position:absolute; inset:0; border-radius: 1.5rem; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);"></div>
             </div>
           </div>
