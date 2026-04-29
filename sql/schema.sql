@@ -1,5 +1,7 @@
 -- SLS IT Solutions — Admin / Enquiries / Testimonials schema
 -- Run on database: slsdb
+-- Run order: 1. schema.sql  2. blog.sql
+-- (Or run install.sql which sources both in the correct order.)
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;

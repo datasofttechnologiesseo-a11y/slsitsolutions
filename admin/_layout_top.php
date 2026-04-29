@@ -26,6 +26,7 @@ $pageMap = [
     'categories.php'       => 'Categories',
     'category-form.php'    => isset($_GET['id']) ? 'Edit Category' : 'Add Category',
     'tags.php'             => 'Tags',
+    'settings.php'         => 'System Settings',
 ];
 $breadHere = $pageMap[$current] ?? ($pageTitle ?? 'Admin');
 ?><!doctype html>
@@ -45,15 +46,9 @@ $breadHere = $pageMap[$current] ?? ($pageTitle ?? 'Admin');
 <div class="app">
 
   <aside class="sidebar" id="sidebar">
-    <div class="brand">
-      <div class="brand-logo">
-        <img src="../assets/images/logo.png" alt="SLS IT Solutions">
-      </div>
-      <div class="brand-text">
-        <div class="t1">SLS IT Solutions</div>
-        <div class="t2">Admin Panel</div>
-      </div>
-    </div>
+    <a href="dashboard.php" class="brand">
+      <img src="../assets/images/logo.png" alt="SLS IT Solutions" class="brand-logo-img">
+    </a>
 
     <div class="nav-label">Main</div>
     <nav>
@@ -81,6 +76,13 @@ $breadHere = $pageMap[$current] ?? ($pageTitle ?? 'Admin');
       </a>
       <a href="tags.php" class="<?= $current==='tags.php' ? 'active':'' ?>">
         <i class="fa-solid fa-tags"></i><span>Tags</span>
+      </a>
+    </nav>
+
+    <div class="nav-label">System</div>
+    <nav>
+      <a href="settings.php" class="<?= $current==='settings.php' ? 'active':'' ?>">
+        <i class="fa-solid fa-gear"></i><span>Settings</span>
       </a>
     </nav>
 
