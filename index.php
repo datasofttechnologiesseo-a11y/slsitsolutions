@@ -1,4 +1,22 @@
 ﻿<?php
+require_once __DIR__ . '/includes/db.php';
+require_once __DIR__ . '/includes/testimonial_helpers.php';
+require_once __DIR__ . '/includes/blog.php';
+
+try {
+    $testimonials = db()->query(
+        'SELECT * FROM testimonials WHERE is_active = 1 ORDER BY sort_order ASC, id DESC'
+    )->fetchAll();
+} catch (\Throwable $e) {
+    $testimonials = [];
+}
+
+try {
+    $latestBlogs = get_recent_blogs(3);
+} catch (\Throwable $e) {
+    $latestBlogs = [];
+}
+
 $page_title = 'SLS IT Solutions | Managed IT Services, Cybersecurity & Support in Faridabad, Delhi NCR';
 $page_description = 'SLS IT Solutions delivers managed IT services, cybersecurity, backup & disaster recovery, and 24/7 support for businesses in Faridabad, Delhi NCR & across India. DPDP Act compliant. 200+ clients.';
 $page_keywords = 'IT company Faridabad, managed IT services Delhi NCR, cybersecurity Faridabad, IT support India, backup disaster recovery, IT infrastructure services, DPDP Act compliance, IT consultancy Delhi, business IT solutions India';
@@ -635,75 +653,60 @@ include 'includes/header.php';
       </div>
 
       <!-- Slider Wrapper -->
+      <?php if (!empty($testimonials)): ?>
       <div class="testi-slider-outer fade-up">
         <div class="testi-slider" id="testiSlider">
 
-          <!-- Card 1 -->
+          <?php foreach ($testimonials as $t):
+            $initials = $t['initials'] ?: testimonial_initials($t['client_name']);
+            $grad     = testimonial_gradient($t['avatar_color']);
+            $stars    = str_repeat('★', max(1, min(5, (int)$t['rating'])));
+          ?>
           <div class="testi-slide">
             <div class="testi-card-inner">
               <svg class="testi-icon" viewBox="0 0 40 32" fill="none"><path d="M0 32V19.2C0 8.533 6.4 2.133 19.2 0l2.4 4C15.467 5.6 12.267 8.8 11.2 14.4H16V32H0zm24 0V19.2C24 8.533 30.4 2.133 43.2 0l2.4 4C39.467 5.6 36.267 8.8 35.2 14.4H40V32H24z" fill="#00a86b" fill-opacity="0.25"/></svg>
-              <p class="testi-quote-text">SLS IT Solutions completely transformed our IT infrastructure. Their team handled our server migration seamlessly with zero downtime. We finally have the security and reliability our operations demand.</p>
-              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote-text"><?= htmlspecialchars($t['quote']) ?></p>
+              <div class="testi-stars"><?= $stars ?></div>
               <div class="testi-author">
-                <div class="testi-av" style="background:linear-gradient(135deg,#0f4c81,#1a6bb5);">RK</div>
+                <div class="testi-av" style="background:<?= htmlspecialchars($grad) ?>;"><?= htmlspecialchars($initials) ?></div>
                 <div>
-                  <div class="testi-name">Rajesh Kumar</div>
-                  <div class="testi-co">Rahul Technic, Faridabad</div>
+                  <div class="testi-name"><?= htmlspecialchars($t['client_name']) ?></div>
+                  <?php if (!empty($t['company'])): ?>
+                    <div class="testi-co"><?= htmlspecialchars($t['company']) ?></div>
+                  <?php endif; ?>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- Card 2 -->
-          <div class="testi-slide">
-            <div class="testi-card-inner">
-              <svg class="testi-icon" viewBox="0 0 40 32" fill="none"><path d="M0 32V19.2C0 8.533 6.4 2.133 19.2 0l2.4 4C15.467 5.6 12.267 8.8 11.2 14.4H16V32H0zm24 0V19.2C24 8.533 30.4 2.133 43.2 0l2.4 4C39.467 5.6 36.267 8.8 35.2 14.4H40V32H24z" fill="#00a86b" fill-opacity="0.25"/></svg>
-              <p class="testi-quote-text">We approached SLS IT Solutions for our data backup and disaster recovery setup. Their response time is exceptional and the solution they implemented gives us complete peace of mind. Highly recommend for any manufacturing business.</p>
-              <div class="testi-stars">★★★★★</div>
-              <div class="testi-author">
-                <div class="testi-av" style="background:linear-gradient(135deg,#00a86b,#00c97f);">AM</div>
-                <div>
-                  <div class="testi-name">Amit Mehta</div>
-                  <div class="testi-co">AVON Industrial Packaging, Delhi</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="testi-slide">
-            <div class="testi-card-inner">
-              <svg class="testi-icon" viewBox="0 0 40 32" fill="none"><path d="M0 32V19.2C0 8.533 6.4 2.133 19.2 0l2.4 4C15.467 5.6 12.267 8.8 11.2 14.4H16V32H0zm24 0V19.2C24 8.533 30.4 2.133 43.2 0l2.4 4C39.467 5.6 36.267 8.8 35.2 14.4H40V32H24z" fill="#00a86b" fill-opacity="0.25"/></svg>
-              <p class="testi-quote-text">As a fast-growing agri-business, our data security was a real concern. SLS IT Solutions provided enterprise-grade cybersecurity that actually fits our budget. Their team is always just a call away — that's rare in India.</p>
-              <div class="testi-stars">★★★★★</div>
-              <div class="testi-author">
-                <div class="testi-av" style="background:linear-gradient(135deg,#7c3aed,#a855f7);">PS</div>
-                <div>
-                  <div class="testi-name">Priya Sharma</div>
-                  <div class="testi-co">Indogulf Cropsciences, NCR</div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <?php endforeach; ?>
 
         </div><!-- /.testi-slider -->
 
         <!-- Dots -->
         <div class="testi-dots" id="testiDots">
-          <button class="testi-dot active" onclick="goToSlide(0)"></button>
-          <button class="testi-dot" onclick="goToSlide(1)"></button>
-          <button class="testi-dot" onclick="goToSlide(2)"></button>
+          <?php foreach ($testimonials as $i => $t): ?>
+            <button class="testi-dot <?= $i===0?'active':'' ?>" onclick="goToSlide(<?= $i ?>)"></button>
+          <?php endforeach; ?>
         </div>
       </div>
+      <?php endif; ?>
     </div>
 
     <script>
     (function(){
       var slider = document.getElementById('testiSlider');
+      if (!slider) return;
+      var slides = slider.querySelectorAll('.testi-slide');
       var dots   = document.querySelectorAll('.testi-dot');
+      var total  = slides.length;
       var current = 0;
-      var total   = 3;
       var timer;
+
+      if (total === 0) return;
+
+      // Make slider responsive to dynamic slide count
+      slider.style.width = (total * 100) + '%';
+      slides.forEach(function(s){ s.style.width = (100 / total) + '%'; });
 
       function goToSlide(n){
         current = (n + total) % total;
@@ -712,16 +715,73 @@ include 'includes/header.php';
       }
       window.goToSlide = goToSlide;
 
-      function autoPlay(){
-        timer = setInterval(function(){ goToSlide(current + 1); }, 4000);
+      if (total > 1) {
+        function autoPlay(){
+          timer = setInterval(function(){ goToSlide(current + 1); }, 4000);
+        }
+        slider.addEventListener('mouseenter', function(){ clearInterval(timer); });
+        slider.addEventListener('mouseleave', autoPlay);
+        autoPlay();
       }
-      slider.addEventListener('mouseenter', function(){ clearInterval(timer); });
-      slider.addEventListener('mouseleave', autoPlay);
-      autoPlay();
     })();
     </script>
   </section>
 
+
+  <!-- ===== LATEST FROM BLOG ===== -->
+  <?php if (!empty($latestBlogs)): ?>
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14 fade-up">
+        <span class="inline-block text-xs font-semibold uppercase tracking-widest text-emerald-600 bg-emerald-50 px-4 py-1.5 rounded-full mb-4">From Our Blog</span>
+        <h2 class="text-3xl md:text-4xl font-bold mb-3" style="font-family:'Poppins',sans-serif;color:#0f172a;">Latest Insights &amp; Articles</h2>
+        <p class="text-gray-500 max-w-2xl mx-auto">Practical guidance on cybersecurity, IT infrastructure, and digital transformation for Indian businesses.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <?php foreach ($latestBlogs as $b):
+          $bcats = get_categories_for_blog((int)$b['id']);
+        ?>
+          <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition fade-up flex flex-col">
+            <a href="blog-detail.php?slug=<?= urlencode($b['slug']) ?>" class="block">
+              <?php if (!empty($b['cover_image'])): ?>
+                <img src="<?= htmlspecialchars($b['cover_image']) ?>" alt="<?= htmlspecialchars($b['title']) ?>" class="w-full h-52 object-cover">
+              <?php else: ?>
+                <div class="w-full h-52 bg-gradient-to-br from-blue-700 to-blue-900 flex items-center justify-center relative">
+                  <i class="fas fa-newspaper text-white text-5xl opacity-30"></i>
+                </div>
+              <?php endif; ?>
+            </a>
+            <div class="p-6 flex-1 flex flex-col">
+              <?php if ($bcats): ?>
+                <div class="flex flex-wrap gap-2 mb-3">
+                  <?php foreach (array_slice($bcats, 0, 1) as $c): ?>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-blue-700 bg-blue-50 px-3 py-1 rounded-full"><?= htmlspecialchars($c['name']) ?></span>
+                  <?php endforeach; ?>
+                </div>
+              <?php endif; ?>
+              <h3 class="text-lg font-bold text-gray-900 mb-3 leading-snug" style="font-family:'Poppins',sans-serif;">
+                <a href="blog-detail.php?slug=<?= urlencode($b['slug']) ?>" class="hover:text-blue-700"><?= htmlspecialchars($b['title']) ?></a>
+              </h3>
+              <p class="text-sm text-gray-600 leading-relaxed mb-5 flex-1"><?= htmlspecialchars(blog_excerpt($b, 22)) ?></p>
+              <div class="flex items-center justify-between text-xs text-gray-500 pt-4 border-t border-gray-100">
+                <span><i class="far fa-calendar mr-1"></i> <?= htmlspecialchars(date('d M Y', strtotime($b['published_at']))) ?></span>
+                <a href="blog-detail.php?slug=<?= urlencode($b['slug']) ?>" class="text-blue-700 font-semibold hover:underline">Read more →</a>
+              </div>
+            </div>
+          </article>
+        <?php endforeach; ?>
+      </div>
+
+      <div class="text-center fade-up">
+        <a href="blog.php" class="btn-primary inline-flex items-center gap-2">
+          View All Posts
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  <?php endif; ?>
 
   <!-- ===== STATS SECTION ===== -->
   <section class="py-12 stats-parallax" style="background-image: url('assets/images/sections/data-center.jpg');">

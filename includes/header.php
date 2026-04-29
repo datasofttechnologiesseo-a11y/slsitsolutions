@@ -303,6 +303,7 @@ function nav_active($page) {
               </a>
             </div>
           </div>
+          <a href="blog.php" class="nav-link <?= in_array($current_page, ['blog','blog-detail']) ? 'active' : '' ?>">Blog</a>
           <a href="contact.php" class="nav-link <?= nav_active('contact') ?>">Contact</a>
           <a href="contact.php" class="btn-primary !py-2.5 !px-5">Get a Quote</a>
         </div>
@@ -342,6 +343,7 @@ function nav_active($page) {
         <a href="https://datasofttechnologies.com/services/ai-development" target="_blank" rel="noopener">AI Development ↗</a>
       </div>
     </div>
+    <a href="blog.php">Blog</a>
     <a href="contact.php">Contact</a>
   </div>
 

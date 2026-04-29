@@ -150,7 +150,13 @@ include 'includes/header.php';
             </div>
             <p class="text-gray-500 mb-8 ml-[52px]">We typically respond within 2-4 business hours.</p>
 
-            <form id="contactForm" class="space-y-5">
+            <div id="contactFormStatus" class="hidden mb-4 p-4 rounded-xl text-sm"></div>
+            <form id="contactForm" class="space-y-5" novalidate>
+              <!-- Honeypot — must stay empty -->
+              <div style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
+                <label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+                <label>Email<input type="text" name="hp_email" tabindex="-1" autocomplete="off"></label>
+              </div>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
                   <label for="name" class="block text-sm font-semibold text-gray-700 mb-1.5">Full Name <span class="text-red-500">*</span></label>
@@ -318,5 +324,52 @@ include 'includes/header.php';
   </section>
 
   
+
+<script>
+(function(){
+  var form   = document.getElementById('contactForm');
+  var status = document.getElementById('contactFormStatus');
+  if (!form) return;
+
+  function showStatus(type, msg){
+    status.className = 'mb-4 p-4 rounded-xl text-sm border ' + (
+      type === 'success' ? 'bg-emerald-50 text-emerald-800 border-emerald-200' :
+      type === 'error'   ? 'bg-red-50 text-red-800 border-red-200' :
+                           'bg-blue-50 text-blue-800 border-blue-200'
+    );
+    status.textContent = msg;
+    status.classList.remove('hidden');
+    status.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var btn = form.querySelector('button[type="submit"]');
+    var origHTML = btn.innerHTML;
+    btn.disabled = true;
+    btn.innerHTML = 'Sending...';
+    showStatus('info', 'Sending your message...');
+
+    var fd = new FormData(form);
+    fetch('api/contact-submit.php', { method: 'POST', body: fd })
+      .then(function(r){ return r.json().then(function(j){ return { ok: r.ok, body: j }; }); })
+      .then(function(res){
+        if (res.ok && res.body.success) {
+          showStatus('success', res.body.message || 'Thank you! We will get back to you soon.');
+          form.reset();
+        } else {
+          showStatus('error', (res.body && res.body.message) || 'Something went wrong. Please try again.');
+        }
+      })
+      .catch(function(){
+        showStatus('error', 'Network error. Please check your connection and try again.');
+      })
+      .finally(function(){
+        btn.disabled = false;
+        btn.innerHTML = origHTML;
+      });
+  });
+})();
+</script>
 
 <?php include 'includes/footer.php'; ?>

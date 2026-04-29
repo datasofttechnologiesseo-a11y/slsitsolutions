@@ -1,0 +1,35 @@
+# SLS IT Solutions — pretty URLs and basic hardening
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Don't touch real files / directories
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# /blog/category/<slug>  -> blog.php?category=<slug>
+RewriteRule ^blog/category/([A-Za-z0-9_-]+)/?$ blog.php?category=$1 [L,QSA]
+
+# /blog/tag/<slug>       -> blog.php?tag=<slug>
+RewriteRule ^blog/tag/([A-Za-z0-9_-]+)/?$ blog.php?tag=$1 [L,QSA]
+
+# /blog                  -> blog.php
+RewriteRule ^blog/?$ blog.php [L,QSA]
+
+# /blog/<slug>           -> blog-detail.php?slug=<slug>
+RewriteRule ^blog/([A-Za-z0-9_-]+)/?$ blog-detail.php?slug=$1 [L,QSA]
+</IfModule>
+
+# Disable directory listing
+Options -Indexes
+
+# Block access to sensitive files
+<FilesMatch "^(\.htaccess|\.git|composer\.(json|lock)|.*\.sql)$">
+    Require all denied
+</FilesMatch>
+
+# Block PHP execution in uploads
+<IfModule mod_rewrite.c>
+    RewriteRule ^assets/uploads/.*\.(php|phtml|phar)$ - [F,L]
+</IfModule>

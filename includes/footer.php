@@ -1,3 +1,10 @@
+<?php
+  // Make blog helpers available so the Popular Topics widget renders even on pages
+  // that did not pre-load the blog helpers.
+  if (!function_exists('get_top_categories') && file_exists(__DIR__ . '/blog.php')) {
+    require_once __DIR__ . '/blog.php';
+  }
+?>
   <!-- Footer -->
   <footer class="text-gray-400 pt-16 pb-8" style="background-color:#0f172a;">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,8 +32,22 @@
             <li><a href="index.php" class="hover:text-white transition-colors">Home</a></li>
             <li><a href="about.php" class="hover:text-white transition-colors">About Us</a></li>
             <li><a href="services.php" class="hover:text-white transition-colors">Services</a></li>
+            <li><a href="blog.php" class="hover:text-white transition-colors">Blog</a></li>
             <li><a href="contact.php" class="hover:text-white transition-colors">Contact</a></li>
           </ul>
+          <?php
+            // Footer "Popular Categories" widget — only render if blog helper loaded.
+            if (function_exists('get_top_categories')):
+              $footerCats = get_top_categories(5);
+              if ($footerCats):
+          ?>
+            <h4 class="text-white font-semibold text-lg mt-8 mb-4" style="font-family:'Poppins',sans-serif;">Popular Topics</h4>
+            <ul class="space-y-2 text-sm">
+              <?php foreach ($footerCats as $fc): ?>
+                <li><a href="blog.php?category=<?= urlencode($fc['slug']) ?>" class="hover:text-white transition-colors">› <?= htmlspecialchars($fc['name']) ?> <span class="opacity-60">(<?= (int)$fc['post_count'] ?>)</span></a></li>
+              <?php endforeach; ?>
+            </ul>
+          <?php endif; endif; ?>
         </div>
         <!-- Column 3: Our Services -->
         <div>
