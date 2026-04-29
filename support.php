@@ -1,8 +1,8 @@
 <?php
-$page_title = 'IT Support & Consultancy - SLS IT Solutions | Expert IT Services India';
-$page_description = 'Expert IT support and consultancy services from SLS IT Solutions. We provide strategic IT planning, system implementation, staff training, troubleshooting, and post-implementation assistance across India.';
-$page_keywords = 'IT support, IT consultancy, system implementation, staff training, troubleshooting, IT services India, SLS IT Solutions';
-$canonical = 'https://www.slsitsolutions.com/support.html';
+$page_title = 'IT Support & Consultancy in Faridabad, Delhi NCR | 24/7 Helpdesk | SLS IT';
+$page_description = 'Round-the-clock IT support and strategic consultancy from SLS IT Solutions: helpdesk, troubleshooting, IT planning, system implementation & staff training across Faridabad, Delhi NCR & India.';
+$page_keywords = 'IT support Faridabad, IT helpdesk Delhi NCR, IT consultancy India, 24/7 IT support, managed IT support services, IT troubleshooting Faridabad, IT strategy planning, system implementation services, IT outsourcing India, business IT consultancy';
+$canonical = 'https://www.slsitsolutions.com/support.php';
 $og_title = 'IT Support & Consultancy - SLS IT Solutions';
 $og_description = 'Expert IT support and consultancy services. Strategic planning, implementation, training, and ongoing support for your business.';
 include 'includes/header.php';
@@ -249,7 +249,7 @@ include 'includes/header.php';
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
           </svg>
         </a>
-        <a href="index.html#services" class="btn-secondary">
+        <a href="services.php" class="btn-secondary">
           View All Services
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>

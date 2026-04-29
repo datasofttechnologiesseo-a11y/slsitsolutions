@@ -1,8 +1,8 @@
 <?php
-$page_title = 'IT Infrastructure Solutions - SLS IT Solutions | Servers, Networking & Virtualization India';
-$page_description = 'Enterprise IT infrastructure solutions including server setup, virtualization, network design, wireless networking, Active Directory, and performance monitoring. SLS IT Solutions, India.';
-$page_keywords = 'IT infrastructure, server setup, virtualization, network design, wireless networking, Active Directory, performance monitoring, high availability, SLS IT Solutions, India';
-$canonical = 'https://slsitsolutions.com/infrastructure.html';
+$page_title = 'IT Infrastructure Services in Faridabad & Delhi NCR | Servers, Networking | SLS IT';
+$page_description = 'Build a robust IT backbone with SLS IT Solutions: server setup, virtualization, structured cabling, wireless networking, Active Directory & performance monitoring across Faridabad, Delhi NCR & India.';
+$page_keywords = 'IT infrastructure services Faridabad, server setup Delhi NCR, virtualization services India, structured cabling, network design India, Active Directory deployment, wireless networking, VMware Hyper-V services, high availability solutions, IT infrastructure company India';
+$canonical = 'https://www.slsitsolutions.com/infrastructure.php';
 $og_title = 'IT Infrastructure Solutions - SLS IT Solutions';
 $og_description = 'Enterprise IT infrastructure solutions including server setup, virtualization, network design, and more.';
 include 'includes/header.php';
@@ -185,7 +185,7 @@ include 'includes/header.php';
           Contact Us
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
         </a>
-        <a href="index.html#services" class="btn-secondary">
+        <a href="services.php" class="btn-secondary">
           View All Services
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
         </a>

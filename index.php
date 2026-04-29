@@ -1,7 +1,7 @@
-<?php
-$page_title = 'SLS IT Solutions - IT Support, Cybersecurity & Infrastructure Services in India';
-$page_description = 'SLS IT Solutions provides enterprise-grade cybersecurity, backup & disaster recovery, IT infrastructure, and 24/7 support services for Indian businesses. DPDP Act compliant. Trusted by 200+ companies across India.';
-$page_keywords = 'IT solutions India, cybersecurity India, IT support Delhi NCR, DPDP Act compliance, backup disaster recovery, IT infrastructure India, managed IT services';
+﻿<?php
+$page_title = 'SLS IT Solutions | Managed IT Services, Cybersecurity & Support in Faridabad, Delhi NCR';
+$page_description = 'SLS IT Solutions delivers managed IT services, cybersecurity, backup & disaster recovery, and 24/7 support for businesses in Faridabad, Delhi NCR & across India. DPDP Act compliant. 200+ clients.';
+$page_keywords = 'IT company Faridabad, managed IT services Delhi NCR, cybersecurity Faridabad, IT support India, backup disaster recovery, IT infrastructure services, DPDP Act compliance, IT consultancy Delhi, business IT solutions India';
 $canonical = 'https://www.slsitsolutions.com/';
 $og_title = 'SLS IT Solutions - Secure & Scalable IT for Indian Businesses';
 $og_description = 'Enterprise-grade cybersecurity, backup, infrastructure & IT support services trusted by 200+ Indian businesses. Get a free consultation today.';
@@ -144,7 +144,7 @@ include 'includes/header.php';
           </div>
 
           <!-- Right Side: Hero Image (hidden on mobile) -->
-          <div class="hidden lg:flex items-center z-10" style="animation: fadeInUp 1s ease 0.6s both; margin-top: 0.5rem; margin-left: 3.5rem;">
+          <div class="hidden lg:flex items-center z-10" style="animation: fadeInUp 1s ease 0.6s both; margin-top: 3rem; margin-left: 3.5rem;">
             <div class="relative rounded-3xl overflow-hidden shadow-2xl w-full">
               <img src="Home hero image.png" alt="SLS IT Solutions NOC & Service Desk Team" class="w-full h-full object-contain" loading="eager" width="548" height="505" style="object-position: center;">
               <div style="position:absolute; inset:0; border-radius: 1.5rem; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);"></div>
@@ -168,44 +168,44 @@ include 'includes/header.php';
       <div class="marquee-container">
         <div class="marquee-track">
           <!-- Set 1 — ordered biggest to smallest by logo resolution -->
-          <div class="marquee-item"><img src="assets/images/clients/Rahul-Technic.png" alt="Rahul Technic"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Arcis-Design.png" alt="Arcis Design"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Keshoram.png" alt="Keshoram"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Space-Telelink.png" alt="Space Telelink"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Indogulf.jpg" alt="Indogulf Cropsciences"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Universal-Quartzz.jpg" alt="Universal Quartzz"></div>
-          <div class="marquee-item"><img src="assets/images/clients/CICO.png" alt="CICO Group"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Tilak-Stone.jpg" alt="Tilak Stone"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Enterslice.jpg" alt="Enterslice"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Akash-Group.jpg" alt="Akash Group"></div>
-          <div class="marquee-item"><img src="assets/images/clients/JQR.png" alt="JQR Sports"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Bhagwati.png" alt="Bhagwati Techno Fab"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Premier.jpg" alt="Premier Plastics"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Cornitos.png" alt="Cornitos"></div>
-          <div class="marquee-item"><img src="assets/images/clients/AVON.jpg" alt="Avon Industries"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Universal-Granimarmo.jpg" alt="Universal Granimarmo"></div>
-          <div class="marquee-item"><img src="assets/images/clients/ANH.png" alt="ANH"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Moeving.png" alt="Moeving"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Rahul-Technic.png" alt="Rahul Technic"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Arcis-Design.png" alt="Arcis Design"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Keshoram.png" alt="Keshoram"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Space-Telelink.png" alt="Space Telelink"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Indogulf.jpg" alt="Indogulf Cropsciences"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Universal-Quartzz.jpg" alt="Universal Quartzz"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/CICO.png" alt="CICO Group"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Tilak-Stone.jpg" alt="Tilak Stone"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Enterslice.jpg" alt="Enterslice"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Akash-Group.jpg" alt="Akash Group"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/JQR.png" alt="JQR Sports"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Bhagwati.png" alt="Bhagwati Techno Fab"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Premier.jpg" alt="Premier Plastics"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Cornitos.png" alt="Cornitos"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/AVON.jpg" alt="Avon Industries"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Universal-Granimarmo.jpg" alt="Universal Granimarmo"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/ANH.png" alt="ANH"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Moeving.png" alt="Moeving"></div>
 
           <!-- Set 2 (duplicate for seamless loop) -->
-          <div class="marquee-item"><img src="assets/images/clients/Rahul-Technic.png" alt="Rahul Technic"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Arcis-Design.png" alt="Arcis Design"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Keshoram.png" alt="Keshoram"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Space-Telelink.png" alt="Space Telelink"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Indogulf.jpg" alt="Indogulf Cropsciences"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Universal-Quartzz.jpg" alt="Universal Quartzz"></div>
-          <div class="marquee-item"><img src="assets/images/clients/CICO.png" alt="CICO Group"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Tilak-Stone.jpg" alt="Tilak Stone"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Enterslice.jpg" alt="Enterslice"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Akash-Group.jpg" alt="Akash Group"></div>
-          <div class="marquee-item"><img src="assets/images/clients/JQR.png" alt="JQR Sports"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Bhagwati.png" alt="Bhagwati Techno Fab"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Premier.jpg" alt="Premier Plastics"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Cornitos.png" alt="Cornitos"></div>
-          <div class="marquee-item"><img src="assets/images/clients/AVON.jpg" alt="Avon Industries"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Universal-Granimarmo.jpg" alt="Universal Granimarmo"></div>
-          <div class="marquee-item"><img src="assets/images/clients/ANH.png" alt="ANH"></div>
-          <div class="marquee-item"><img src="assets/images/clients/Moeving.png" alt="Moeving"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Rahul-Technic.png" alt="Rahul Technic"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Arcis-Design.png" alt="Arcis Design"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Keshoram.png" alt="Keshoram"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Space-Telelink.png" alt="Space Telelink"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Indogulf.jpg" alt="Indogulf Cropsciences"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Universal-Quartzz.jpg" alt="Universal Quartzz"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/CICO.png" alt="CICO Group"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Tilak-Stone.jpg" alt="Tilak Stone"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Enterslice.jpg" alt="Enterslice"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Akash-Group.jpg" alt="Akash Group"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/JQR.png" alt="JQR Sports"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Bhagwati.png" alt="Bhagwati Techno Fab"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Premier.jpg" alt="Premier Plastics"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Cornitos.png" alt="Cornitos"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/AVON.jpg" alt="Avon Industries"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Universal-Granimarmo.jpg" alt="Universal Granimarmo"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/ANH.png" alt="ANH"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Moeving.png" alt="Moeving"></div>
         </div>
       </div>
 
@@ -234,7 +234,7 @@ include 'includes/header.php';
           <a href="about.php" class="btn-primary">Learn More About Us <i class="fas fa-arrow-right text-sm"></i></a>
         </div>
         <div class="split-image-wrap">
-          <img src="assets/images/sections/office-team.jpg" alt="SLS IT Solutions Team">
+          <img src="assets/images/sections/office-team.jpg" alt="SLS IT Solutions Team" loading="lazy">
         </div>
       </div>
     </div>
@@ -518,6 +518,105 @@ include 'includes/header.php';
           <h3 class="text-lg font-bold text-gray-900 mb-2" style="font-family:'Poppins',sans-serif;">Proven Track Record</h3>
           <p class="text-sm text-gray-600 leading-relaxed">10+ years serving businesses across NCR, Delhi, and pan-India with consistent delivery and client satisfaction.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== TECHNOLOGY PARTNERS ===== -->
+  <section class="section-padding" style="background:#f8fafc;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 fade-up">
+        <h2 class="section-title">Technology Partners</h2>
+        <p class="section-subtitle">We collaborate with industry-leading technology providers to deliver best-in-class solutions.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 fade-up">
+
+        <!-- Category 1: Hardware -->
+        <div class="partner-category">
+          <div class="partner-cat-header">
+            <span class="partner-cat-icon" style="background:linear-gradient(135deg,#0f4c81,#1a6bb5);">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+            </span>
+            <span class="partner-cat-title">Hardware</span>
+          </div>
+          <div class="partner-logos-grid">
+            <div class="partner-logo-item">
+              <img src="assets/images/partners/hp.svg" alt="HP" loading="lazy">
+            </div>
+            <div class="partner-logo-item">
+              <img src="assets/images/partners/ibm.svg" alt="IBM" loading="lazy">
+            </div>
+            <div class="partner-logo-item">
+              <img src="assets/images/partners/lenovo.svg" alt="Lenovo" loading="lazy">
+            </div>
+            <div class="partner-logo-item">
+              <img src="assets/images/partners/dell.svg" alt="Dell" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Network Security -->
+        <div class="partner-category">
+          <div class="partner-cat-header">
+            <span class="partner-cat-icon" style="background:linear-gradient(135deg,#dc2626,#ef4444);">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </span>
+            <span class="partner-cat-title">Network Security</span>
+          </div>
+          <div class="partner-logos-grid partner-logos-3">
+            <div class="partner-logo-item">
+              <img src="assets/images/partners/fortinet.svg" alt="Fortinet" loading="lazy">
+            </div>
+            <div class="partner-logo-item">
+              <img src="assets/images/partners/sophos.svg" alt="Sophos" loading="lazy">
+            </div>
+            <div class="partner-logo-item partner-logo-full">
+              <img src="assets/images/partners/sonicwall.svg" alt="SonicWALL" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Endpoint Security -->
+        <div class="partner-category">
+          <div class="partner-cat-header">
+            <span class="partner-cat-icon" style="background:linear-gradient(135deg,#7c3aed,#a855f7);">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </span>
+            <span class="partner-cat-title">Endpoint Security</span>
+          </div>
+          <div class="partner-logos-grid partner-logos-3">
+            <div class="partner-logo-item">
+              <img src="assets/images/partners/crowdstrike.svg" alt="CrowdStrike" loading="lazy">
+            </div>
+            <div class="partner-logo-item">
+              <img src="assets/images/partners/seqrite.png" alt="Seqrite" loading="lazy">
+            </div>
+            <div class="partner-logo-item partner-logo-full">
+              <img src="assets/images/partners/escan.png" alt="eScan" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Cloud -->
+        <div class="partner-category">
+          <div class="partner-cat-header">
+            <span class="partner-cat-icon" style="background:linear-gradient(135deg,#00a86b,#00c97f);">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+            </span>
+            <span class="partner-cat-title">Cloud Platforms</span>
+          </div>
+          <div class="partner-logos-grid">
+            <div class="partner-logo-item">
+              <img src="assets/images/partners/aws.svg" alt="AWS" loading="lazy">
+            </div>
+            <div class="partner-logo-item">
+              <img src="assets/images/partners/google.svg" alt="Google Cloud" loading="lazy">
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>

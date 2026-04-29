@@ -1,10 +1,11 @@
 <?php
-$page_title = 'About Us - SLS IT Solutions | IT Support & Security Services India';
-$page_description = 'Learn about SLS IT Solutions - your trusted technology partner for IT infrastructure, security, backup, and support services. Experienced IT professionals delivering reliable solutions.';
-$page_keywords = 'SLS IT Solutions, IT support India, IT security services, IT infrastructure, managed IT services, about us';
+$page_title = 'About SLS IT Solutions | Trusted IT Partner in Faridabad, Delhi NCR';
+$page_description = 'Meet SLS IT Solutions — Faridabad-based IT company serving 200+ businesses across Delhi NCR & India with cybersecurity, infrastructure, backup, and managed IT support since inception.';
+$page_keywords = 'about SLS IT Solutions, IT company Faridabad, managed IT services Delhi NCR, IT consultancy Ballabgarh, trusted IT partner India, IT support team Faridabad';
 $og_title = 'About Us - SLS IT Solutions | IT Support & Security Services India';
 $og_description = 'SLS IT Solutions is a professional IT support and services provider committed to helping businesses manage, secure, and optimize their technology environments.';
-$og_url = 'https://www.slsitsolutions.com/about.html';
+$canonical = 'https://www.slsitsolutions.com/about.php';
+$og_url = 'https://www.slsitsolutions.com/about.php';
 include 'includes/header.php';
 ?>
 
@@ -30,7 +31,7 @@ include 'includes/header.php';
       <div class="split-content fade-up">
         <div class="split-text">
           <span class="split-label">Know Who We Are</span>
-          <h2 class="split-heading">About SLS IT Solutions Pvt. Ltd.</h2>
+          <h2 class="split-heading">About SLS IT Solutions</h2>
           <p class="split-desc">SLS IT Solutions is a leading IT infrastructure and managed services provider headquartered in Faridabad, proudly serving businesses across Delhi-NCR and pan-India. We specialize in delivering enterprise-grade cybersecurity, backup, infrastructure, and IT support solutions tailored to the unique challenges of the Indian market.</p>
           <p class="split-desc">Since our inception, we have built a strong reputation as a forward-thinking partner — empowering organizations with best-in-class Virtualization, Backup &amp; Recovery, Cloud Computing, and IT System Integration services, all delivered cost-effectively and at scale.</p>
           <div class="split-features">
@@ -42,7 +43,7 @@ include 'includes/header.php';
         </div>
         <div class="split-image-wrap about-image-wrap">
           <div class="about-image-inner">
-            <img src="assets/images/sections/about-company.jpg" alt="SLS IT Solutions Office">
+            <img src="assets/images/sections/about-company.jpg" alt="SLS IT Solutions Office" loading="lazy">
             <div class="about-image-overlay"></div>
           </div>
           <div class="about-experience-badge">
@@ -72,7 +73,7 @@ include 'includes/header.php';
           <a href="services.php" class="btn-primary">Explore Our Services <i class="fas fa-arrow-right text-sm"></i></a>
         </div>
         <div class="split-image-wrap">
-          <img src="assets/images/sections/server-room.jpg" alt="IT Infrastructure">
+          <img src="assets/images/sections/server-room.jpg" alt="IT Infrastructure" loading="lazy">
         </div>
       </div>
     </div>
@@ -309,104 +310,6 @@ include 'includes/header.php';
           <h4 class="text-xl font-bold mb-3" style="font-family:'Poppins',sans-serif;">Implement</h4>
           <p class="text-gray-600">Execute solutions for results. We deploy, monitor, and optimize to ensure lasting performance and reliability.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== TECHNOLOGY PARTNERS ========== -->
-  <section class="section-padding" style="background:#f8fafc;">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12 fade-up">
-        <h2 class="section-title">Technology Partners</h2>
-        <p class="section-subtitle">We collaborate with industry-leading technology providers to deliver best-in-class solutions.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 fade-up">
-
-        <!-- Category 1: Hardware -->
-        <div class="partner-category">
-          <div class="partner-cat-header">
-            <span class="partner-cat-icon" style="background:linear-gradient(135deg,#0f4c81,#1a6bb5);">
-              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
-            </span>
-            <span class="partner-cat-title">Hardware</span>
-          </div>
-          <div class="partner-logos-grid">
-            <div class="partner-logo-item">
-              <img src="assets/images/partners/hp.svg" alt="HP" loading="lazy">
-            </div>
-            <div class="partner-logo-item">
-              <img src="assets/images/partners/ibm.svg" alt="IBM" loading="lazy">
-            </div>
-            <div class="partner-logo-item">
-              <img src="assets/images/partners/lenovo.svg" alt="Lenovo" loading="lazy">
-            </div>
-            <div class="partner-logo-item">
-              <img src="assets/images/partners/dell.svg" alt="Dell" loading="lazy">
-            </div>
-          </div>
-        </div>
-
-        <!-- Category 2: Network Security -->
-        <div class="partner-category">
-          <div class="partner-cat-header">
-            <span class="partner-cat-icon" style="background:linear-gradient(135deg,#dc2626,#ef4444);">
-              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-            </span>
-            <span class="partner-cat-title">Network Security</span>
-          </div>
-          <div class="partner-logos-grid partner-logos-3">
-            <div class="partner-logo-item">
-              <img src="assets/images/partners/fortinet.svg" alt="Fortinet" loading="lazy">
-            </div>
-            <div class="partner-logo-item">
-              <img src="assets/images/partners/sophos.svg" alt="Sophos" loading="lazy">
-            </div>
-            <div class="partner-logo-item partner-logo-full">
-              <img src="assets/images/partners/sonicwall.svg" alt="SonicWALL" loading="lazy">
-            </div>
-          </div>
-        </div>
-
-        <!-- Category 3: Endpoint Security -->
-        <div class="partner-category">
-          <div class="partner-cat-header">
-            <span class="partner-cat-icon" style="background:linear-gradient(135deg,#7c3aed,#a855f7);">
-              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-            </span>
-            <span class="partner-cat-title">Endpoint Security</span>
-          </div>
-          <div class="partner-logos-grid partner-logos-3">
-            <div class="partner-logo-item">
-              <img src="assets/images/partners/crowdstrike.svg" alt="CrowdStrike" loading="lazy">
-            </div>
-            <div class="partner-logo-item">
-              <img src="assets/images/partners/seqrite.png" alt="Seqrite" loading="lazy">
-            </div>
-            <div class="partner-logo-item partner-logo-full">
-              <img src="assets/images/partners/escan.png" alt="eScan" loading="lazy">
-            </div>
-          </div>
-        </div>
-
-        <!-- Category 4: Cloud -->
-        <div class="partner-category">
-          <div class="partner-cat-header">
-            <span class="partner-cat-icon" style="background:linear-gradient(135deg,#00a86b,#00c97f);">
-              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
-            </span>
-            <span class="partner-cat-title">Cloud Platforms</span>
-          </div>
-          <div class="partner-logos-grid">
-            <div class="partner-logo-item">
-              <img src="assets/images/partners/aws.svg" alt="AWS" loading="lazy">
-            </div>
-            <div class="partner-logo-item">
-              <img src="assets/images/partners/google.svg" alt="Google Cloud" loading="lazy">
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>

@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "sls-it",
+      "runtimeExecutable": "php",
+      "runtimeArgs": ["-S", "localhost:8766", "-t", "."],
+      "port": 8766
+    }
+  ]
+}

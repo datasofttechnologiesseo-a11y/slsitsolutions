@@ -22,6 +22,7 @@ function nav_active($page) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f4c81">
   <title><?= htmlspecialchars($page_title) ?></title>
   <?php if ($page_description): ?><meta name="description" content="<?= htmlspecialchars($page_description) ?>"><?php endif; ?>
   <?php if ($page_keywords): ?><meta name="keywords" content="<?= htmlspecialchars($page_keywords) ?>"><?php endif; ?>
@@ -42,6 +43,49 @@ function nav_active($page) {
 
   <?php if ($canonical): ?><link rel="canonical" href="<?= htmlspecialchars($canonical) ?>"><?php endif; ?>
 
+  <!-- Structured Data: LocalBusiness / Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.slsitsolutions.com/#organization",
+    "name": "SLS IT Solutions",
+    "alternateName": "SLS IT",
+    "description": "Managed IT services, cybersecurity, backup & disaster recovery, IT infrastructure and 24/7 support for businesses in Faridabad, Delhi NCR and across India.",
+    "url": "https://www.slsitsolutions.com/",
+    "logo": "https://www.slsitsolutions.com/assets/images/logo-hd.jpeg",
+    "image": "https://www.slsitsolutions.com/assets/images/logo-hd.jpeg",
+    "telephone": "+91-8383800914",
+    "email": "sales@slsitsolutions.com",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Sector-2, Ballabgarh",
+      "addressLocality": "Faridabad",
+      "addressRegion": "Haryana",
+      "addressCountry": "IN"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Faridabad" },
+      { "@type": "City", "name": "Delhi" },
+      { "@type": "City", "name": "Gurugram" },
+      { "@type": "City", "name": "Noida" },
+      { "@type": "Country", "name": "India" }
+    ],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/slsitsolutions",
+      "https://x.com/slsitsolutions",
+      "https://www.facebook.com/slsitsolutions"
+    ]
+  }
+  </script>
+
   <link rel="icon" type="image/jpeg" href="assets/images/logo-hd.jpeg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,7 +100,8 @@ function nav_active($page) {
     :root{--primary:#0f4c81;--secondary:#00a86b;--accent:#f59e0b;--dark:#0f172a;--text:#1e293b;--text-light:#64748b;--bg:#ffffff;--bg-alt:#f8fafc;--radius:12px;--shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1)}
     *,::after,::before{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--text);line-height:1.6;overflow-x:hidden}
-    .topbar{background:var(--dark);color:#94a3b8;font-size:.8rem;padding:8px 0;position:fixed;top:0;left:0;right:0;z-index:1000;transition:transform .3s ease}
+    .topbar{background:var(--dark);color:#94a3b8;font-size:.8rem;position:fixed;top:0;left:0;right:0;z-index:1000;transition:transform .3s ease}
+    .topbar-inner{height:40px}
     .topbar.hidden{transform:translateY(-100%)}
     .topbar-inner{display:flex;justify-content:space-between;align-items:center}
     .topbar-left{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
@@ -145,8 +190,9 @@ function nav_active($page) {
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </a>
             <div class="mega-menu">
+              <div class="mega-menu-grid">
               <!-- Column 1: IT Infrastructure Solutions -->
-              <div class="mega-col">
+              <div class="mega-col mega-col-infra">
                 <div class="mega-col-header infra">
                   <span class="mega-col-icon-bg">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2"/></svg>
@@ -196,7 +242,7 @@ function nav_active($page) {
               <!-- Divider -->
               <div class="mega-vert-divider"></div>
               <!-- Column 2: IT Development Solutions -->
-              <div class="mega-col">
+              <div class="mega-col mega-col-dev">
                 <div class="mega-col-header dev">
                   <span class="mega-col-icon-bg dev">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
@@ -243,6 +289,18 @@ function nav_active($page) {
                   </div>
                 </a>
               </div>
+              </div><!-- /.mega-menu-grid -->
+              <!-- Footer CTA strip -->
+              <a href="services.php" class="mega-menu-footer">
+                <span class="mega-footer-text">
+                  <span class="mega-footer-eyebrow">Need help choosing?</span>
+                  <span class="mega-footer-title">Explore all services & get a free consultation</span>
+                </span>
+                <span class="mega-footer-cta">
+                  View all
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </span>
+              </a>
             </div>
           </div>
           <a href="contact.php" class="nav-link <?= nav_active('contact') ?>">Contact</a>

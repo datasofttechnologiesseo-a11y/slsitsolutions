@@ -1,6 +1,9 @@
 <?php
-$page_title = 'IT Services - SLS IT Solutions | Security, Backup, Infrastructure';
-$page_description = 'SLS IT Solutions offers comprehensive IT services including cybersecurity, backup & disaster recovery, infrastructure solutions, professional services, and custom app & web development.';
+$page_title = 'IT Services in Faridabad & Delhi NCR | Cybersecurity, Backup, Infrastructure | SLS IT';
+$page_description = 'End-to-end IT services from SLS IT Solutions: cybersecurity, backup & disaster recovery, infrastructure, virtualization, networking, and managed IT support across Faridabad, Delhi NCR & India.';
+$page_keywords = 'IT services Faridabad, IT services Delhi NCR, managed IT services India, cybersecurity services, backup disaster recovery, IT infrastructure services, networking solutions, virtualization services, IT support services India';
+$canonical = 'https://www.slsitsolutions.com/services.php';
+$og_url = 'https://www.slsitsolutions.com/services.php';
 include 'includes/header.php';
 ?>
 
@@ -37,7 +40,7 @@ include 'includes/header.php';
           </div>
         </div>
         <div class="split-image-wrap">
-          <img src="assets/images/sections/cloud-computing.jpg" alt="IT Services">
+          <img src="assets/images/sections/cloud-computing.jpg" alt="IT Services" loading="lazy">
         </div>
       </div>
     </div>

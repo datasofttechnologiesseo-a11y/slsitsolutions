@@ -1,7 +1,9 @@
 <?php
-$page_title = 'Cybersecurity Solutions - SLS IT Solutions | Advanced Threat Protection India';
-$page_description = 'SLS IT Solutions provides advanced cybersecurity solutions including threat protection, endpoint security, SIEM monitoring, firewall management, and secure remote access for businesses in India.';
-$page_keywords = 'cybersecurity solutions, threat protection, endpoint security, SIEM monitoring, firewall, VPN, data protection, SLS IT Solutions, India';
+$page_title = 'Cybersecurity Services in Faridabad & Delhi NCR | Threat Protection | SLS IT';
+$page_description = 'Protect your business from ransomware, phishing & zero-day attacks. SLS IT Solutions delivers endpoint security, SIEM, firewall management, EDR, and DPDP-compliant cybersecurity in India.';
+$page_keywords = 'cybersecurity Faridabad, cybersecurity services Delhi NCR, threat protection India, endpoint security, EDR solutions, SIEM monitoring, firewall management, ransomware protection, phishing prevention, DPDP Act compliance, network security India';
+$canonical = 'https://www.slsitsolutions.com/security.php';
+$og_url = 'https://www.slsitsolutions.com/security.php';
 include 'includes/header.php';
 ?>
 
@@ -220,7 +222,7 @@ include 'includes/header.php';
           Contact Us
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
-        <a href="index.html#services" class="btn-secondary">
+        <a href="services.php" class="btn-secondary">
           View All Services
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
         </a>

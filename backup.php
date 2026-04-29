@@ -1,8 +1,8 @@
 <?php
-$page_title = 'Backup & Disaster Recovery - SLS IT Solutions | Data Protection India';
-$page_description = 'Reliable backup and disaster recovery solutions from SLS IT Solutions. Protect your business data with automated backups, data replication, and comprehensive recovery planning across India.';
-$page_keywords = 'backup solutions, disaster recovery, data protection, business continuity, NAS SAN storage, data replication, India';
-$canonical = 'https://www.slsitsolutions.com/backup.html';
+$page_title = 'Backup & Disaster Recovery Services in Faridabad, Delhi NCR | SLS IT';
+$page_description = 'Never lose business data again. SLS IT Solutions delivers automated backups, cloud DR, NAS/SAN storage, data replication & business continuity planning across Faridabad, Delhi NCR & India.';
+$page_keywords = 'backup services Faridabad, disaster recovery Delhi NCR, cloud backup India, business continuity planning, data backup solutions, NAS SAN storage, data replication services, ransomware recovery, BCDR India, automated backup services';
+$canonical = 'https://www.slsitsolutions.com/backup.php';
 include 'includes/header.php';
 ?>
 

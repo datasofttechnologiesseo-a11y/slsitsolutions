@@ -4,7 +4,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
         <!-- Column 1: Brand -->
         <div>
-          <img src="Logo (1).png" alt="SLS IT Solutions - IT Support & Cybersecurity" class="h-12 mb-4">
+          <img src="Logo (1).png" alt="SLS IT Solutions - IT Support & Cybersecurity" class="h-12 mb-4" loading="lazy">
           <p class="text-sm leading-relaxed mb-6" style="color: #ffffff;">Reliable IT support, security, backup, and infrastructure solutions for modern businesses.</p>
           <div class="flex gap-3">
             <a href="https://www.linkedin.com/company/slsitsolutions" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors" aria-label="LinkedIn">
@@ -60,7 +60,7 @@
       <!-- Bottom Bar -->
       <div class="footer-bottom-bar">
         <p class="footer-copyright">&copy; <?= date('Y') ?> <span>SLS IT Solutions</span>. All Rights Reserved.</p>
-        <p class="footer-credit">Designed &amp; Developed by <a href="http://datasofttechnologies.com/" target="_blank" rel="noopener">Datasoft Technologies <i class="fas fa-arrow-up-right-from-square"></i></a></p>
+        <p class="footer-credit">Designed &amp; Developed by <a href="https://datasofttechnologies.com/" target="_blank" rel="noopener">Datasoft Technologies <i class="fas fa-arrow-up-right-from-square"></i></a></p>
       </div>
     </div>
   </footer>
