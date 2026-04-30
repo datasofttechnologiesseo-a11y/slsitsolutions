@@ -36,10 +36,17 @@
             <li><a href="contact.php" class="hover:text-white transition-colors">Contact</a></li>
           </ul>
           <?php
-            // Footer "Popular Categories" widget — only render if blog helper loaded.
-            if (function_exists('get_top_categories')):
-              $footerCats = get_top_categories(5);
-              if ($footerCats):
+            // Footer "Popular Categories" widget — only render if blog helper loaded
+            // and the database is reachable. Falls back silently if either is missing.
+            $footerCats = [];
+            if (function_exists('get_top_categories')) {
+              try {
+                $footerCats = get_top_categories(5);
+              } catch (\Throwable $e) {
+                $footerCats = [];
+              }
+            }
+            if ($footerCats):
           ?>
             <h4 class="text-white font-semibold text-lg mt-8 mb-4" style="font-family:'Poppins',sans-serif;">Popular Topics</h4>
             <ul class="space-y-2 text-sm">
@@ -47,7 +54,7 @@
                 <li><a href="blog.php?category=<?= urlencode($fc['slug']) ?>" class="hover:text-white transition-colors">› <?= htmlspecialchars($fc['name']) ?> <span class="opacity-60">(<?= (int)$fc['post_count'] ?>)</span></a></li>
               <?php endforeach; ?>
             </ul>
-          <?php endif; endif; ?>
+          <?php endif; ?>
         </div>
         <!-- Column 3: Our Services -->
         <div>
