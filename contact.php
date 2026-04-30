@@ -105,7 +105,7 @@ include 'includes/header.php';
                 <div class="cvi-icon" style="background: rgba(0, 168, 107, 0.1); color:#00a86b;"><i class="fas fa-envelope"></i></div>
                 <div>
                   <div class="cvi-label">Email</div>
-                  <div class="cvi-value">info@slsitsolutions.com</div>
+                  <div class="cvi-value">sales@<wbr>slsitsolutions.com</div>
                 </div>
               </div>
               <div class="contact-visual-item">

@@ -2231,8 +2231,8 @@ section { overflow-x: clip; }
   align-items: center;
   gap: 0.5rem;
   font-size: 0.9rem;
-  font-weight: 500;
-  color: #334155;
+  font-weight: 700;
+  color: #0f172a;
 }
 
 .split-section .split-feature-item i {
@@ -2476,10 +2476,13 @@ section { overflow-x: clip; }
 }
 
 .cvi-value {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: #0f172a;
-  word-break: break-word;
+  word-break: normal;
+  overflow-wrap: break-word;
+  line-height: 1.35;
+  min-width: 0;
 }
 
 .contact-visual-stats {

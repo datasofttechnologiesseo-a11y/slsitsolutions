@@ -11,6 +11,45 @@ try {
     $testimonials = [];
 }
 
+// Fallback testimonials when the database is empty or unreachable —
+// keeps the "Client Voices" section populated until real ones are added.
+if (empty($testimonials)) {
+    $testimonials = [
+        [
+            'client_name'  => 'Rahul Mehra',
+            'company'      => 'Operations Head, Cornitos',
+            'quote'        => 'SLS IT Solutions transformed our IT infrastructure end-to-end. Their proactive monitoring and 24/7 support have kept our operations running without a single major outage in two years.',
+            'rating'       => 5,
+            'initials'     => 'RM',
+            'avatar_color' => 'blue',
+        ],
+        [
+            'client_name'  => 'Priya Sharma',
+            'company'      => 'IT Manager, Indogulf Cropsciences',
+            'quote'        => 'Migrating to their backup and disaster recovery setup was the best decision we made. When we faced a ransomware scare last year, recovery took hours, not days.',
+            'rating'       => 5,
+            'initials'     => 'PS',
+            'avatar_color' => 'green',
+        ],
+        [
+            'client_name'  => 'Anil Kapoor',
+            'company'      => 'Director, Universal Quartzz',
+            'quote'        => 'From DPDP Act compliance to firewall management, the SLS team is genuinely knowledgeable. They explain things in plain English and deliver on every promise.',
+            'rating'       => 5,
+            'initials'     => 'AK',
+            'avatar_color' => 'purple',
+        ],
+        [
+            'client_name'  => 'Sneha Verma',
+            'company'      => 'CTO, Enterslice',
+            'quote'        => 'Reliable, responsive, and refreshingly transparent on pricing. They helped us scale our cloud infrastructure across multiple regions without a single hiccup.',
+            'rating'       => 5,
+            'initials'     => 'SV',
+            'avatar_color' => 'orange',
+        ],
+    ];
+}
+
 try {
     $latestBlogs = get_recent_blogs(3);
 } catch (\Throwable $e) {

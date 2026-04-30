@@ -9,60 +9,69 @@ $q       = trim((string)($_GET['q'] ?? ''));
 
 $activeCat = null;
 $activeTag = null;
+$rows      = [];
+$total     = 0;
+$pages     = 1;
+$perPage   = 9;
+$page      = max(1, (int)($_GET['page'] ?? 1));
+$catsAll   = [];
+$dbDown    = false;
 
-if ($catSlug !== '') {
-    $stmt = db()->prepare('SELECT id, name, slug, description FROM blog_categories WHERE slug = ?');
-    $stmt->execute([$catSlug]);
-    $activeCat = $stmt->fetch() ?: null;
+try {
+    if ($catSlug !== '') {
+        $stmt = db()->prepare('SELECT id, name, slug, description FROM blog_categories WHERE slug = ?');
+        $stmt->execute([$catSlug]);
+        $activeCat = $stmt->fetch() ?: null;
+    }
+    if ($tagSlug !== '') {
+        $stmt = db()->prepare('SELECT id, name, slug FROM blog_tags WHERE slug = ?');
+        $stmt->execute([$tagSlug]);
+        $activeTag = $stmt->fetch() ?: null;
+    }
+
+    // Build query
+    $joins  = '';
+    $where  = ['b.is_published = 1'];
+    $params = [];
+
+    if ($activeCat) {
+        $joins  .= ' INNER JOIN blog_category_map mc ON mc.blog_id = b.id ';
+        $where[]  = 'mc.category_id = ?';
+        $params[] = (int)$activeCat['id'];
+    }
+    if ($activeTag) {
+        $joins  .= ' INNER JOIN blog_tag_map mt ON mt.blog_id = b.id ';
+        $where[]  = 'mt.tag_id = ?';
+        $params[] = (int)$activeTag['id'];
+    }
+    if ($q !== '') {
+        $where[]  = '(b.title LIKE ? OR b.excerpt LIKE ?)';
+        $like = "%$q%";
+        array_push($params, $like, $like);
+    }
+
+    $wsql = $where ? 'WHERE ' . implode(' AND ', $where) : '';
+
+    $offset = ($page - 1) * $perPage;
+
+    $cnt = db()->prepare("SELECT COUNT(DISTINCT b.id) FROM blogs b $joins $wsql");
+    $cnt->execute($params);
+    $total = (int)$cnt->fetchColumn();
+    $pages = max(1, (int)ceil($total / $perPage));
+
+    $stmt = db()->prepare("
+        SELECT DISTINCT b.id, b.title, b.slug, b.excerpt, b.cover_image, b.author, b.published_at, b.content
+        FROM blogs b $joins $wsql
+        ORDER BY b.published_at DESC, b.id DESC
+        LIMIT $perPage OFFSET $offset
+    ");
+    $stmt->execute($params);
+    $rows = $stmt->fetchAll();
+
+    $catsAll = get_categories_with_counts();
+} catch (\Throwable $e) {
+    $dbDown = true;
 }
-if ($tagSlug !== '') {
-    $stmt = db()->prepare('SELECT id, name, slug FROM blog_tags WHERE slug = ?');
-    $stmt->execute([$tagSlug]);
-    $activeTag = $stmt->fetch() ?: null;
-}
-
-// Build query
-$joins  = '';
-$where  = ['b.is_published = 1'];
-$params = [];
-
-if ($activeCat) {
-    $joins  .= ' INNER JOIN blog_category_map mc ON mc.blog_id = b.id ';
-    $where[]  = 'mc.category_id = ?';
-    $params[] = (int)$activeCat['id'];
-}
-if ($activeTag) {
-    $joins  .= ' INNER JOIN blog_tag_map mt ON mt.blog_id = b.id ';
-    $where[]  = 'mt.tag_id = ?';
-    $params[] = (int)$activeTag['id'];
-}
-if ($q !== '') {
-    $where[]  = '(b.title LIKE ? OR b.excerpt LIKE ?)';
-    $like = "%$q%";
-    array_push($params, $like, $like);
-}
-
-$wsql = $where ? 'WHERE ' . implode(' AND ', $where) : '';
-
-$perPage = 9;
-$page    = max(1, (int)($_GET['page'] ?? 1));
-$offset  = ($page - 1) * $perPage;
-
-$cnt = db()->prepare("SELECT COUNT(DISTINCT b.id) FROM blogs b $joins $wsql");
-$cnt->execute($params);
-$total = (int)$cnt->fetchColumn();
-$pages = max(1, (int)ceil($total / $perPage));
-
-$stmt = db()->prepare("
-    SELECT DISTINCT b.id, b.title, b.slug, b.excerpt, b.cover_image, b.author, b.published_at, b.content
-    FROM blogs b $joins $wsql
-    ORDER BY b.published_at DESC, b.id DESC
-    LIMIT $perPage OFFSET $offset
-");
-$stmt->execute($params);
-$rows = $stmt->fetchAll();
-
-$catsAll = get_categories_with_counts();
 
 function blog_qs(array $extra = []): string {
     $q = array_merge($_GET, $extra);
@@ -166,7 +175,11 @@ include 'includes/header.php';
         </div>
 
         <!-- Recent posts -->
-        <?php $recent = get_recent_blogs(4); if ($recent): ?>
+        <?php
+          $recent = [];
+          try { $recent = get_recent_blogs(4); } catch (\Throwable $e) { $recent = []; }
+          if ($recent):
+        ?>
           <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
             <h3 class="font-semibold text-gray-900 mb-3" style="font-family:'Poppins',sans-serif;">
               <i class="fas fa-clock-rotate-left text-blue-700 mr-2"></i> Recent posts

@@ -5,7 +5,11 @@ require_once __DIR__ . '/includes/blog.php';
 $slug = trim((string)($_GET['slug'] ?? ''));
 if ($slug === '') { header('Location: blog.php'); exit; }
 
-$post = get_blog_by_slug($slug);
+try {
+    $post = get_blog_by_slug($slug);
+} catch (\Throwable $e) {
+    $post = null;
+}
 if (!$post) {
     http_response_code(404);
     $page_title = 'Post not found | SLS IT Solutions';
