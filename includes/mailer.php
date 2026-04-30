@@ -9,6 +9,21 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception as MailException;
 
 /**
+ * In non-production environments, the local PHP CA bundle often can't validate
+ * shared-hosting SMTP certificates (e.g. cPanel servers presenting *.hostingprovider.com
+ * for a custom domain). Skip peer verification only when app.production === false.
+ */
+function smtp_ssl_options(): array {
+    $isProd = (bool)(app_config('app')['production'] ?? true);
+    if ($isProd) return [];
+    return ['ssl' => [
+        'verify_peer'       => false,
+        'verify_peer_name'  => false,
+        'allow_self_signed' => true,
+    ]];
+}
+
+/**
  * Resolve mail config: DB settings (preferred) → fallback to config.php.
  * Returns the same shape that send_via_smtp / send_via_mail expect.
  */
@@ -77,6 +92,7 @@ function send_via_smtp_to(array $cfg, string $toEmail, string $toName, string $s
             : PHPMailer::ENCRYPTION_SMTPS;
         $mail->Timeout    = 15;
         $mail->CharSet    = 'UTF-8';
+        $mail->SMTPOptions = smtp_ssl_options();
 
         $mail->setFrom($cfg['from_email'] ?? $cfg['username'], $cfg['from_name'] ?? '');
         $mail->addAddress($toEmail, $toName);
@@ -125,6 +141,7 @@ function send_via_smtp(array $cfg, string $subject, string $html, string $text, 
             ? PHPMailer::ENCRYPTION_STARTTLS
             : PHPMailer::ENCRYPTION_SMTPS;
         $mail->CharSet    = 'UTF-8';
+        $mail->SMTPOptions = smtp_ssl_options();
 
         $mail->setFrom($cfg['from_email'], $cfg['from_name']);
         $mail->addAddress($cfg['to_email'], $cfg['to_name'] ?? '');

@@ -106,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?= csrf_field() ?>
 
         <!-- Step 1: Email -->
-        <div class="login-step <?= $emailVal && $error === '' ? '' : 'active' ?>" id="stepEmail">
+        <div class="login-step <?= $emailVal && $error !== '' ? '' : 'active' ?>" id="stepEmail">
           <div class="field">
             <label for="email">Email Address</label>
             <div class="input-group">
