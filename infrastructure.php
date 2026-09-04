@@ -1,10 +1,97 @@
 <?php
-$page_title = 'IT Infrastructure Services in Faridabad & Delhi NCR | Servers, Networking | SLS IT';
+$page_title = 'IT Infrastructure Services Faridabad & Delhi NCR | SLS IT';
 $page_description = 'Build a robust IT backbone with SLS IT Solutions: server setup, virtualization, structured cabling, wireless networking, Active Directory & performance monitoring across Faridabad, Delhi NCR & India.';
 $page_keywords = 'IT infrastructure services Faridabad, server setup Delhi NCR, virtualization services India, structured cabling, network design India, Active Directory deployment, wireless networking, VMware Hyper-V services, high availability solutions, IT infrastructure company India';
 $canonical = 'https://www.slsitsolutions.com/infrastructure.php';
 $og_title = 'IT Infrastructure Solutions - SLS IT Solutions';
 $og_description = 'Enterprise IT infrastructure solutions including server setup, virtualization, network design, and more.';
+$preload_image = 'assets/images/heroes/infra-hero.jpg';
+$structured_data = [[
+  '@type' => 'Service',
+  '@id' => 'https://www.slsitsolutions.com/infrastructure.php#service',
+  'name' => 'IT Infrastructure Services',
+  'serviceType' => 'IT Infrastructure',
+  'description' => 'Server setup, virtualization, structured cabling, wireless networking, Active Directory deployment and performance monitoring.',
+  'url' => 'https://www.slsitsolutions.com/infrastructure.php',
+  'provider' => [
+    '@id' => 'https://www.slsitsolutions.com/#organization'
+  ],
+  'areaServed' => [
+    [
+      '@type' => 'City',
+      'name' => 'Faridabad'
+    ],
+    [
+      '@type' => 'City',
+      'name' => 'Delhi'
+    ],
+    [
+      '@type' => 'City',
+      'name' => 'Gurugram'
+    ],
+    [
+      '@type' => 'City',
+      'name' => 'Noida'
+    ],
+    [
+      '@type' => 'Country',
+      'name' => 'India'
+    ]
+  ],
+  'availableChannel' => [
+    '@type' => 'ServiceChannel',
+    'servicePhone' => '+91-8383800914',
+    'serviceUrl' => 'https://www.slsitsolutions.com/contact.php'
+  ],
+  'hasOfferCatalog' => [
+    '@type' => 'OfferCatalog',
+    'name' => 'IT Infrastructure Services',
+    'itemListElement' => [
+      [
+        '@type' => 'Offer',
+        'itemOffered' => [
+          '@type' => 'Service',
+          'name' => 'Server Setup & Migration'
+        ]
+      ],
+      [
+        '@type' => 'Offer',
+        'itemOffered' => [
+          '@type' => 'Service',
+          'name' => 'Virtualization (VMware / Hyper-V)'
+        ]
+      ],
+      [
+        '@type' => 'Offer',
+        'itemOffered' => [
+          '@type' => 'Service',
+          'name' => 'Structured Cabling'
+        ]
+      ],
+      [
+        '@type' => 'Offer',
+        'itemOffered' => [
+          '@type' => 'Service',
+          'name' => 'Wireless Networking'
+        ]
+      ],
+      [
+        '@type' => 'Offer',
+        'itemOffered' => [
+          '@type' => 'Service',
+          'name' => 'Active Directory'
+        ]
+      ],
+      [
+        '@type' => 'Offer',
+        'itemOffered' => [
+          '@type' => 'Service',
+          'name' => 'Network Monitoring'
+        ]
+      ]
+    ]
+  ]
+]];
 include 'includes/header.php';
 ?>
 

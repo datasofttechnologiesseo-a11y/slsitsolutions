@@ -1,8 +1,15 @@
 User-agent: *
 Allow: /
 
+# Private / non-content areas
+Disallow: /admin/
+Disallow: /api/
 Disallow: /includes/
-Disallow: /assets/css/
-Disallow: /assets/js/
+Disallow: /sql/
+Disallow: /lib/
+
+# Avoid indexing internal blog search result pages
+Disallow: /blog.php?*q=
 
 Sitemap: https://www.slsitsolutions.com/sitemap.xml
+Sitemap: https://www.slsitsolutions.com/sitemap.php

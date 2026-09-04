@@ -1,8 +1,95 @@
 <?php
-$page_title = 'Backup & Disaster Recovery Services in Faridabad, Delhi NCR | SLS IT';
+$page_title = 'Backup & Disaster Recovery Services | SLS IT Solutions';
 $page_description = 'Never lose business data again. SLS IT Solutions delivers automated backups, cloud DR, NAS/SAN storage, data replication & business continuity planning across Faridabad, Delhi NCR & India.';
 $page_keywords = 'backup services Faridabad, disaster recovery Delhi NCR, cloud backup India, business continuity planning, data backup solutions, NAS SAN storage, data replication services, ransomware recovery, BCDR India, automated backup services';
 $canonical = 'https://www.slsitsolutions.com/backup.php';
+$preload_image = 'assets/images/heroes/backup-hero.jpg';
+$structured_data = [[
+  '@type' => 'Service',
+  '@id' => 'https://www.slsitsolutions.com/backup.php#service',
+  'name' => 'Backup & Disaster Recovery Services',
+  'serviceType' => 'Backup and Disaster Recovery',
+  'description' => 'Automated on-site and cloud backups, NAS/SAN storage, data replication, ransomware recovery and business continuity planning.',
+  'url' => 'https://www.slsitsolutions.com/backup.php',
+  'provider' => [
+    '@id' => 'https://www.slsitsolutions.com/#organization'
+  ],
+  'areaServed' => [
+    [
+      '@type' => 'City',
+      'name' => 'Faridabad'
+    ],
+    [
+      '@type' => 'City',
+      'name' => 'Delhi'
+    ],
+    [
+      '@type' => 'City',
+      'name' => 'Gurugram'
+    ],
+    [
+      '@type' => 'City',
+      'name' => 'Noida'
+    ],
+    [
+      '@type' => 'Country',
+      'name' => 'India'
+    ]
+  ],
+  'availableChannel' => [
+    '@type' => 'ServiceChannel',
+    'servicePhone' => '+91-8383800914',
+    'serviceUrl' => 'https://www.slsitsolutions.com/contact.php'
+  ],
+  'hasOfferCatalog' => [
+    '@type' => 'OfferCatalog',
+    'name' => 'Backup & Disaster Recovery Services',
+    'itemListElement' => [
+      [
+        '@type' => 'Offer',
+        'itemOffered' => [
+          '@type' => 'Service',
+          'name' => 'Automated Backup'
+        ]
+      ],
+      [
+        '@type' => 'Offer',
+        'itemOffered' => [
+          '@type' => 'Service',
+          'name' => 'Cloud Backup'
+        ]
+      ],
+      [
+        '@type' => 'Offer',
+        'itemOffered' => [
+          '@type' => 'Service',
+          'name' => 'Disaster Recovery Planning'
+        ]
+      ],
+      [
+        '@type' => 'Offer',
+        'itemOffered' => [
+          '@type' => 'Service',
+          'name' => 'Data Replication'
+        ]
+      ],
+      [
+        '@type' => 'Offer',
+        'itemOffered' => [
+          '@type' => 'Service',
+          'name' => 'NAS / SAN Storage'
+        ]
+      ],
+      [
+        '@type' => 'Offer',
+        'itemOffered' => [
+          '@type' => 'Service',
+          'name' => 'Business Continuity'
+        ]
+      ]
+    ]
+  ]
+]];
 include 'includes/header.php';
 ?>
 

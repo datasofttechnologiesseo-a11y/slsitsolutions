@@ -79,14 +79,80 @@ function blog_qs(array $extra = []): string {
 }
 
 // Page meta
-$page_title = $activeCat
-    ? htmlspecialchars($activeCat['name']) . ' Articles | SLS IT Solutions Blog'
-    : ($activeTag ? '#' . htmlspecialchars($activeTag['name']) . ' | SLS IT Solutions Blog'
-                  : 'Insights & Articles | SLS IT Solutions Blog');
-$page_description = $activeCat
-    ? ($activeCat['description'] ?: ('Articles in '.$activeCat['name'].' from SLS IT Solutions.'))
-    : 'Practical IT, cybersecurity, and infrastructure insights from SLS IT Solutions for Indian businesses.';
-$canonical = 'https://www.slsitsolutions.com/blog.php';
+$site_url  = 'https://www.slsitsolutions.com';
+$page_type = 'CollectionPage';
+
+if ($activeCat) {
+    $page_title       = $activeCat['name'] . ' Articles | SLS IT Solutions Blog';
+    $page_description = $activeCat['description'] ?: ('Read the latest ' . $activeCat['name'] . ' articles, guides and insights from the SLS IT Solutions team in Faridabad, Delhi NCR.');
+    $canonical        = $site_url . '/blog.php?category=' . rawurlencode($activeCat['slug']);
+    $breadcrumbs      = [
+        ['name' => 'Home', 'url' => $site_url . '/'],
+        ['name' => 'Blog', 'url' => $site_url . '/blog.php'],
+        ['name' => $activeCat['name'], 'url' => $canonical],
+    ];
+} elseif ($activeTag) {
+    $page_title       = '#' . $activeTag['name'] . ' Articles | SLS IT Solutions Blog';
+    $page_description = 'Articles tagged "' . $activeTag['name'] . '" from SLS IT Solutions: practical IT, cybersecurity and infrastructure insights for Indian businesses.';
+    $canonical        = $site_url . '/blog.php?tag=' . rawurlencode($activeTag['slug']);
+    $breadcrumbs      = [
+        ['name' => 'Home', 'url' => $site_url . '/'],
+        ['name' => 'Blog', 'url' => $site_url . '/blog.php'],
+        ['name' => '#' . $activeTag['name'], 'url' => $canonical],
+    ];
+} elseif ($q !== '') {
+    $page_title       = 'Search results for "' . $q . '" | SLS IT Solutions Blog';
+    $page_description = 'Blog search results for "' . $q . '" on SLS IT Solutions.';
+    $canonical        = $site_url . '/blog.php';
+    $page_robots      = 'noindex, follow';
+} else {
+    $page_title       = 'IT & Cybersecurity Blog for Indian Businesses | SLS IT Solutions';
+    $page_description = 'Practical IT, cybersecurity, backup, DPDP compliance and infrastructure insights from SLS IT Solutions, Faridabad. Guides and tips for SMEs and enterprises across Delhi NCR and India.';
+    $page_keywords    = 'IT blog India, cybersecurity tips for business, managed IT services blog, DPDP Act compliance guide, backup and disaster recovery tips, IT infrastructure insights, SLS IT Solutions blog';
+    $canonical        = $site_url . '/blog.php';
+}
+
+// Pagination: self-referencing canonical per page + prev/next hints
+$extra_head = '';
+if ($page > 1) {
+    $canonical  .= (strpos($canonical, '?') === false ? '?' : '&') . 'page=' . $page;
+    $page_title  = $page_title . ' - Page ' . $page;
+}
+if ($pages > 1 && $q === '') {
+    $base = strtok($canonical, '?');
+    $qsBase = [];
+    if ($activeCat) $qsBase['category'] = $activeCat['slug'];
+    if ($activeTag) $qsBase['tag'] = $activeTag['slug'];
+    $mk = function (int $p) use ($base, $qsBase) {
+        $qs = $qsBase; if ($p > 1) $qs['page'] = $p;
+        return $base . ($qs ? '?' . http_build_query($qs) : '');
+    };
+    if ($page > 1)      $extra_head .= '<link rel="prev" href="' . htmlspecialchars($mk($page - 1)) . '">' . "\n";
+    if ($page < $pages) $extra_head .= '<link rel="next" href="' . htmlspecialchars($mk($page + 1)) . '">' . "\n";
+}
+
+// ItemList of the posts shown on this page (helps search engines discover articles)
+if ($rows) {
+    $items = [];
+    foreach ($rows as $i => $r) {
+        $items[] = [
+            '@type'    => 'ListItem',
+            'position' => $i + 1,
+            'url'      => $site_url . '/blog-detail.php?slug=' . rawurlencode($r['slug']),
+            'name'     => $r['title'],
+        ];
+    }
+    $structured_data = [[
+        '@type'           => 'ItemList',
+        '@id'             => $canonical . '#posts',
+        'name'            => 'Blog posts',
+        'itemListOrder'   => 'https://schema.org/ItemListOrderDescending',
+        'numberOfItems'   => count($items),
+        'itemListElement' => $items,
+    ]];
+}
+
+$preload_image = 'assets/images/heroes/about-hero.jpg';
 
 include 'includes/header.php';
 ?>
@@ -189,7 +255,7 @@ include 'includes/header.php';
                 <li>
                   <a href="blog-detail.php?slug=<?= urlencode($rp['slug']) ?>" class="flex gap-3 group">
                     <?php if (!empty($rp['cover_image'])): ?>
-                      <img src="<?= htmlspecialchars($rp['cover_image']) ?>" alt="" class="w-16 h-12 object-cover rounded-lg flex-shrink-0">
+                      <img src="<?= htmlspecialchars($rp['cover_image']) ?>" alt="<?= htmlspecialchars($rp['title']) ?>" width="64" height="48" loading="lazy" decoding="async" class="w-16 h-12 object-cover rounded-lg flex-shrink-0">
                     <?php else: ?>
                       <div class="w-16 h-12 bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg flex-shrink-0 flex items-center justify-center text-blue-400">
                         <i class="fas fa-newspaper"></i>
@@ -232,7 +298,7 @@ include 'includes/header.php';
               <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition fade-up flex flex-col">
                 <a href="blog-detail.php?slug=<?= urlencode($r['slug']) ?>" class="block">
                   <?php if (!empty($r['cover_image'])): ?>
-                    <img src="<?= htmlspecialchars($r['cover_image']) ?>" alt="<?= htmlspecialchars($r['title']) ?>" class="w-full h-48 object-cover">
+                    <img src="<?= htmlspecialchars($r['cover_image']) ?>" alt="<?= htmlspecialchars($r['title']) ?>" width="640" height="360" loading="lazy" decoding="async" class="w-full h-48 object-cover">
                   <?php else: ?>
                     <div class="w-full h-48 bg-gradient-to-br from-blue-700 to-blue-900 flex items-center justify-center">
                       <i class="fas fa-newspaper text-white text-4xl opacity-40"></i>
@@ -263,19 +329,19 @@ include 'includes/header.php';
           <?php if ($pages > 1):
             $first = max(1, $page - 2); $last = min($pages, $page + 2);
           ?>
-            <nav class="mt-10 flex justify-center items-center gap-2">
+            <nav class="mt-10 flex justify-center items-center gap-2" aria-label="Blog pagination">
               <?php if ($page > 1): ?>
-                <a href="?<?= blog_qs(['page'=>$page-1]) ?>" class="px-3 py-2 rounded-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50"><i class="fas fa-chevron-left"></i></a>
+                <a href="?<?= blog_qs(['page'=>$page-1]) ?>" rel="prev" aria-label="Previous page" class="px-3 py-2 rounded-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50"><i class="fas fa-chevron-left" aria-hidden="true"></i></a>
               <?php endif; ?>
               <?php for ($i=$first; $i<=$last; $i++): ?>
                 <?php if ($i === $page): ?>
-                  <span class="px-4 py-2 rounded-lg bg-blue-700 text-white font-semibold"><?= $i ?></span>
+                  <span class="px-4 py-2 rounded-lg bg-blue-700 text-white font-semibold" aria-current="page"><?= $i ?></span>
                 <?php else: ?>
                   <a href="?<?= blog_qs(['page'=>$i]) ?>" class="px-4 py-2 rounded-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50"><?= $i ?></a>
                 <?php endif; ?>
               <?php endfor; ?>
               <?php if ($page < $pages): ?>
-                <a href="?<?= blog_qs(['page'=>$page+1]) ?>" class="px-3 py-2 rounded-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50"><i class="fas fa-chevron-right"></i></a>
+                <a href="?<?= blog_qs(['page'=>$page+1]) ?>" rel="next" aria-label="Next page" class="px-3 py-2 rounded-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50"><i class="fas fa-chevron-right" aria-hidden="true"></i></a>
               <?php endif; ?>
             </nav>
           <?php endif; ?>

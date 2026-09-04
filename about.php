@@ -1,11 +1,13 @@
 <?php
-$page_title = 'About SLS IT Solutions | Trusted IT Partner in Faridabad, Delhi NCR';
+$page_title = 'About Us | SLS IT Solutions, Faridabad & Delhi NCR';
 $page_description = 'Meet SLS IT Solutions — Faridabad-based IT company serving 200+ businesses across Delhi NCR & India with cybersecurity, infrastructure, backup, and managed IT support since inception.';
 $page_keywords = 'about SLS IT Solutions, IT company Faridabad, managed IT services Delhi NCR, IT consultancy Ballabgarh, trusted IT partner India, IT support team Faridabad';
 $og_title = 'About Us - SLS IT Solutions | IT Support & Security Services India';
 $og_description = 'SLS IT Solutions is a professional IT support and services provider committed to helping businesses manage, secure, and optimize their technology environments.';
 $canonical = 'https://www.slsitsolutions.com/about.php';
 $og_url = 'https://www.slsitsolutions.com/about.php';
+$preload_image = 'assets/images/heroes/about-hero.jpg';
+$page_type = 'AboutPage';
 include 'includes/header.php';
 ?>
 
@@ -43,7 +45,7 @@ include 'includes/header.php';
         </div>
         <div class="split-image-wrap about-image-wrap">
           <div class="about-image-inner">
-            <img src="assets/images/sections/about-company.jpg" alt="SLS IT Solutions Office" loading="lazy">
+            <img src="assets/images/sections/about-company.jpg" alt="SLS IT Solutions Office" loading="lazy" width="1200" height="801" decoding="async">
             <div class="about-image-overlay"></div>
           </div>
           <div class="about-experience-badge">
@@ -73,7 +75,7 @@ include 'includes/header.php';
           <a href="services.php" class="btn-primary">Explore Our Services <i class="fas fa-arrow-right text-sm"></i></a>
         </div>
         <div class="split-image-wrap">
-          <img src="assets/images/sections/server-room.jpg" alt="IT Infrastructure" loading="lazy">
+          <img src="assets/images/sections/server-room.jpg" alt="IT Infrastructure" loading="lazy" width="1200" height="673" decoding="async">
         </div>
       </div>
     </div>

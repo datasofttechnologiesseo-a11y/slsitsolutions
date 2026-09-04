@@ -1,9 +1,11 @@
 <?php
-$page_title = 'Contact SLS IT Solutions | IT Services Faridabad, Delhi NCR | +91 8383800914';
+$page_title = 'Contact SLS IT Solutions | Faridabad, Delhi NCR | +91 8383800914';
 $page_description = 'Get a free IT consultation from SLS IT Solutions, Sector-2 Ballabgarh, Faridabad. Call +91 8383800914 or email sales@slsitsolutions.com for cybersecurity, backup, infrastructure & support quotes.';
 $page_keywords = 'contact SLS IT Solutions, IT company Faridabad contact, IT services Ballabgarh, IT support phone Delhi NCR, IT consultation Faridabad, IT services quote India, hire IT company Faridabad';
 $canonical = 'https://www.slsitsolutions.com/contact.php';
 $og_url = 'https://www.slsitsolutions.com/contact.php';
+$preload_image = 'assets/images/heroes/contact-hero.jpg';
+$page_type = 'ContactPage';
 include 'includes/header.php';
 ?>
 
@@ -309,13 +311,14 @@ include 'includes/header.php';
   <section class="bg-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-10 fade-up">
-        <h2 class="text-3xl font-bold mb-3" style="font-family:'Poppins',sans-serif;color:#0f172a;">Find Us</h2>
+        <h2 id="find-us" class="text-3xl font-bold mb-3" style="font-family:'Poppins',sans-serif;color:#0f172a;">Find Us</h2>
+        <p class="text-gray-500">Arya Nagar, Sector-2, Ballabgarh, Faridabad, Haryana 121004</p>
       </div>
-      <div class="fade-up rounded-2xl overflow-hidden shadow-xl border border-gray-200">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3510.7!2d77.32!3d28.34!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDIwJzI0LjAiTiA3N8KwMTknMTIuMCJF!5e0!3m2!1sen!2sin!4v1" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full"></iframe>
+      <div class="fade-up rounded-2xl overflow-hidden shadow-xl border border-gray-200 map-embed">
+        <iframe title="SLS IT Solutions office location on Google Maps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3178.162502470167!2d77.3336346!3d28.3290893!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdb34854ff569%3A0xaec6588a72250142!2sSLS%20IT%20SOLUTIONS!5e0!3m2!1sen!2sin!4v1788507403337!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" class="w-full"></iframe>
       </div>
       <div class="mt-6 text-center">
-        <a href="https://maps.google.com/?q=Arya+Nagar+Sector+2+Ballabgarh+Faridabad+Haryana" target="_blank" rel="noopener" class="btn-outline text-sm">
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=SLS+IT+SOLUTIONS&amp;query_place_id=ChIJafRPhTTbDDkRQgElcopYxq4" target="_blank" rel="noopener" class="btn-outline text-sm">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
           Open in Google Maps
         </a>

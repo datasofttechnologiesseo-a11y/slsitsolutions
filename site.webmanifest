@@ -1,0 +1,14 @@
+{
+  "name": "SLS IT Solutions",
+  "short_name": "SLS IT",
+  "description": "Managed IT services, cybersecurity, backup & disaster recovery and 24/7 IT support in Faridabad, Delhi NCR and across India.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#0f4c81",
+  "lang": "en-IN",
+  "icons": [
+    { "src": "/assets/images/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/images/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

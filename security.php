@@ -1,9 +1,96 @@
 <?php
-$page_title = 'Cybersecurity Services in Faridabad & Delhi NCR | Threat Protection | SLS IT';
+$page_title = 'Cybersecurity Services Faridabad & Delhi NCR | SLS IT Solutions';
 $page_description = 'Protect your business from ransomware, phishing & zero-day attacks. SLS IT Solutions delivers endpoint security, SIEM, firewall management, EDR, and DPDP-compliant cybersecurity in India.';
 $page_keywords = 'cybersecurity Faridabad, cybersecurity services Delhi NCR, threat protection India, endpoint security, EDR solutions, SIEM monitoring, firewall management, ransomware protection, phishing prevention, DPDP Act compliance, network security India';
 $canonical = 'https://www.slsitsolutions.com/security.php';
 $og_url = 'https://www.slsitsolutions.com/security.php';
+$preload_image = 'assets/images/heroes/security-hero.jpg';
+$structured_data = [[
+  '@type' => 'Service',
+  '@id' => 'https://www.slsitsolutions.com/security.php#service',
+  'name' => 'Cybersecurity Services',
+  'serviceType' => 'Cybersecurity',
+  'description' => 'Endpoint protection, EDR, SIEM monitoring, firewall management, email security, vulnerability assessment and DPDP-compliant security operations for Indian businesses.',
+  'url' => 'https://www.slsitsolutions.com/security.php',
+  'provider' => [
+    '@id' => 'https://www.slsitsolutions.com/#organization'
+  ],
+  'areaServed' => [
+    [
+      '@type' => 'City',
+      'name' => 'Faridabad'
+    ],
+    [
+      '@type' => 'City',
+      'name' => 'Delhi'
+    ],
+    [
+      '@type' => 'City',
+      'name' => 'Gurugram'
+    ],
+    [
+      '@type' => 'City',
+      'name' => 'Noida'
+    ],
+    [
+      '@type' => 'Country',
+      'name' => 'India'
+    ]
+  ],
+  'availableChannel' => [
+    '@type' => 'ServiceChannel',
+    'servicePhone' => '+91-8383800914',
+    'serviceUrl' => 'https://www.slsitsolutions.com/contact.php'
+  ],
+  'hasOfferCatalog' => [
+    '@type' => 'OfferCatalog',
+    'name' => 'Cybersecurity Services',
+    'itemListElement' => [
+      [
+        '@type' => 'Offer',
+        'itemOffered' => [
+          '@type' => 'Service',
+          'name' => 'Endpoint Security & EDR'
+        ]
+      ],
+      [
+        '@type' => 'Offer',
+        'itemOffered' => [
+          '@type' => 'Service',
+          'name' => 'Firewall & Network Security'
+        ]
+      ],
+      [
+        '@type' => 'Offer',
+        'itemOffered' => [
+          '@type' => 'Service',
+          'name' => 'SIEM & Threat Monitoring'
+        ]
+      ],
+      [
+        '@type' => 'Offer',
+        'itemOffered' => [
+          '@type' => 'Service',
+          'name' => 'Email & Phishing Protection'
+        ]
+      ],
+      [
+        '@type' => 'Offer',
+        'itemOffered' => [
+          '@type' => 'Service',
+          'name' => 'Vulnerability Assessment'
+        ]
+      ],
+      [
+        '@type' => 'Offer',
+        'itemOffered' => [
+          '@type' => 'Service',
+          'name' => 'DPDP Act Compliance'
+        ]
+      ]
+    ]
+  ]
+]];
 include 'includes/header.php';
 ?>
 

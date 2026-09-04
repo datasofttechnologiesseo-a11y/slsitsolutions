@@ -13,6 +13,7 @@ try {
 if (!$post) {
     http_response_code(404);
     $page_title = 'Post not found | SLS IT Solutions';
+    $page_robots = 'noindex, follow';
     include 'includes/header.php';
     ?>
     <section class="page-header" style="background:linear-gradient(135deg,#0f172a,#0f4c81);">
@@ -51,10 +52,54 @@ if ($cats) {
     $related = $stmt->fetchAll();
 }
 
+$site_url         = 'https://www.slsitsolutions.com';
 $page_title       = $post['meta_title'] ?: ($post['title'] . ' | SLS IT Solutions Blog');
 $page_description = $post['meta_desc']  ?: blog_excerpt($post, 30);
-$canonical        = 'https://www.slsitsolutions.com/blog-detail.php?slug=' . urlencode($post['slug']);
-$og_image         = !empty($post['cover_image']) ? 'https://www.slsitsolutions.com/' . $post['cover_image'] : null;
+$canonical        = $site_url . '/blog-detail.php?slug=' . rawurlencode($post['slug']);
+$og_type          = 'article';
+$page_type        = 'ItemPage';
+$og_image         = !empty($post['cover_image']) ? $site_url . '/' . ltrim($post['cover_image'], '/') : null;
+$og_image_alt     = $post['title'];
+$preload_image    = !empty($post['cover_image']) ? $post['cover_image'] : null;
+$publishedIso     = date('c', strtotime($post['published_at'] ?: 'now'));
+$modifiedIso      = date('c', strtotime(($post['updated_at'] ?? null) ?: ($post['published_at'] ?: 'now')));
+$catNames         = array_map(fn($c) => $c['name'], $cats);
+$tagNames         = array_map(fn($t) => $t['name'], $tags);
+$article_meta     = [
+    'published' => $publishedIso,
+    'modified'  => $modifiedIso,
+    'author'    => $post['author'] ?: 'SLS IT Solutions',
+    'section'   => $catNames[0] ?? 'IT Insights',
+    'tags'      => $tagNames,
+];
+$breadcrumbs = [
+    ['name' => 'Home', 'url' => $site_url . '/'],
+    ['name' => 'Blog', 'url' => $site_url . '/blog.php'],
+];
+if ($cats) {
+    $breadcrumbs[] = ['name' => $cats[0]['name'], 'url' => $site_url . '/blog.php?category=' . rawurlencode($cats[0]['slug'])];
+}
+$breadcrumbs[] = ['name' => $post['title'], 'url' => $canonical];
+
+$plainText  = trim(preg_replace('/\s+/', ' ', strip_tags($post['content'])));
+$structured_data = [[
+    '@type'            => 'BlogPosting',
+    '@id'              => $canonical . '#article',
+    'mainEntityOfPage' => ['@id' => $canonical . '#webpage'],
+    'headline'         => mb_strimwidth($post['title'], 0, 110, ''),
+    'description'      => $page_description,
+    'image'            => $og_image ? [$og_image] : [$site_url . '/assets/images/og-image.jpg'],
+    'datePublished'    => $publishedIso,
+    'dateModified'     => $modifiedIso,
+    'author'           => ['@type' => 'Person', 'name' => $post['author'] ?: 'SLS IT Solutions', 'url' => $site_url . '/about.php'],
+    'publisher'        => ['@id' => $site_url . '/#organization'],
+    'articleSection'   => $catNames,
+    'keywords'         => implode(', ', $tagNames),
+    'wordCount'        => str_word_count($plainText),
+    'inLanguage'       => 'en-IN',
+    'isAccessibleForFree' => true,
+    'url'              => $canonical,
+]];
 
 // Sidebar data
 $allCategories = get_categories_with_counts();
@@ -88,7 +133,7 @@ include 'includes/header.php';
   <div class="post-hero-blob post-hero-blob-2"></div>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <nav class="post-breadcrumb">
+    <nav class="post-breadcrumb" aria-label="Breadcrumb">
       <a href="index.php"><i class="fas fa-house"></i> Home</a>
       <span class="sep">/</span>
       <a href="blog.php">Blog</a>
@@ -211,7 +256,7 @@ include 'includes/header.php';
                 <li>
                   <a href="blog-detail.php?slug=<?= urlencode($rp['slug']) ?>">
                     <?php if (!empty($rp['cover_image'])): ?>
-                      <img src="<?= htmlspecialchars($rp['cover_image']) ?>" alt="">
+                      <img src="<?= htmlspecialchars($rp['cover_image']) ?>" alt="<?= htmlspecialchars($rp['title']) ?>" width="64" height="48" loading="lazy" decoding="async">
                     <?php else: ?>
                       <div class="ps-recent-ph"><i class="fas fa-newspaper"></i></div>
                     <?php endif; ?>
@@ -229,11 +274,11 @@ include 'includes/header.php';
       </aside>
 
       <!-- ===== Main content (right) ===== -->
-      <main class="post-main">
+      <div class="post-main">
 
         <?php if ($hasCover): ?>
           <figure class="post-cover-card">
-            <img src="<?= htmlspecialchars($post['cover_image']) ?>" alt="<?= htmlspecialchars($post['title']) ?>">
+            <img src="<?= htmlspecialchars($post['cover_image']) ?>" alt="<?= htmlspecialchars($post['title']) ?>" width="1200" height="675" fetchpriority="high" decoding="async">
           </figure>
         <?php endif; ?>
 
@@ -262,7 +307,7 @@ include 'includes/header.php';
           </div>
         </div>
 
-      </main>
+      </div>
 
     </div>
   </div>
@@ -280,7 +325,7 @@ include 'includes/header.php';
       <?php foreach ($related as $rp): ?>
         <a href="blog-detail.php?slug=<?= urlencode($rp['slug']) ?>" class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition fade-up block">
           <?php if (!empty($rp['cover_image'])): ?>
-            <img src="<?= htmlspecialchars($rp['cover_image']) ?>" alt="" class="w-full h-44 object-cover">
+            <img src="<?= htmlspecialchars($rp['cover_image']) ?>" alt="<?= htmlspecialchars($rp['title']) ?>" width="640" height="360" loading="lazy" decoding="async" class="w-full h-44 object-cover">
           <?php else: ?>
             <div class="w-full h-44 bg-gradient-to-br from-blue-700 to-blue-900 flex items-center justify-center">
               <i class="fas fa-newspaper text-white text-4xl opacity-40"></i>

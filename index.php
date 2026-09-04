@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require_once __DIR__ . '/includes/db.php';
 require_once __DIR__ . '/includes/testimonial_helpers.php';
 require_once __DIR__ . '/includes/blog.php';
@@ -56,47 +56,17 @@ try {
     $latestBlogs = [];
 }
 
-$page_title = 'SLS IT Solutions | Managed IT Services, Cybersecurity & Support in Faridabad, Delhi NCR';
+$page_title = 'SLS IT Solutions | Managed IT Services & Cybersecurity, Faridabad';
 $page_description = 'SLS IT Solutions delivers managed IT services, cybersecurity, backup & disaster recovery, and 24/7 support for businesses in Faridabad, Delhi NCR & across India. DPDP Act compliant. 200+ clients.';
 $page_keywords = 'IT company Faridabad, managed IT services Delhi NCR, cybersecurity Faridabad, IT support India, backup disaster recovery, IT infrastructure services, DPDP Act compliance, IT consultancy Delhi, business IT solutions India';
 $canonical = 'https://www.slsitsolutions.com/';
 $og_title = 'SLS IT Solutions - Secure & Scalable IT for Indian Businesses';
 $og_description = 'Enterprise-grade cybersecurity, backup, infrastructure & IT support services trusted by 200+ Indian businesses. Get a free consultation today.';
 $og_url = 'https://www.slsitsolutions.com/';
-$og_image = 'https://www.slsitsolutions.com/assets/images/logo.png';
 $twitter_title = 'SLS IT Solutions - IT Support, Cybersecurity & Infrastructure Services in India';
 $twitter_description = 'Enterprise-grade cybersecurity, backup, infrastructure & IT support services trusted by 200+ Indian businesses.';
-$extra_head = <<<'HTML'
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "SLS IT Solutions",
-    "url": "https://www.slsitsolutions.com",
-    "logo": "https://www.slsitsolutions.com/assets/images/logo.png",
-    "description": "Enterprise-grade IT support, cybersecurity, backup & disaster recovery, and infrastructure services for Indian businesses.",
-    "telephone": "+918383800914",
-    "email": "sales@slsitsolutions.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Arya Nagar, Sector-2, Ballabgarh",
-      "addressLocality": "Faridabad",
-      "addressRegion": "Haryana",
-      "postalCode": "121004",
-      "addressCountry": "IN"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "India"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/company/slsitsolutions",
-      "https://www.facebook.com/slsitsolutions",
-      "https://x.com/slsitsolutions"
-    ]
-  }
-  </script>
-HTML;
+$preload_image = 'assets/images/heroes/home-hero.jpg';
+$og_image_alt = 'SLS IT Solutions - Managed IT Services, Cybersecurity, Backup & Support in Faridabad, Delhi NCR';
 include 'includes/header.php';
 ?>
 
@@ -203,7 +173,7 @@ include 'includes/header.php';
           <!-- Right Side: Hero Image (hidden on mobile) -->
           <div class="hidden lg:flex items-center z-10" style="animation: fadeInUp 1s ease 0.6s both; margin-top: 3rem; margin-left: 3.5rem;">
             <div class="relative rounded-3xl overflow-hidden shadow-2xl w-full">
-              <img src="Home hero image.png" alt="SLS IT Solutions NOC & Service Desk Team" class="w-full h-full object-contain" loading="eager" width="548" height="505" style="object-position: center;">
+              <img src="assets/images/heroes/home-hero-team.jpg" alt="SLS IT Solutions NOC and service desk team monitoring client systems" class="w-full h-full object-contain" loading="eager" fetchpriority="high" decoding="async" width="1024" height="943" style="object-position: center;">
               <div style="position:absolute; inset:0; border-radius: 1.5rem; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);"></div>
             </div>
           </div>
@@ -225,44 +195,44 @@ include 'includes/header.php';
       <div class="marquee-container">
         <div class="marquee-track">
           <!-- Set 1 — ordered biggest to smallest by logo resolution -->
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Rahul-Technic.png" alt="Rahul Technic"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Arcis-Design.png" alt="Arcis Design"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Keshoram.png" alt="Keshoram"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Space-Telelink.png" alt="Space Telelink"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Indogulf.jpg" alt="Indogulf Cropsciences"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Universal-Quartzz.jpg" alt="Universal Quartzz"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/CICO.png" alt="CICO Group"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Tilak-Stone.jpg" alt="Tilak Stone"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Enterslice.jpg" alt="Enterslice"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Akash-Group.jpg" alt="Akash Group"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/JQR.png" alt="JQR Sports"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Bhagwati.png" alt="Bhagwati Techno Fab"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Premier.jpg" alt="Premier Plastics"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Cornitos.png" alt="Cornitos"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/AVON.jpg" alt="Avon Industries"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Universal-Granimarmo.jpg" alt="Universal Granimarmo"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/ANH.png" alt="ANH"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Moeving.png" alt="Moeving"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Rahul-Technic.png" alt="Rahul Technic" width="1280" height="717" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Arcis-Design.png" alt="Arcis Design" width="353" height="397" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Keshoram.png" alt="Keshoram" width="599" height="417" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Space-Telelink.png" alt="Space Telelink" width="600" height="257" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Indogulf.jpg" alt="Indogulf Cropsciences" width="533" height="296" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Universal-Quartzz.jpg" alt="Universal Quartzz" width="344" height="344" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/CICO.png" alt="CICO Group" width="133" height="92" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Tilak-Stone.jpg" alt="Tilak Stone" width="225" height="225" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Enterslice.jpg" alt="Enterslice" width="400" height="400" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Akash-Group.jpg" alt="Akash Group" width="225" height="225" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/JQR.png" alt="JQR Sports" width="500" height="500" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Bhagwati.png" alt="Bhagwati Techno Fab" width="321" height="67" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Premier.jpg" alt="Premier Plastics" width="200" height="200" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Cornitos.png" alt="Cornitos" width="266" height="189" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/AVON.jpg" alt="Avon Industries" width="200" height="200" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Universal-Granimarmo.jpg" alt="Universal Granimarmo" width="217" height="232" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/ANH.png" alt="ANH" width="195" height="195" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Moeving.png" alt="Moeving" width="180" height="180" decoding="async"></div>
 
           <!-- Set 2 (duplicate for seamless loop) -->
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Rahul-Technic.png" alt="Rahul Technic"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Arcis-Design.png" alt="Arcis Design"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Keshoram.png" alt="Keshoram"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Space-Telelink.png" alt="Space Telelink"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Indogulf.jpg" alt="Indogulf Cropsciences"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Universal-Quartzz.jpg" alt="Universal Quartzz"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/CICO.png" alt="CICO Group"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Tilak-Stone.jpg" alt="Tilak Stone"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Enterslice.jpg" alt="Enterslice"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Akash-Group.jpg" alt="Akash Group"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/JQR.png" alt="JQR Sports"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Bhagwati.png" alt="Bhagwati Techno Fab"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Premier.jpg" alt="Premier Plastics"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Cornitos.png" alt="Cornitos"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/AVON.jpg" alt="Avon Industries"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Universal-Granimarmo.jpg" alt="Universal Granimarmo"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/ANH.png" alt="ANH"></div>
-          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Moeving.png" alt="Moeving"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Rahul-Technic.png" alt="Rahul Technic" width="1280" height="717" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Arcis-Design.png" alt="Arcis Design" width="353" height="397" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Keshoram.png" alt="Keshoram" width="599" height="417" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Space-Telelink.png" alt="Space Telelink" width="600" height="257" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Indogulf.jpg" alt="Indogulf Cropsciences" width="533" height="296" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Universal-Quartzz.jpg" alt="Universal Quartzz" width="344" height="344" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/CICO.png" alt="CICO Group" width="133" height="92" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Tilak-Stone.jpg" alt="Tilak Stone" width="225" height="225" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Enterslice.jpg" alt="Enterslice" width="400" height="400" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Akash-Group.jpg" alt="Akash Group" width="225" height="225" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/JQR.png" alt="JQR Sports" width="500" height="500" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Bhagwati.png" alt="Bhagwati Techno Fab" width="321" height="67" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Premier.jpg" alt="Premier Plastics" width="200" height="200" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Cornitos.png" alt="Cornitos" width="266" height="189" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/AVON.jpg" alt="Avon Industries" width="200" height="200" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Universal-Granimarmo.jpg" alt="Universal Granimarmo" width="217" height="232" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/ANH.png" alt="ANH" width="195" height="195" decoding="async"></div>
+          <div class="marquee-item"><img loading="lazy" src="assets/images/clients/Moeving.png" alt="Moeving" width="180" height="180" decoding="async"></div>
         </div>
       </div>
 
@@ -291,7 +261,7 @@ include 'includes/header.php';
           <a href="about.php" class="btn-primary">Learn More About Us <i class="fas fa-arrow-right text-sm"></i></a>
         </div>
         <div class="split-image-wrap">
-          <img src="assets/images/sections/office-team.jpg" alt="SLS IT Solutions Team" loading="lazy">
+          <img src="assets/images/sections/office-team.jpg" alt="SLS IT Solutions Team" loading="lazy" width="1200" height="800" decoding="async">
         </div>
       </div>
     </div>
@@ -603,13 +573,13 @@ include 'includes/header.php';
               <img src="assets/images/partners/hp.svg" alt="HP" loading="lazy">
             </div>
             <div class="partner-logo-item">
-              <img src="assets/images/partners/ibm.svg" alt="IBM" loading="lazy">
+              <img src="assets/images/partners/ibm.svg" alt="IBM" loading="lazy" width="819" height="341" decoding="async">
             </div>
             <div class="partner-logo-item">
-              <img src="assets/images/partners/lenovo.svg" alt="Lenovo" loading="lazy">
+              <img src="assets/images/partners/lenovo.svg" alt="Lenovo" loading="lazy" width="499" height="105" decoding="async">
             </div>
             <div class="partner-logo-item">
-              <img src="assets/images/partners/dell.svg" alt="Dell" loading="lazy">
+              <img src="assets/images/partners/dell.svg" alt="Dell" loading="lazy" width="300" height="300" decoding="async">
             </div>
           </div>
         </div>
@@ -624,13 +594,13 @@ include 'includes/header.php';
           </div>
           <div class="partner-logos-grid partner-logos-3">
             <div class="partner-logo-item">
-              <img src="assets/images/partners/fortinet.svg" alt="Fortinet" loading="lazy">
+              <img src="assets/images/partners/fortinet.svg" alt="Fortinet" loading="lazy" width="156" height="18" decoding="async">
             </div>
             <div class="partner-logo-item">
-              <img src="assets/images/partners/sophos.svg" alt="Sophos" loading="lazy">
+              <img src="assets/images/partners/sophos.svg" alt="Sophos" loading="lazy" width="204" height="36" decoding="async">
             </div>
             <div class="partner-logo-item partner-logo-full">
-              <img src="assets/images/partners/sonicwall.svg" alt="SonicWALL" loading="lazy">
+              <img src="assets/images/partners/sonicwall.svg" alt="SonicWALL" loading="lazy" width="313" height="53" decoding="async">
             </div>
           </div>
         </div>
@@ -645,13 +615,13 @@ include 'includes/header.php';
           </div>
           <div class="partner-logos-grid partner-logos-3">
             <div class="partner-logo-item">
-              <img src="assets/images/partners/crowdstrike.svg" alt="CrowdStrike" loading="lazy">
+              <img src="assets/images/partners/crowdstrike.svg" alt="CrowdStrike" loading="lazy" width="173" height="32" decoding="async">
             </div>
             <div class="partner-logo-item">
-              <img src="assets/images/partners/seqrite.png" alt="Seqrite" loading="lazy">
+              <img src="assets/images/partners/seqrite.png" alt="Seqrite" loading="lazy" width="1030" height="401" decoding="async">
             </div>
             <div class="partner-logo-item partner-logo-full">
-              <img src="assets/images/partners/escan.png" alt="eScan" loading="lazy">
+              <img src="assets/images/partners/escan.png" alt="eScan" loading="lazy" width="200" height="97" decoding="async">
             </div>
           </div>
         </div>
@@ -666,10 +636,10 @@ include 'includes/header.php';
           </div>
           <div class="partner-logos-grid">
             <div class="partner-logo-item">
-              <img src="assets/images/partners/aws.svg" alt="AWS" loading="lazy">
+              <img src="assets/images/partners/aws.svg" alt="AWS" loading="lazy" width="304" height="182" decoding="async">
             </div>
             <div class="partner-logo-item">
-              <img src="assets/images/partners/google.svg" alt="Google Cloud" loading="lazy">
+              <img src="assets/images/partners/google.svg" alt="Google Cloud" loading="lazy" width="272" height="92" decoding="async">
             </div>
           </div>
         </div>

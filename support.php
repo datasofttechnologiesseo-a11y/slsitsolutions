@@ -1,10 +1,97 @@
 <?php
-$page_title = 'IT Support & Consultancy in Faridabad, Delhi NCR | 24/7 Helpdesk | SLS IT';
+$page_title = '24/7 IT Support & Consultancy Faridabad, Delhi NCR | SLS IT';
 $page_description = 'Round-the-clock IT support and strategic consultancy from SLS IT Solutions: helpdesk, troubleshooting, IT planning, system implementation & staff training across Faridabad, Delhi NCR & India.';
 $page_keywords = 'IT support Faridabad, IT helpdesk Delhi NCR, IT consultancy India, 24/7 IT support, managed IT support services, IT troubleshooting Faridabad, IT strategy planning, system implementation services, IT outsourcing India, business IT consultancy';
 $canonical = 'https://www.slsitsolutions.com/support.php';
 $og_title = 'IT Support & Consultancy - SLS IT Solutions';
 $og_description = 'Expert IT support and consultancy services. Strategic planning, implementation, training, and ongoing support for your business.';
+$preload_image = 'assets/images/heroes/support-hero.jpg';
+$structured_data = [[
+  '@type' => 'Service',
+  '@id' => 'https://www.slsitsolutions.com/support.php#service',
+  'name' => 'IT Support & Consultancy',
+  'serviceType' => 'IT Support',
+  'description' => '24/7 helpdesk, on-site and remote troubleshooting, IT strategy planning, system implementation and staff training.',
+  'url' => 'https://www.slsitsolutions.com/support.php',
+  'provider' => [
+    '@id' => 'https://www.slsitsolutions.com/#organization'
+  ],
+  'areaServed' => [
+    [
+      '@type' => 'City',
+      'name' => 'Faridabad'
+    ],
+    [
+      '@type' => 'City',
+      'name' => 'Delhi'
+    ],
+    [
+      '@type' => 'City',
+      'name' => 'Gurugram'
+    ],
+    [
+      '@type' => 'City',
+      'name' => 'Noida'
+    ],
+    [
+      '@type' => 'Country',
+      'name' => 'India'
+    ]
+  ],
+  'availableChannel' => [
+    '@type' => 'ServiceChannel',
+    'servicePhone' => '+91-8383800914',
+    'serviceUrl' => 'https://www.slsitsolutions.com/contact.php'
+  ],
+  'hasOfferCatalog' => [
+    '@type' => 'OfferCatalog',
+    'name' => 'IT Support & Consultancy',
+    'itemListElement' => [
+      [
+        '@type' => 'Offer',
+        'itemOffered' => [
+          '@type' => 'Service',
+          'name' => '24/7 Helpdesk'
+        ]
+      ],
+      [
+        '@type' => 'Offer',
+        'itemOffered' => [
+          '@type' => 'Service',
+          'name' => 'Remote & On-site Support'
+        ]
+      ],
+      [
+        '@type' => 'Offer',
+        'itemOffered' => [
+          '@type' => 'Service',
+          'name' => 'IT Strategy Consulting'
+        ]
+      ],
+      [
+        '@type' => 'Offer',
+        'itemOffered' => [
+          '@type' => 'Service',
+          'name' => 'System Implementation'
+        ]
+      ],
+      [
+        '@type' => 'Offer',
+        'itemOffered' => [
+          '@type' => 'Service',
+          'name' => 'Staff Training'
+        ]
+      ],
+      [
+        '@type' => 'Offer',
+        'itemOffered' => [
+          '@type' => 'Service',
+          'name' => 'Annual Maintenance Contracts'
+        ]
+      ]
+    ]
+  ]
+]];
 include 'includes/header.php';
 ?>
 

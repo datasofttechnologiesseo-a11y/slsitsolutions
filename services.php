@@ -1,9 +1,41 @@
 <?php
-$page_title = 'IT Services in Faridabad & Delhi NCR | Cybersecurity, Backup, Infrastructure | SLS IT';
+$page_title = 'IT Services in Faridabad & Delhi NCR | SLS IT Solutions';
 $page_description = 'End-to-end IT services from SLS IT Solutions: cybersecurity, backup & disaster recovery, infrastructure, virtualization, networking, and managed IT support across Faridabad, Delhi NCR & India.';
 $page_keywords = 'IT services Faridabad, IT services Delhi NCR, managed IT services India, cybersecurity services, backup disaster recovery, IT infrastructure services, networking solutions, virtualization services, IT support services India';
 $canonical = 'https://www.slsitsolutions.com/services.php';
 $og_url = 'https://www.slsitsolutions.com/services.php';
+$preload_image = 'assets/images/heroes/services-hero.jpg';
+$page_type = 'CollectionPage';
+$structured_data = [[
+  '@type' => 'ItemList',
+  'name' => 'IT Services by SLS IT Solutions',
+  'itemListElement' => [
+    [
+      '@type' => 'ListItem',
+      'position' => 1,
+      'name' => 'Cybersecurity Solutions',
+      'url' => 'https://www.slsitsolutions.com/security.php'
+    ],
+    [
+      '@type' => 'ListItem',
+      'position' => 2,
+      'name' => 'Backup & Disaster Recovery',
+      'url' => 'https://www.slsitsolutions.com/backup.php'
+    ],
+    [
+      '@type' => 'ListItem',
+      'position' => 3,
+      'name' => 'IT Infrastructure Solutions',
+      'url' => 'https://www.slsitsolutions.com/infrastructure.php'
+    ],
+    [
+      '@type' => 'ListItem',
+      'position' => 4,
+      'name' => 'IT Support & Consultancy',
+      'url' => 'https://www.slsitsolutions.com/support.php'
+    ]
+  ]
+]];
 include 'includes/header.php';
 ?>
 
@@ -40,7 +72,7 @@ include 'includes/header.php';
           </div>
         </div>
         <div class="split-image-wrap">
-          <img src="assets/images/sections/cloud-computing.jpg" alt="IT Services" loading="lazy">
+          <img src="assets/images/sections/cloud-computing.jpg" alt="IT Services" loading="lazy" width="1200" height="801" decoding="async">
         </div>
       </div>
     </div>
